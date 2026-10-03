@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt de construcción — tnmsport-web.vercel.app</title>
+<style>
+:root{--bg:#ffffff;--fg:#1c1f24;--muted:#5b6572;--line:#e3e7ec;--accent:#0b62d6;--code:#f4f6f8;--head:#f8fafc}
+@media (prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e6e9ee;--muted:#9aa4b2;--line:#2a2f37;--accent:#6aa9ff;--code:#1b1f26;--head:#1a1e25}}
+*{box-sizing:border-box}
+body{margin:0;padding:2rem 1.25rem 6rem;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1200px;margin-inline:auto}
+h1{font-size:1.9rem;margin:0 0 .3em;letter-spacing:-.02em}
+h2{font-size:1.45rem;margin:2.4em 0 .6em;padding-bottom:.3em;border-bottom:2px solid var(--line)}
+h3{font-size:1.15rem;margin:1.9em 0 .5em;color:var(--accent)}
+h4{font-size:1rem;margin:1.4em 0 .4em}
+p{margin:.55em 0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.88em;font-family:ui-monospace,Consolas,monospace}
+pre{background:var(--code);padding:.9rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82rem;line-height:1.45}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.7em 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.85rem}
+th,td{padding:.42rem .6rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+td:last-child,th:last-child{white-space:normal}
+thead th{background:var(--head);position:sticky;top:0;font-weight:600}
+tbody tr:hover{background:var(--head)}
+details{margin:.6em 0;border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;background:var(--head)}
+summary{cursor:pointer;font-weight:600;font-size:.92rem}
+details[open] summary{margin-bottom:.6em}
+hr{border:0;border-top:1px solid var(--line);margin:2.5em 0}
+ul,ol{margin:.5em 0;padding-left:1.4rem}
+li{margin:.2em 0}
+.swatch{display:inline-block;width:.8em;height:.8em;border-radius:3px;border:1px solid var(--line);margin-right:.4em;vertical-align:-1px}
+.shots{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0}
+.shots figure{margin:0;flex:1 1 260px;max-width:340px}
+.shots img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.shots figcaption{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+.meta{color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<h1 id="prompt-de-construcción-tnmsport-webvercelapp">Prompt de construcción — tnmsport-web.vercel.app</h1>
+<p><em>Generado a partir del análisis automatizado de https://tnmsport-web.vercel.app/ el 2026-09-07T23:59:14.219Z.</em></p>
+<p>&gt; Copiá todo lo que sigue y pasáselo a la IA que va a construir la aplicación. Los valores son mediciones reales del sitio del cliente, no estimaciones.</p>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Construir una aplicación web equivalente en estructura y propósito a <strong>tnmsport-web.vercel.app</strong>, con mejor rendimiento, accesibilidad y mantenibilidad. Replicar la arquitectura de información y el tipo de componentes, <strong>no</strong> copiar textos, imágenes, logos ni marcas del original: usar contenido propio o placeholders.</p>
+<p>Contexto del original: TnmSport — sin description</p>
+<h2 id="2-stack-y-decisiones-técnicas">2. Stack y decisiones técnicas</h2>
+<p>Detectado en el original: react · Google Fonts, Service Worker</p>
+<ul><li>El original usa React sin framework de SSR: usar <strong>Next.js (App Router)</strong> para ganar SSR/SSG y mejor LCP.</li><li>Estilos: usar <strong>Tailwind CSS</strong> con los tokens de este documento en <code>tailwind.config</code> (el original usa CSS propio).</li><li>TypeScript en strict mode. Componentes con props tipadas y variantes explícitas (evitar clases duplicadas).</li></ul>
+<h2 id="3-design-tokens-medidos-por-frecuencia-de-uso-real">3. Design tokens (medidos por frecuencia de uso real)</h2>
+<p><strong>Color</strong></p>
+<div class="tw"><table><thead><tr><th>Rol</th><th>Valor</th><th>Uso en el original</th></tr></thead><tbody><tr><td>surface-1 (fondo base)</td><td><code>#19191d</code></td><td>9 elementos</td></tr><tr><td>surface-2</td><td><code>#22c55e (0.14)</code></td><td>9 elementos</td></tr><tr><td>surface-3</td><td><code>#22c55e</code></td><td>6 elementos</td></tr><tr><td>surface-4</td><td><code>#2c2c32 (0.85)</code></td><td>1 elementos</td></tr><tr><td>text-1 (texto base)</td><td><code>#8e8e99</code></td><td>52 elementos</td></tr><tr><td>text-2</td><td><code>#f4f4f5</code></td><td>44 elementos</td></tr><tr><td>text-3</td><td><code>#22c55e</code></td><td>15 elementos</td></tr><tr><td>text-4</td><td><code>#b8b8c0</code></td><td>6 elementos</td></tr><tr><td>border-1</td><td><code>#ffffff (0.14)</code></td><td>10 elementos</td></tr><tr><td>border-2</td><td><code>#22c55e</code></td><td>9 elementos</td></tr></tbody></table></div>
+<p>&gt; Ajustar estos colores donde no lleguen a WCAG AA (ver sección 9) manteniendo la identidad.</p>
+<p><strong>Tipografía</strong></p>
+<ul><li>Familias: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif, &quot;Space Grotesk&quot;, Outfit, -apple-system, BlinkMacSystemFont, sans-serif</li><li>Escala de tamaños en uso: 12px · 14px · 16px · 18px · 48px</li><li>Pesos: 400, 600, 700</li><li>Line-heights: 25.6px, 16.8px, 19.2px, 14.4px</li><li>Letter-spacing: -0.16px, -0.36px, 0.96px</li></ul>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>font-size</th><th>weight</th><th>line-height</th></tr></thead><tbody><tr><td>body</td><td>16px</td><td>400</td><td>25.6px</td></tr><tr><td>h1</td><td>48px</td><td>700</td><td>51.84px</td></tr><tr><td>h2</td><td>12px</td><td>600</td><td>14.4px</td></tr><tr><td>p</td><td>16px</td><td>400</td><td>24.8px</td></tr></tbody></table></div>
+<p>Consistencia del original: 2 familias, 5 tamaños, 3 pesos distintos. La escala es acotada: mantenerla.</p>
+<p><strong>Espaciado, radios y elevación</strong></p>
+<ul><li>Radios: 10px · 14px · 20px · 9999px</li><li>Gaps de grilla/flex: 4px · 8px · 12px · 16px · 24px</li><li>Paddings más usados: 12px 16px, 4px 12px, 0px 8px 0px 0px, 12px 20px, 24px 20px</li><li>Sombras: <code>rgba(0, 0, 0, 0.55) 0px 12px 28px -8px</code></li><li>Ancho de contenedor: 1240px, 640px · padding lateral: 0px / 0px, 16px / 16px</li></ul>
+<p>Definir todo esto como variables CSS / <code>tailwind.config</code> y prohibir valores mágicos fuera de la escala.</p>
+<h2 id="4-mapa-de-páginas-a-construir">4. Mapa de páginas a construir</h2>
+<div class="tw"><table><thead><tr><th>Tipo de página</th><th>Ruta del original</th><th>Secciones</th><th>Componentes destacados</th><th>Formularios</th></tr></thead><tbody><tr><td>Home</td><td><code>/</code></td><td>1</td><td>—</td><td>0</td></tr><tr><td>Página interna</td><td><code>/t/seed-a</code></td><td>1</td><td>1 tablas</td><td>0</td></tr><tr><td>Página</td><td><code>/entrar</code></td><td>1</td><td>—</td><td>1</td></tr><tr><td>Página interna</td><td><code>/t/seed-c</code></td><td>1</td><td>1 tablas</td><td>0</td></tr></tbody></table></div>
+<p>Construir una ruta por cada tipo de página listado, con su layout propio y componentes compartidos.</p>
+<p><strong>Página interna</strong> — secciones en orden: Liga Seed A</p>
+<p><strong>Página</strong> — secciones en orden: Entrar</p>
+<p><strong>Página interna</strong> — secciones en orden: Liga Seed C (desempate)</p>
+<h2 id="4b-estructura-del-home-orden-de-scroll-del-original">4b. Estructura del home (orden de scroll del original)</h2>
+<div class="tw"><table><thead><tr><th>#</th><th>Sección</th><th>Encabezado</th><th>Alto</th><th>Layout</th><th>Contenido</th></tr></thead><tbody><tr><td>1</td><td>div.portada</td><td>Tablas, fixtures y goleadores de tu torneo</td><td>715px (0.79 vh)</td><td>grid, 1 col</td><td>9 links, 9 items</td></tr></tbody></table></div>
+<p>Alto total del home: 900px (1 viewports). 1 bloques de primer nivel.</p>
+<p><strong>Capas fijas</strong>: header/nav (sticky, z-index 20). Definir una escala de z-index documentada.</p>
+<h2 id="5-componentes-a-construir">5. Componentes a construir</h2>
+<div class="tw"><table><thead><tr><th>Componente</th><th>Cantidad en el original</th><th>Nota de implementación</th></tr></thead><tbody><tr><td>svg</td><td>13</td><td>sprite o componentes de ícono, no SVG inline duplicado</td></tr><tr><td>links</td><td>11</td><td>links internos con el router, externos con <code>rel=&quot;noopener&quot;</code></td></tr></tbody></table></div>
+<h2 id="6-comportamiento-responsive">6. Comportamiento responsive</h2>
+<ul><li>Breakpoints declarados en el CSS original: 400, 460, 480, 560, 900</li><li>Breakpoints a implementar: <strong>640 / 768 / 1024 / 1280 / 1536</strong> (Tailwind por defecto), verificando además 360px.</li><li>Menú: colapsar a hamburguesa por debajo de 1024px, con panel accesible (foco atrapado, cierre por Escape).</li><li>Contenedor: máximo 1240px, centrado, con padding lateral 0px / 0px.</li></ul>
+<div class="tw"><table><thead><tr><th>Ancho</th><th>Cards por fila</th><th>Links de nav visibles</th><th>Alto de header</th><th>h1</th></tr></thead><tbody><tr><td>360px</td><td>—</td><td>0</td><td>62</td><td>30.4px</td></tr><tr><td>390px</td><td>—</td><td>0</td><td>62</td><td>30.4px</td></tr><tr><td>768px</td><td>—</td><td>0</td><td>62</td><td>46.08px</td></tr><tr><td>1024px</td><td>—</td><td>0</td><td>62</td><td>48px</td></tr><tr><td>1280px</td><td>—</td><td>0</td><td>62</td><td>48px</td></tr><tr><td>1440px</td><td>—</td><td>0</td><td>62</td><td>48px</td></tr><tr><td>1920px</td><td>—</td><td>0</td><td>62</td><td>48px</td></tr></tbody></table></div>
+<ul><li>De 390px a 768px: h1 30.4px → 46.08px</li><li>De 768px a 1024px: h1 46.08px → 48px</li></ul>
+<p><strong>Requisito duro:</strong> ningún breakpoint entre 320px y 1920px puede tener scroll horizontal.</p>
+<h2 id="7-movimiento-e-interacción">7. Movimiento e interacción</h2>
+<ul><li>Duraciones del original: 0.12s, 0.12s, 0.12s, 0.12s · easings: ease</li><li>Propiedades animadas: border-color, background, transform</li><li>En <code>:hover</code> cambian: background-attachment, background-clip, background-color, background-image, background-origin</li><li>10 elementos con transición y 6 con animación; 5 <code>@keyframes</code> declarados.</li><li>En hover, los botones del original cambian: backgroundColor, color, outlineColor. Replicar ese tipo de respuesta, no necesariamente los valores.</li><li>Foco de teclado del original: visible (2px solid rgb(251, 191, 36)).</li><li>Estandarizar en 3 duraciones (150ms micro, 250ms normal, 400ms entrada) y un easing por tipo. Respetar <code>prefers-reduced-motion</code>.</li></ul>
+<h2 id="8-contenido-y-datos">8. Contenido y datos</h2>
+<ul><li>El home del original tiene 675 caracteres de texto visible, 0 imágenes y 11 links.</li><li>Todo el contenido debe venir de datos (JSON/CMS/API), no hardcodeado en el markup.</li><li>SEO: title y meta description por página, canonical, Open Graph, y JSON-LD.</li><li>Idioma: <code>lang=&quot;es&quot;</code>. Formatear moneda y fechas con <code>Intl</code>.</li><li>H1 actual: &quot;Tablas, fixtures y goleadores de tu torneo&quot;.</li><li>Propuestas de valor que ya comunica: &quot;TnmSport&quot; · &quot;Tablas, fixtures y goleadores de tu torneo&quot; · &quot;de tu torneo&quot; · &quot;TORNEOS EN JUEGO&quot; · &quot;Liga de Carga 1-3&quot;</li><li>Tono: informal rioplatense (vos), 32.5 palabras por oración, 1.5% de mayúsculas sostenidas. Escribir los textos nuevos con ese registro.</li></ul>
+<h2 id="9-mejoras-obligatorias-respecto-del-original">9. Mejoras obligatorias respecto del original</h2>
+<ol><li>11 elementos focusables sin foco visible. Mantener un <code>:focus-visible</code> claro.</li><li>Agregar &quot;saltar al contenido principal&quot; (skip link), que el original no tiene.</li><li>Contraste: 1 combinaciones por debajo de WCAG AA. Ajustar la paleta para cumplir 4.5:1 en texto normal y 3:1 en texto grande.</li><li>El original no usa WebP/AVIF. Servir AVIF o WebP con fallback.</li><li>El original no soporta modo oscuro. Definir los tokens con variables CSS para poder habilitarlo.</li><li>SEO: falta meta description.</li><li>SEO: no hay datos estructurados JSON-LD. Agregar Organization/WebSite y Product o Article según corresponda.</li></ol>
+<h2 id="9b-referencias-visuales-del-original">9b. Referencias visuales del original</h2>
+<p>Recortes reales de los componentes y zonas descriptos arriba (mismo orden que las tablas de la sección 5):</p>
+<p><a href="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-footer.png">Footer</a> <a href="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-header.png">Header</a> <a href="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-hero.png">Primera sección / hero</a></p>
+<div class="shots"><figure><a href="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-footer.png"><img loading="lazy" src="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-footer.png" alt="Footer"></a><figcaption>Footer</figcaption></figure><figure><a href="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-header.png"><img loading="lazy" src="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-header.png" alt="Header"></a><figcaption>Header</figcaption></figure><figure><a href="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-hero.png"><img loading="lazy" src="../../shots/tnmsport-web.vercel.app/00-home/05-componentes/zone-hero.png" alt="Primera sección / hero"></a><figcaption>Primera sección / hero</figcaption></figure></div>
+<h2 id="10-criterios-de-aceptación">10. Criterios de aceptación</h2>
+<div class="tw"><table><thead><tr><th>Métrica</th><th>Original</th><th>Objetivo</th></tr></thead><tbody><tr><td>LCP</td><td>sin dato</td><td>&lt; 2500 ms</td></tr><tr><td>CLS</td><td>0.0064</td><td>&lt; 0.1</td></tr><tr><td>FCP</td><td>292 ms</td><td>&lt; 1800 ms</td></tr><tr><td>TTFB</td><td>36 ms</td><td>&lt; 800 ms</td></tr><tr><td>Requests</td><td>7</td><td>&lt; 40</td></tr><tr><td>Peso transferido</td><td>69 KB</td><td>&lt; 500 KB</td></tr><tr><td>Nodos DOM</td><td>133</td><td>&lt; 1200</td></tr><tr><td>Imágenes sin alt</td><td>0</td><td>0</td></tr><tr><td>Inputs sin label</td><td>0</td><td>0</td></tr><tr><td>Fallos de contraste AA</td><td>1</td><td>0</td></tr><tr><td>Overflow horizontal</td><td>no</td><td>no, en ningún breakpoint</td></tr><tr><td>Errores de consola</td><td>0</td><td>0</td></tr></tbody></table></div>
+<ul><li>Lighthouse ≥ 90 en Performance, Accessibility, Best Practices y SEO (mobile, con throttling).</li><li>Navegación completa por teclado, con foco visible en todos los elementos interactivos.</li><li>Sin scroll horizontal entre 320px y 1920px.</li></ul>
+<h2 id="11-entregables-esperados">11. Entregables esperados</h2>
+<ol><li>Proyecto que compila y corre con <code>npm install &amp;&amp; npm run dev</code>.</li><li>Tokens de diseño centralizados (variables CSS + config del framework de estilos).</li><li>Componentes reutilizables tipados, con las variantes de la sección 5.</li><li>Las secciones de la sección 4 armadas con datos de ejemplo.</li><li>README con estructura de carpetas, decisiones tomadas y cómo reemplazar el contenido de ejemplo.</li></ol>
+<p><strong>No incluir:</strong> logos, marcas, fotos ni textos del sitio original. Usar placeholders propios.</p>
+</body>
+</html>

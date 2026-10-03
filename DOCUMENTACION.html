@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analizador de sitios web</title>
+<style>
+:root{--bg:#ffffff;--fg:#1c1f24;--muted:#5b6572;--line:#e3e7ec;--accent:#0b62d6;--code:#f4f6f8;--head:#f8fafc}
+@media (prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e6e9ee;--muted:#9aa4b2;--line:#2a2f37;--accent:#6aa9ff;--code:#1b1f26;--head:#1a1e25}}
+*{box-sizing:border-box}
+body{margin:0;padding:2rem 1.25rem 6rem;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1200px;margin-inline:auto}
+h1{font-size:1.9rem;margin:0 0 .3em;letter-spacing:-.02em}
+h2{font-size:1.45rem;margin:2.4em 0 .6em;padding-bottom:.3em;border-bottom:2px solid var(--line)}
+h3{font-size:1.15rem;margin:1.9em 0 .5em;color:var(--accent)}
+h4{font-size:1rem;margin:1.4em 0 .4em}
+p{margin:.55em 0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.88em;font-family:ui-monospace,Consolas,monospace}
+pre{background:var(--code);padding:.9rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82rem;line-height:1.45}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.7em 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.85rem}
+th,td{padding:.42rem .6rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+td:last-child,th:last-child{white-space:normal}
+thead th{background:var(--head);position:sticky;top:0;font-weight:600}
+tbody tr:hover{background:var(--head)}
+details{margin:.6em 0;border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;background:var(--head)}
+summary{cursor:pointer;font-weight:600;font-size:.92rem}
+details[open] summary{margin-bottom:.6em}
+hr{border:0;border-top:1px solid var(--line);margin:2.5em 0}
+ul,ol{margin:.5em 0;padding-left:1.4rem}
+li{margin:.2em 0}
+.swatch{display:inline-block;width:.8em;height:.8em;border-radius:3px;border:1px solid var(--line);margin-right:.4em;vertical-align:-1px}
+.shots{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0}
+.shots figure{margin:0;flex:1 1 260px;max-width:340px}
+.shots img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.shots figcaption{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+.meta{color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<h1 id="analizador-de-sitios-web">Analizador de sitios web</h1>
+<p>Herramienta de línea de comandos, con interfaz gráfica local opcional, que analiza sitios web y produce prompts de construcción listos para pasarle a una IA que genere una aplicación equivalente y mejor.</p>
+<h2 id="1-para-qué-sirve">1. Para qué sirve</h2>
+<p>El caso de uso principal es este: el cliente muestra <strong>sitios de la competencia que le gustaron</strong> y quiere algo con esa estética. La herramienta los mide y traduce ese &quot;me gusta cómo se ve&quot; en una especificación concreta.</p>
+<p>Cada sitio se carga con un <strong>rol</strong>:</p>
+<ul><li><strong>Referencia</strong> (<code>@referencia</code>): un sitio de la competencia que le gustó al cliente. Aporta la <strong>estética</strong> a replicar: color, tipografía, espaciado, forma de los componentes, densidad y movimiento.</li><li><strong>Sitio del cliente</strong> (<code>@cliente</code>): su sitio actual. Aporta la <strong>estructura</strong>, el contenido, las funcionalidades y las integraciones, y es la línea base de rendimiento a superar.</li></ul>
+<p>Con eso se generan tres tipos de entregable:</p>
+<div class="tw"><table><thead><tr><th>Entregable</th><th>Archivo</th><th>Para qué</th></tr></thead><tbody><tr><td>Reporte técnico por sitio</td><td><code>reportes/&lt;sitio&gt;/&lt;sitio&gt;.*</code></td><td>Entender y documentar cada sitio en detalle</td></tr><tr><td>Prompt por sitio</td><td><code>reportes/&lt;sitio&gt;/&lt;sitio&gt;-PROMPT.*</code></td><td>Replicar y mejorar <strong>ese</strong> sitio puntual</td></tr><tr><td><strong>Prompt de síntesis</strong></td><td><code>reportes/PROMPT-SINTESIS.*</code></td><td><strong>El principal:</strong> cruza la estética de todas las referencias con la estructura del cliente</td></tr></tbody></table></div>
+<p>El flujo completo:</p>
+<ol><li>Se cargan los sitios con su rol (por la interfaz o editando <code>links.txt</code>).</li><li>La herramienta los recorre, los mide y los documenta: estructura, design tokens, componentes, responsive, animaciones, accesibilidad y rendimiento.</li><li>Se genera el prompt de síntesis, que extrae lo que las referencias tienen <strong>en común</strong> (eso es el estilo del rubro, no la casualidad de un sitio), lo cruza con la arquitectura de información del cliente, y suma los problemas medidos que la app nueva no debe repetir.</li><li>Ese prompt se le pasa a una IA para que construya la aplicación.</li></ol>
+<p>Analizar solo el sitio del cliente sigue funcionando igual: si no hay referencias marcadas, cada sitio recibe su reporte y su prompt individual.</p>
+<p>Todo lo que aparece en los reportes son <strong>mediciones reales</strong>, no estimaciones: se leen los estilos computados del navegador, no el CSS declarado.</p>
+<h2 id="2-requisitos-e-instalación">2. Requisitos e instalación</h2>
+<ul><li>Node.js 18 o superior.</li><li>Chromium, que se instala con Playwright.</li></ul>
+<pre><code>npm install
+npx playwright install chromium</code></pre>
+<p>Lighthouse queda como dependencia opcional. Si no está instalado, la herramienta avisa y sigue sin él.</p>
+<h2 id="3-uso-rápido">3. Uso rápido</h2>
+<h3 id="interfaz-gráfica">Interfaz gráfica</h3>
+<pre><code>node ui.js</code></pre>
+<p>Abre <code>http://127.0.0.1:4599</code>. Desde ahí se cargan los sitios con su nombre y su rol (referencia o sitio del cliente), se elige la configuración, se dispara el análisis con el progreso en vivo y se abren los reportes generados, con el prompt de síntesis destacado arriba.</p>
+<h3 id="línea-de-comandos">Línea de comandos</h3>
+<pre><code>node analyze.js --file links.txt --pages 5 --brief brief.md --lighthouse
+node analyze.js --cliente &quot;https://sitio-del-cliente.com&quot; &quot;https://competencia1.com&quot; &quot;https://competencia2.com&quot;
+node analyze.js --file links.txt --pages 4 --concurrency 3 --cache
+node analyze.js --from-json</code></pre>
+<p>En PowerShell las URLs que contienen <code>&amp;</code> <strong>deben</strong> ir entre comillas dobles, porque <code>&amp;</code> es un operador reservado del shell. Usar <code>--file links.txt</code> evita el problema por completo.</p>
+<h2 id="4-archivos-de-entrada">4. Archivos de entrada</h2>
+<h3 id="linkstxt">links.txt</h3>
+<p>Una URL por línea. Después de la URL, detrás de un <code>#</code>, van el nombre y el rol. Las líneas vacías y las que empiezan con <code>#</code> se ignoran. El <code>https://</code> es opcional.</p>
+<pre><code>https://www.authogar.com/     # Authogar @cliente
+https://www.macowens.com.ar/  # Macowens @referencia
+https://www.devre.la/         # Devre @referencia</code></pre>
+<p>Sin rol explícito se asume <code>@referencia</code>. Se aceptan también <code>@propio</code> como sinónimo de cliente y <code>@competencia</code> como sinónimo de referencia.</p>
+<p>Lo administra la interfaz gráfica, pero se puede editar a mano. Desde la línea de comandos, <code>--cliente &lt;url&gt;</code> marca esa URL como sitio del cliente y el resto quedan como referencias.</p>
+<h3 id="briefmd-opcional">brief.md (opcional)</h3>
+<p>Briefing del cliente. Se inyecta como <strong>sección 0 del prompt</strong>, con prioridad explícita sobre todo lo que se infiere del sitio actual: donde el pedido del cliente contradiga lo medido, gana el pedido del cliente.</p>
+<p>Hay una plantilla en <code>brief.example.md</code> con las secciones a completar: qué pidió textualmente, qué le molesta del sitio actual, qué se conserva sí o sí, alcance, restricciones técnicas, prioridades y plazos.</p>
+<h2 id="5-opciones-de-línea-de-comandos">5. Opciones de línea de comandos</h2>
+<div class="tw"><table><thead><tr><th>Flag</th><th>Default</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>--file</code>, <code>-f</code></td><td>—</td><td>Lee las URLs de un archivo, una por línea</td></tr><tr><td><code>--limit</code>, <code>-l</code></td><td>—</td><td>Procesa solo las primeras N URLs de la lista</td></tr><tr><td><code>--pages</code>, <code>-p</code></td><td>4</td><td>Páginas por sitio: home más las más representativas</td></tr><tr><td><code>--full-pages</code></td><td>off</td><td>Mide todos los breakpoints en todas las páginas, no solo en el home</td></tr><tr><td><code>--no-sitemap</code></td><td>off</td><td>No lee sitemap.xml; descubre solo por los links del home</td></tr><tr><td><code>--cliente &lt;url&gt;</code></td><td>—</td><td>Marca esa URL como sitio del cliente; el resto quedan como referencias</td></tr><tr><td><code>--brief</code></td><td>—</td><td>Archivo de briefing del cliente</td></tr><tr><td><code>--lighthouse</code></td><td>off</td><td>Corre Lighthouse mobile con throttling</td></tr><tr><td><code>--lh-desktop</code></td><td>off</td><td>Igual pero con perfil desktop</td></tr><tr><td><code>--breakpoints</code></td><td>360,390,768,1024,1280,1440,1920</td><td>Anchos a medir</td></tr><tr><td><code>--concurrency</code>, <code>-c</code></td><td>1</td><td>Sitios analizados en paralelo</td></tr><tr><td><code>--retries</code></td><td>1</td><td>Reintentos por página que falla</td></tr><tr><td><code>--cache</code></td><td>off</td><td>Saltea sitios que ya tengan su JSON generado</td></tr><tr><td><code>--keep-popups</code></td><td>off</td><td>No cierra popups ni banners de cookies</td></tr><tr><td><code>--headed</code></td><td>off</td><td>Muestra el navegador trabajando</td></tr><tr><td><code>--slow</code></td><td>0</td><td>Milisegundos de demora entre acciones, para poder seguirlo a ojo</td></tr><tr><td><code>--no-shots</code></td><td>off</td><td>Sin capturas de ningún tipo</td></tr><tr><td><code>--no-bp-shots</code></td><td>off</td><td>Sin capturas por breakpoint</td></tr><tr><td><code>--no-crops</code></td><td>off</td><td>Sin recortes de componentes</td></tr><tr><td><code>--no-interactions</code></td><td>off</td><td>No capturar estados interactivos (hover, menú, filtros, carrito)</td></tr><tr><td><code>--no-history</code></td><td>off</td><td>No registra la corrida en el historial</td></tr><tr><td><code>--from-json</code></td><td>—</td><td>Regenera los reportes desde un análisis previo, sin volver a navegar</td></tr></tbody></table></div>
+<p><code>--from-json</code> es útil para iterar el formato de los reportes o del prompt sin esperar la corrida completa.</p>
+<h2 id="6-archivos-que-genera">6. Archivos que genera</h2>
+<pre><code>reportes/
+  PROMPT-SINTESIS.md · .html · .docx            el prompt principal: estética de las
+                                                referencias + estructura del cliente
+  resumen.md · resumen.html · resumen.docx      índice y comparativas entre sitios
+  datos-completos.json                          todos los datos crudos
+  &lt;sitio&gt;/
+    &lt;sitio&gt;.md · .html · .docx · .json          reporte técnico
+    &lt;sitio&gt;-PROMPT.md · .html · .docx           prompt de construcción de ese sitio solo
+
+shots/
+  &lt;sitio&gt;/&lt;NN-tipo-pagina&gt;/
+    01-desktop/       captura fullPage a 1440
+    02-mobile/        captura fullPage a 390x844 con touch emulado
+    03-breakpoints/   una captura por ancho medido
+    04-popups/        el estado inicial con el popup, antes de cerrarlo
+    05-componentes/   recortes de cada variante de botón, card e input, y de las zonas
+    06-estados/       hover, foco, menú desplegado, filtros, carrito y buscador
+
+historial/
+  historial.md · .html · .docx                  todas las corridas con su evolución
+  historial.json                                índice de corridas y métricas
+  &lt;corrida&gt;/                                    snapshot de los reportes de esa corrida</code></pre>
+<p><code>reportes/</code> siempre tiene la <strong>última</strong> corrida; <code>historial/</code> conserva las anteriores.</p>
+<p>Los tres formatos tienen el mismo contenido:</p>
+<ul><li><strong>HTML</strong>: el más cómodo de leer. Tema claro y oscuro, tablas con encabezado fijo, muestras de color junto a cada valor hexadecimal y las capturas embebidas.</li><li><strong>DOCX</strong>: para mandarle al cliente. Hoja apaisada, con las imágenes embebidas.</li><li><strong>MD</strong>: para versionar o para pegar en otra herramienta.</li></ul>
+<h2 id="7-qué-contiene-el-reporte-técnico">7. Qué contiene el reporte técnico</h2>
+<div class="tw"><table><thead><tr><th>Sección</th><th>Contenido</th></tr></thead><tbody><tr><td>Páginas analizadas</td><td>Tabla de las páginas descubiertas, con tipo, origen y métricas básicas</td></tr><tr><td>0. Recorrido y popups</td><td>Overlays detectados al entrar, cómo se cerraron, y la traza paso a paso del análisis</td></tr><tr><td>1. Meta y SEO</td><td>title, description, viewport, canonical, robots, Open Graph, Twitter, JSON-LD, hreflang, resource hints</td></tr><tr><td>2. Stack</td><td>React, Next, Vue, Angular, jQuery, Tailwind, Bootstrap, WordPress, más 40 detecciones extra (e-commerce, analítica, animación, iconos)</td></tr><tr><td>3. Estructura y layout</td><td>Landmarks, anatomía sección por sección en orden de scroll, contenedores, capas sticky/fixed, grillas, profundidad del DOM</td></tr><tr><td>4. Tipografía</td><td>Familias, tamaños, pesos, line-heights y letter-spacing por frecuencia de uso real, escala por elemento, fuentes cargadas</td></tr><tr><td>5. Paleta</td><td>Colores de texto, fondo y borde por frecuencia, gradientes, amplitud de la paleta</td></tr><tr><td>6. Espaciado</td><td>Radios, sombras, gaps, paddings, márgenes y anchos de borde</td></tr><tr><td>7. Componentes</td><td>Inventario de 26 tipos, variantes de botón, card e input agrupadas por firma de estilo, links, imágenes, formularios campo por campo, carruseles, tablas, navegación, footer, embeds, y los recortes</td></tr><tr><td>8. Accesibilidad</td><td>Alt, jerarquía de encabezados, labels, nombres accesibles, foco, ARIA, landmarks, y contraste WCAG AA calculado sobre el fondo efectivo</td></tr><tr><td>9. Animaciones</td><td>Transiciones, animaciones, keyframes, transforms, filtros, propiedades que cambian en hover, scroll reveal, prefers-reduced-motion</td></tr><tr><td>10. Responsive</td><td>Una medición por breakpoint, transiciones de layout entre anchos, overflow horizontal con culpables, tap targets chicos</td></tr><tr><td>11. CSS</td><td>Hojas, reglas por tipo, <code>!important</code>, media queries, breakpoints inferidos, <code>@font-face</code>, <code>@supports</code>, dark mode</td></tr><tr><td>12. Performance y red</td><td>Navigation timing, paint, LCP, CLS, recursos por tipo y host, terceros, requests fallidos</td></tr><tr><td>13. Lighthouse</td><td>Puntajes por categoría, métricas, oportunidades y auditorías de accesibilidad falladas</td></tr><tr><td>15. Catálogo</td><td>Anatomía de la card de producto: campos que muestra en orden, grilla, y señales del modelo de negocio B2B (precios detrás de login, unidad de venta, cantidad mínima, stock, CUIT)</td></tr><tr><td>16. Estados interactivos</td><td>Hover real con las propiedades que cambian, foco de teclado, menú desplegado, filtros, carrito y autocompletado del buscador</td></tr><tr><td>17. Copy y tono</td><td>Titulares, propuestas de valor, CTAs, promesas del rubro, taxonomía de la navegación y registro (vos / usted / tú)</td></tr><tr><td>18. Páginas adicionales</td><td>Resumen de cada página secundaria: estructura, componentes, formularios y responsive</td></tr></tbody></table></div>
+<h2 id="8-qué-contiene-el-prompt-de-síntesis">8. Qué contiene el prompt de síntesis</h2>
+<p>Es el entregable principal cuando hay referencias cargadas. Vive en <code>reportes/PROMPT-SINTESIS.*</code>.</p>
+<div class="tw"><table><thead><tr><th>Sección</th><th>Contenido</th></tr></thead><tbody><tr><td>0. Punto de partida</td><td>Quién es quién (cliente y referencias), el briefing si se pasó, y la regla de oro: replicar el lenguaje visual, nunca el contenido</td></tr><tr><td>1. Objetivo</td><td>Qué construir, combinando estética de las referencias con estructura del cliente</td></tr><tr><td>2. Estética en común</td><td>Consenso entre referencias: color (neutros compartidos y acentos por sitio), tipografía, forma y espaciado, componentes, layout y densidad, movimiento. Cada valor indica en cuántas referencias aparece</td></tr><tr><td>3. Estructura y funcionalidad</td><td>Páginas, secciones en orden de scroll, navegación, footer e integraciones, tomadas del sitio del cliente</td></tr><tr><td>4. Stack</td><td>Lo detectado en cada sitio y la recomendación</td></tr><tr><td>5. Referencias visuales</td><td>Recortes de header, nav y hero de cada sitio</td></tr><tr><td>6. Calidad exigida</td><td>Tabla con el mejor valor entre todos los sitios analizados y el objetivo a superar, más la lista de errores que comete cada sitio y no hay que repetir</td></tr><tr><td>7. Entregables</td><td>Qué se espera recibir, y qué no incluir</td></tr></tbody></table></div>
+<p>La lógica del consenso es la parte que aporta valor real: un valor que aparece en 3 de 4 referencias es el estilo del rubro; uno que aparece en 1 de 4 es la decisión particular de un sitio. El prompt lo dice explícitamente en cada tabla, con la columna &quot;Referencias&quot; en formato <code>n/total</code>, para que la IA sepa qué es regla y qué es opción.</p>
+<h2 id="9-qué-contiene-el-prompt-por-sitio">9. Qué contiene el prompt por sitio</h2>
+<p>Es el entregable central. Traduce las mediciones a una especificación accionable, en secciones numeradas:</p>
+<div class="tw"><table><thead><tr><th>Sección</th><th>Contenido</th></tr></thead><tbody><tr><td>0. Pedido del cliente</td><td>El briefing, con prioridad sobre el resto (solo si se pasó <code>--brief</code>)</td></tr><tr><td>1. Objetivo</td><td>Qué construir, con la aclaración de no copiar marcas ni contenido del original</td></tr><tr><td>2. Stack</td><td>Recomendación derivada de lo detectado, más si es e-commerce y qué prever</td></tr><tr><td>3. Design tokens</td><td>Colores con roles asignados, escala tipográfica, espaciado, radios y sombras, con avisos de consolidación cuando hay dispersión</td></tr><tr><td>4. Mapa de páginas</td><td>Una fila por tipo de página con sus secciones y componentes destacados</td></tr><tr><td>4b. Estructura del home</td><td>Las secciones en orden de scroll con su contenido</td></tr><tr><td>5. Componentes</td><td>Qué construir, con las variantes mapeadas a primary/secondary/ghost y una nota de implementación accesible por componente</td></tr><tr><td>6. Responsive</td><td>Breakpoints a implementar, umbral de hamburguesa, cards por fila, y el requisito duro de no tener scroll horizontal</td></tr><tr><td>7. Movimiento</td><td>Duraciones, easings, qué cambia en hover, y estandarización propuesta</td></tr><tr><td>8. Contenido y datos</td><td>Volumen de contenido, exigencia de datos externos, SEO e internacionalización</td></tr><tr><td>9. Mejoras obligatorias</td><td>Lista numerada de los problemas medidos en el original que la app nueva debe corregir</td></tr><tr><td>9b. Referencias visuales</td><td>Los recortes de los componentes y zonas del original</td></tr><tr><td>10. Criterios de aceptación</td><td>Tabla original contra objetivo, con la línea base de Lighthouse si se corrió</td></tr><tr><td>11. Entregables</td><td>Qué se espera recibir, y qué no incluir</td></tr></tbody></table></div>
+<h2 id="10-historial-de-corridas">10. Historial de corridas</h2>
+<p>Cada corrida se registra automáticamente. No hace falta hacer nada; para desactivarlo está <code>--no-history</code>.</p>
+<p>Qué guarda:</p>
+<ul><li><strong>Un snapshot de los reportes</strong> en <code>historial/&lt;corrida&gt;/</code>: los <code>.md</code>, <code>.html</code>, <code>.docx</code> y <code>.json</code> de cada sitio, sus prompts, el prompt de síntesis y el resumen. Así una corrida nueva no pisa lo anterior.</li><li><strong>Un índice con métricas</strong> en <code>historial/historial.json</code>: fecha, duración, opciones usadas, y por sitio su rol, estado y 22 métricas (Lighthouse, LCP, CLS, requests, peso, nodos DOM, fallos de contraste, imágenes sin alt, inputs sin label, breakpoints con overflow, errores de consola, cantidad de secciones, botones, cards, tokens distintos, overlays).</li><li><strong>Una vista legible</strong> en <code>historial/historial.md</code>, <code>.html</code> y <code>.docx</code>, con tres partes: el índice de corridas, el detalle de cada una con el <strong>cambio de cada métrica respecto de la corrida anterior</strong>, y una tabla de evolución por sitio a lo largo del tiempo.</li></ul>
+<p>Los deltas vienen marcados según si el cambio es una mejora o un empeoramiento: <code>✔</code> mejoró, <code>✖</code> empeoró, <code>=</code> sin cambios. La dirección depende de la métrica: en LCP o requests menos es mejor, en los puntajes de Lighthouse más es mejor, y las de estructura (secciones, botones, cards) se muestran sin juicio porque no son ni buenas ni malas.</p>
+<p>Para qué sirve en la práctica:</p>
+<ul><li>Demostrarle al cliente la mejora: se mide su sitio actual hoy, y cuando la app nueva esté lista se la mide con la misma herramienta. El historial muestra el antes y el después con los mismos criterios.</li><li>Detectar que un sitio de referencia cambió entre corridas.</li><li>Recuperar el prompt exacto que se usó en una entrega anterior.</li></ul>
+<p>Una limitación a tener en cuenta: los snapshots incluyen los reportes, pero <strong>no las capturas de pantalla</strong>, que viven en <code>shots/</code> y siempre corresponden a la última corrida de cada sitio. Un reporte archivado abierto hoy muestra las imágenes actuales, no las de su fecha. Se hizo así porque cada corrida genera decenas de megabytes de imágenes.</p>
+<p>En la interfaz gráfica el historial aparece al pie, con una fila por sitio y los deltas coloreados en verde o rojo.</p>
+<h2 id="11-arquitectura">11. Arquitectura</h2>
+<pre><code>analyze.js              CLI y orquestación
+ui.js                   servidor HTTP local de la interfaz
+ui/index.html           interfaz gráfica
+
+lib/
+  browserHelpers.js     utilidades inyectadas en la página (window.__A)
+  discovery.js          descubrimiento y clasificación de páginas
+  popups.js             detección y cierre de overlays
+  network.js            intercepción de red
+  lighthouse.js         corrida de Lighthouse
+  zip.js                escritor de ZIP para el DOCX
+  extractors/           lo que corre dentro del navegador
+    meta.js  stack.js  styles.js  layout.js  components.js
+    a11y.js  animations.js  cssom.js  perf.js  probe.js
+    catalog.js          anatomía de la card de producto y señales B2B
+    content.js          copy, tono, promesas y taxonomía
+  report/
+    markdown.js         reportes en markdown
+    mdparse.js          parser del markdown generado
+    html.js             markdown a HTML
+    docx.js             markdown a DOCX (OOXML)
+  history.js            historial de corridas y su comparación
+  interactions.js       captura de estados interactivos
+    prompt.js           el prompt de construcción por sitio
+    synthesis.js        el prompt de síntesis entre referencias y cliente</code></pre>
+<h3 id="cómo-corre-el-análisis-de-una-página">Cómo corre el análisis de una página</h3>
+<ol><li>Se crea un contexto de navegador nuevo, viewport 1440x900, con los helpers y el observador de CLS/LCP inyectados antes de cualquier script de la página.</li><li>Se navega con <code>networkidle</code> y timeout de 60 segundos. Si no llega, se reintenta con <code>domcontentloaded</code>.</li><li>Se captura el estado inicial con el popup visible, y después se cierra.</li><li>Se hace un scroll completo para disparar el lazy-load y las animaciones de scroll.</li><li>Corren los nueve extractores, cada uno en su propio <code>page.evaluate()</code>.</li><li>Se recortan los componentes y zonas que los extractores marcaron.</li><li>Se captura el desktop fullPage.</li><li>Se mide cada breakpoint: se cambia el viewport, se vuelve a cerrar lo que aparezca, y se corre la sonda.</li><li>Se abre un contexto mobile aparte, con touch emulado, para la captura fullPage y su propia medición.</li></ol>
+<h3 id="los-extractores">Los extractores</h3>
+<p>Corren dentro del navegador, así que no pueden usar <code>require</code> ni cerrar sobre variables de Node. Comparten utilidades a través de <code>window.__A</code>, que <code>browserHelpers.js</code> instala con <code>addInitScript</code> en cada documento.</p>
+<p><code>styles.js</code> hace un solo recorrido de <code>getComputedStyle</code> sobre todos los elementos del body y de ahí saca tipografía, paleta, espaciado, estadísticas de display y contraste. Los demás consultan el DOM de forma dirigida.</p>
+<p>Las variantes de componentes se agrupan por <strong>firma de estilo</strong>: se toman las propiedades relevantes del estilo computado, se concatenan y se agrupan por esa clave. Eso revela el design system tal como se usa, no como está declarado. Al agrupar, se marca un elemento representativo con <code>data-shot</code> para poder recortarlo después.</p>
+<h3 id="el-docx">El DOCX</h3>
+<p>Se genera sin dependencias externas. <code>zip.js</code> escribe el contenedor ZIP con deflate y CRC32 propios, y <code>docx.js</code> arma el OOXML mínimo: <code>document.xml</code>, <code>styles.xml</code>, <code>numbering.xml</code>, relaciones y content types. Soporta encabezados, párrafos con negrita, cursiva, código y links, listas, tablas con encabezado repetido, y PNG embebidos leyendo las dimensiones del chunk IHDR.</p>
+<p>Los <code>&lt;details&gt;</code> del markdown se aplanan: el resumen queda como subtítulo.</p>
+<h2 id="12-la-interfaz-gráfica">12. La interfaz gráfica</h2>
+<p><code>node ui.js</code> levanta un servidor HTTP nativo que escucha <strong>solo en 127.0.0.1</strong>. No tiene dependencias.</p>
+<div class="tw"><table><thead><tr><th>Endpoint</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>GET /api/links</code></td><td>Lee links.txt</td></tr><tr><td><code>PUT /api/links</code></td><td>Lo reescribe, normalizando URLs y descartando inválidas y repetidas</td></tr><tr><td><code>POST /api/run</code></td><td>Arranca el análisis</td></tr><tr><td><code>POST /api/stop</code></td><td>Lo detiene</td></tr><tr><td><code>GET /api/status</code></td><td>Estado y últimas líneas del log</td></tr><tr><td><code>GET /api/stream</code></td><td>Server-sent events con el progreso en vivo</td></tr><tr><td><code>GET /api/reports</code></td><td>Lista los reportes generados</td></tr><tr><td><code>GET /api/briefs</code></td><td>Lista los archivos de briefing disponibles</td></tr><tr><td><code>GET /api/history</code></td><td>Historial de corridas con sus métricas y deltas</td></tr></tbody></table></div>
+<h3 id="diseño-de-la-interfaz">Diseño de la interfaz</h3>
+<p>La consola es una sola página servida por <code>ui.js</code>, sin framework ni build step: la herramienta no tiene dependencias de frontend y no vale la pena perder eso por una pantalla. Los criterios que sí se aplican son los de una interfaz moderna:</p>
+<ul><li><strong>Tokens de diseño</strong> como variables CSS, con un único color de acento (verde terminal) para todo lo interactivo. Ámbar y rojo aparecen solo para estados. Tema oscuro por defecto y claro por <code>prefers-color-scheme</code>.</li><li><strong>Cinco pestañas</strong> con patrón ARIA <code>tablist</code>/<code>tab</code>/<code>tabpanel</code>, navegables con flechas, Home y End, con la pestaña activa recordada entre sesiones. Al arrancar un análisis salta sola a Progreso.</li><li><strong>Barra de acción fija</strong> abajo: los botones de analizar y detener, más la última línea del log, siempre visibles sin importar en qué pestaña estés.</li><li><strong>Responsive real</strong>: la tabla de sitios se convierte en tarjetas apiladas por debajo de 860px y las pestañas scrollean en horizontal. Verificado con la propia herramienta a 1440, 768 y 390px: sin overflow horizontal.</li><li><strong>WCAG 2.2 AA</strong>: foco visible de 2px con offset (2.4.11), todos los elementos interactivos de 32px o más (2.5.8 pide 24), cada input con su <code>label</code>, <code>aria-live</code> en los estados y <code>prefers-reduced-motion</code> respetado.</li><li><strong>Log tipo terminal</strong> con filtro en vivo, autoscroll conmutable, copiar al portapapeles y coloreado por tipo de línea (éxito, error, advertencia).</li></ul>
+<h3 id="cómo-mantiene-la-conexión">Cómo mantiene la conexión</h3>
+<p>El progreso llega por server-sent events, que es una conexión HTTP que queda abierta durante toda la corrida. Eso puede cortarse por motivos ajenos a la herramienta: el equipo se suspende, el navegador tira la conexión por inactividad, o el servidor se reinicia. Para que la interfaz nunca quede mostrando datos viejos sin avisar:</p>
+<ul><li>El servidor manda un <code>ping</code> cada 15 segundos y desarma los timeouts del socket (<code>server.timeout</code>, <code>requestTimeout</code> y <code>headersTimeout</code> en 0), así una corrida de 20 minutos no se corta sola.</li><li>La interfaz tiene un indicador de conexión en la barra superior: <strong>conectado</strong>, <strong>reconectando…</strong> o <strong>servidor caído</strong>.</li><li>Además del stream, sondea <code>/api/status</code> cada 5 segundos. Si el stream quedó mudo más de 45 segundos, lo reabre; y si se perdieron líneas de log mientras estuvo cortado, las recupera del sondeo.</li><li>Al volver de una suspensión o al cambiar de pestaña, revisa el estado enseguida.</li></ul>
+<p>Las capturas se sirven con <code>ETag</code> y <code>Cache-Control: max-age=3600</code>, y responden <code>304</code> si el navegador ya las tiene. Sin eso, abrir varias pestañas de reportes con imágenes de varios MB agotaba el límite de seis conexiones por origen del navegador y la interfaz parecía trabada.</p>
+<p>Los argumentos del CLI se construyen como array y se pasan a <code>spawn</code> sin shell, y los valores numéricos se validan por rango, así que no hay forma de inyectar comandos desde el navegador. El servidor sirve archivos solo de <code>reportes/</code> y <code>shots/</code>, verificando que la ruta resuelta no se escape de esas carpetas.</p>
+<h2 id="13-heurísticas-y-sus-límites">13. Heurísticas y sus límites</h2>
+<p>Conviene saber qué partes son medición exacta y qué partes son inferencia:</p>
+<ul><li><strong>Medición exacta</strong>: estilos computados, conteos de elementos, timing de red, contraste, dimensiones, media queries del CSSOM.</li><li><strong>Inferencia con margen de error</strong>:</li><li>*Detección de stack*: se basa en marcadores en el DOM, variables globales y nombres de clases. Un sitio puede usar una tecnología sin dejar rastro visible.</li><li>*Menú hamburguesa*: primero se buscan selectores conocidos; si no hay, se marca un candidato por heurística y el reporte lo señala como &quot;verificar a mano&quot;. Un sitio puede tener un botón de menú que no matchee ningún patrón típico.</li><li>*Cards por fila*: es una moda geométrica sobre elementos de ancho similar alineados en la misma fila. En homes cargadas de carruseles conviene mirarla junto a la captura del breakpoint.</li><li>*Tipo de página*: se clasifica por la URL. Una ruta poco convencional puede caer en &quot;página interna&quot;.</li><li>*Overflow horizontal*: se descartan los elementos recortados por un ancestro con <code>overflow</code> distinto de visible, para no reportar los carruseles como roturas de layout.</li><li>*Consenso entre referencias*: los colores se agrupan por proximidad (se cuantiza cada canal), así que <code>#ffffff</code> y <code>#fefefe</code> cuentan como el mismo. Eso hace que el consenso sea legible, pero significa que un &quot;2/2&quot; puede corresponder a tonos apenas distintos.</li><li>*Secciones de la página*: en SPAs con wrappers anidados se desciende automáticamente hasta encontrar bloques de altura razonable. En sitios con estructura muy plana o muy anidada, el corte puede no coincidir con lo que un diseñador llamaría &quot;sección&quot;.</li><li>*Muestra de elementos*: el recorrido de estilos tiene un tope de 25.000 elementos. Cuando se alcanza, el reporte lo dice explícitamente y las frecuencias corresponden a esa muestra, no al total.</li><li><strong>Deliberadamente fuera de alcance</strong>: checkout y login no se analizan, porque son flujos con datos personales.</li></ul>
+<p>Además, las métricas de la sección 12 se miden <strong>sin throttling</strong>, así que son optimistas: representan una conexión y una CPU buenas. Para números defendibles ante el cliente hay que usar <code>--lighthouse</code>, que sí aplica throttling de red y CPU. La diferencia es grande: un sitio que en la sección 12 parece rápido puede dar 27 de performance en Lighthouse.</p>
+<h2 id="14-tiempos">14. Tiempos</h2>
+<p>Con 4 páginas por sitio y Lighthouse, calcular entre 4 y 6 minutos por sitio. Sin Lighthouse y solo el home, entre 35 y 60 segundos. Los sitios que nunca alcanzan <code>networkidle</code> son los más lentos, porque agotan el timeout de 60 segundos antes de caer al reintento.</p>
+<p>Para listas largas conviene <code>--concurrency 3</code> y <code>--cache</code>.</p>
+<h2 id="15-problemas-frecuentes">15. Problemas frecuentes</h2>
+<div class="tw"><table><thead><tr><th>Síntoma</th><th>Causa y solución</th></tr></thead><tbody><tr><td><code>No se permite usar el carácter de Y comercial (&amp;)</code></td><td>PowerShell interpretando el <code>&amp;</code> de la URL. Encerrar la URL entre comillas dobles, o usar <code>--file links.txt</code></td></tr><tr><td><code>networkidle no llegó</code> en el log</td><td>Normal en sitios con polling o analítica constante. Cae solo a <code>domcontentloaded</code> y sigue</td></tr><tr><td>Lighthouse no corre</td><td>Falta instalarlo: <code>npm install lighthouse</code>. Es dependencia opcional</td></tr><tr><td>Un sitio da timeout siempre</td><td>Puede estar bloqueando automatización. Probar con <code>--headed</code> para ver qué pasa</td></tr><tr><td>El DOCX pesa mucho</td><td>Son las capturas embebidas. Usar <code>--no-crops</code> o <code>--no-bp-shots</code>, o quedarse con el HTML</td></tr><tr><td>Faltan recortes de componentes</td><td>El elemento estaba tapado, animado o fuera de flujo cuando se intentó capturarlo. El log dice cuántos se guardaron sobre cuántos se intentaron</td></tr><tr><td>La interfaz se traba después de unos minutos</td><td>Mirá el indicador de conexión arriba a la derecha. Si dice <strong>servidor caído</strong>, el proceso <code>node ui.js</code> se cerró: tiene que quedar corriendo en una terminal propia mientras se usa la interfaz. Si dice <strong>reconectando…</strong>, se cortó el stream y la interfaz sigue funcionando por sondeo</td></tr><tr><td>La terminal se congela sola en Windows</td><td>Si hiciste clic dentro de la ventana de la consola, el modo de selección rápida de Windows pausa el proceso hasta que presiones Escape o Enter. No es un cuelgue de la herramienta</td></tr><tr><td><code>EADDRINUSE</code> al levantar la interfaz</td><td>Ya hay otra instancia en el puerto 4599. Cerrala, o usá otro puerto: <code>set PORT=4600 &amp;&amp; node ui.js</code></td></tr><tr><td>El análisis sigue pero la interfaz no muestra nada</td><td>El análisis corre en un proceso aparte, así que sigue aunque la interfaz se caiga. Al volver a abrirla recupera el estado y el log desde <code>/api/status</code></td></tr></tbody></table></div>
+<h2 id="16-cómo-extenderlo">16. Cómo extenderlo</h2>
+<p><strong>Agregar una detección de tecnología</strong>: en <code>lib/extractors/stack.js</code>, sumar una entrada al objeto <code>probes</code> con una función que devuelva booleano. Se ejecuta dentro de un try, así que no hace falta defender cada acceso.</p>
+<p><strong>Agregar una métrica nueva</strong>: si necesita recorrer todos los elementos, sumarla al recorrido único de <code>styles.js</code> en lugar de hacer otro <code>page.evaluate</code> con su propio loop. Si es puntual, agregarla al extractor que corresponda.</p>
+<p><strong>Agregar un tipo de componente</strong>: sumar el selector al objeto <code>SEL</code> de <code>components.js</code>. El conteo sale automático. Si además querés variantes y recorte, usar <code>A.variants()</code> con un prefijo de tag.</p>
+<p><strong>Cambiar el prompt</strong>: todo el texto está en <code>lib/report/prompt.js</code>, que recibe el resultado del análisis y devuelve markdown. Los tres formatos se generan a partir de ese markdown, así que un cambio ahí se propaga a MD, HTML y DOCX.</p>
+<p><strong>Cambiar un reporte</strong>: <code>lib/report/markdown.js</code> es la fuente única. <code>html.js</code> y <code>docx.js</code> solo convierten.</p>
+</body>
+</html>

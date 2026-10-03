@@ -1,0 +1,6929 @@
+{
+  "ok": true,
+  "url": "https://www.hergo.com.ar/",
+  "pageType": "home",
+  "pageLabel": "Home",
+  "slug": "00-home",
+  "source": "entrada",
+  "finalUrl": "https://www.hergo.com.ar/",
+  "status": 200,
+  "waitStrategy": "networkidle",
+  "loadMs": 9703,
+  "totalMs": 32922,
+  "meta": {
+    "title": "Hergo",
+    "titleLength": 5,
+    "description": null,
+    "descriptionLength": 0,
+    "viewport": "width=device-width, initial-scale=1.0",
+    "lang": "en",
+    "dir": null,
+    "charset": "utf-8",
+    "favicon": "https://www.hergo.com.ar/assets/flecha-eogHN02H.svg",
+    "ogImage": null,
+    "canonical": null,
+    "robots": null,
+    "themeColor": null,
+    "generator": null,
+    "manifest": null,
+    "og": {},
+    "twitter": {},
+    "hreflang": [],
+    "jsonLdTypes": [],
+    "resourceHints": [],
+    "metaTagCount": 2,
+    "htmlBytes": 29201
+  },
+  "stack": {
+    "react": true,
+    "next": false,
+    "vue": false,
+    "angular": false,
+    "jquery": false,
+    "tailwind": true,
+    "bootstrap": false,
+    "wordpress": false
+  },
+  "stackExtras": [
+    "Google Tag Manager",
+    "Google Analytics"
+  ],
+  "stackAssets": {
+    "scriptHosts": [
+      "www.googletagmanager.com",
+      "www.hergo.com.ar"
+    ],
+    "inlineScripts": 1,
+    "externalScripts": 2,
+    "externalStylesheets": 1,
+    "inlineStyleTags": 0
+  },
+  "layout": {
+    "landmarks": {
+      "header": 0,
+      "nav": 1,
+      "footer": 1,
+      "main": 0,
+      "aside": 0,
+      "section": 9,
+      "article": 0,
+      "search": 0
+    },
+    "header": false,
+    "nav": true,
+    "footer": true,
+    "main": false,
+    "sections": 9,
+    "containerMaxWidths": [
+      {
+        "value": "1280px",
+        "count": 4
+      },
+      {
+        "value": "320px",
+        "count": 3
+      },
+      {
+        "value": "896px",
+        "count": 2
+      },
+      {
+        "value": "1152px",
+        "count": 1
+      }
+    ],
+    "containerPaddings": [
+      {
+        "value": "0px / 0px",
+        "count": 5
+      },
+      {
+        "value": "16px / 16px",
+        "count": 4
+      },
+      {
+        "value": "32px / 32px",
+        "count": 1
+      }
+    ],
+    "blocks": [
+      {
+        "order": 1,
+        "element": "section#hero.bg-hergo-red.text-white.pt-12",
+        "heading": "Primeras marcas.",
+        "height": 415,
+        "viewportsTall": 0.46,
+        "display": "block",
+        "columns": null,
+        "gridTemplate": null,
+        "padding": "160px 0px 0px",
+        "background": "#fe0061",
+        "children": 2,
+        "images": 2,
+        "links": 5,
+        "buttons": 9,
+        "cards": 0,
+        "text": "PORTAL AUTOGESTIÓN GENERAR TARJETA VIRTUAL Empresa Ofertas Trabajar en Hergo Tarjeta Hergo"
+      },
+      {
+        "order": 2,
+        "element": "div.flex.flex-col.lg:flex-row",
+        "heading": "Revista Ofertas #3226",
+        "height": 436,
+        "viewportsTall": 0.48,
+        "display": "flex",
+        "columns": 2,
+        "gridTemplate": null,
+        "padding": "0px",
+        "background": "transparente",
+        "children": 2,
+        "images": 1,
+        "links": 1,
+        "buttons": 0,
+        "cards": 0,
+        "text": "Revista Ofertas #3226 Hacé click y descubrí lo sencillo que es ahorrar con nosotros. Desca"
+      },
+      {
+        "order": 3,
+        "element": "div.flex.flex-col.md:flex-row",
+        "heading": null,
+        "height": 64,
+        "viewportsTall": 0.07,
+        "display": "flex",
+        "columns": 4,
+        "gridTemplate": null,
+        "padding": "4px 16px",
+        "background": "#0172bc",
+        "children": 4,
+        "images": 5,
+        "links": 0,
+        "buttons": 0,
+        "cards": 0,
+        "text": "Medios de pago: efectivo y tarjetas de débito Tarjeta de crédito"
+      },
+      {
+        "order": 4,
+        "element": "section.relative.py-8.md:py-12",
+        "heading": "Salón de ventas:",
+        "height": 438,
+        "viewportsTall": 0.49,
+        "display": "block",
+        "columns": null,
+        "gridTemplate": null,
+        "padding": "48px 0px",
+        "background": "transparente",
+        "children": 2,
+        "images": 3,
+        "links": 0,
+        "buttons": 0,
+        "cards": 0,
+        "text": "Salón de ventas: Ruta 88 y Magallanes a 600 metros de Champagnat y de Juan B. Justo Días y"
+      },
+      {
+        "order": 5,
+        "element": "iframe",
+        "heading": null,
+        "height": 400,
+        "viewportsTall": 0.44,
+        "display": "block",
+        "columns": null,
+        "gridTemplate": null,
+        "padding": "0px",
+        "background": "transparente",
+        "children": 0,
+        "images": 0,
+        "links": 0,
+        "buttons": 0,
+        "cards": 0,
+        "text": ""
+      },
+      {
+        "order": 6,
+        "element": "section#company.w-full.bg-white",
+        "heading": "¿Quiénes somos?",
+        "height": 1451,
+        "viewportsTall": 1.61,
+        "display": "block",
+        "columns": null,
+        "gridTemplate": null,
+        "padding": "0px",
+        "background": "#ffffff",
+        "children": 4,
+        "images": 4,
+        "links": 0,
+        "buttons": 0,
+        "cards": 0,
+        "text": "¿Quiénes somos? Somos una empresa marplatense dedicada a la venta Mayorista y distribución"
+      },
+      {
+        "order": 7,
+        "element": "section#offers.bg-hergo-red.py-12.md:py-20",
+        "heading": null,
+        "height": 248,
+        "viewportsTall": 0.28,
+        "display": "block",
+        "columns": null,
+        "gridTemplate": null,
+        "padding": "80px 0px",
+        "background": "#fe0061",
+        "children": 1,
+        "images": 0,
+        "links": 1,
+        "buttons": 0,
+        "cards": 0,
+        "text": "DESCARGAR PDF: 12/08/2026 al 18/08/2026"
+      },
+      {
+        "order": 8,
+        "element": "div.grid.lg:grid-cols-2.gap-8",
+        "heading": "Trabajar en Hergo",
+        "height": 1435,
+        "viewportsTall": 1.59,
+        "display": "grid",
+        "columns": 2,
+        "gridTemplate": "464px 464px",
+        "padding": "0px",
+        "background": "transparente",
+        "children": 2,
+        "images": 0,
+        "links": 0,
+        "buttons": 1,
+        "cards": 0,
+        "text": "Entendemos que el recurso humano es el que hace la diferencia, por eso propiciamos un ámbi"
+      },
+      {
+        "order": 9,
+        "element": "div.w-full.bg-hergo-blue-light.px-6",
+        "heading": "MEDIOS DE PAGO:",
+        "height": 369,
+        "viewportsTall": 0.41,
+        "display": "flex",
+        "columns": 1,
+        "gridTemplate": null,
+        "padding": "48px 40px",
+        "background": "#0172bc",
+        "children": 1,
+        "images": 0,
+        "links": 0,
+        "buttons": 0,
+        "cards": 3,
+        "text": "En nuestro salón mayorista podrás disfrutar nuestras ofertas siendo comerciante y/o consum"
+      },
+      {
+        "order": 10,
+        "element": "div.grid.grid-cols-1.md:grid-cols-3",
+        "heading": "› Tarjeta Azul",
+        "height": 940,
+        "viewportsTall": 1.04,
+        "display": "grid",
+        "columns": 3,
+        "gridTemplate": "384px 384px 384px",
+        "padding": "0px",
+        "background": "transparente",
+        "children": 3,
+        "images": 3,
+        "links": 0,
+        "buttons": 2,
+        "cards": 0,
+        "text": "› Tarjeta Azul REQUISITOS: Ser comerciante del rubro Dni del titular del comercio Fotocopi"
+      },
+      {
+        "order": 11,
+        "element": "footer.bg-hergo-blue.text-white.py-8",
+        "heading": "INSTITUCIONAL",
+        "height": 447,
+        "viewportsTall": 0.5,
+        "display": "block",
+        "columns": null,
+        "gridTemplate": null,
+        "padding": "48px 0px",
+        "background": "#0045e5",
+        "children": 1,
+        "images": 1,
+        "links": 0,
+        "buttons": 0,
+        "cards": 6,
+        "text": "Magallanes 9526 (Ruta 88 y Magallanes) (0223) 465 3434 (B7611FRZ) Mar del Plata Pcia de Bu"
+      }
+    ],
+    "blocksCount": 11,
+    "layers": [
+      {
+        "element": "nav.fixed.top-0.left-0",
+        "position": "fixed",
+        "zIndex": "50",
+        "size": "1425x177",
+        "top": "0px",
+        "bottom": "723.156px",
+        "background": "#0045e5",
+        "role": "header/nav"
+      }
+    ],
+    "grids": [
+      {
+        "element": "div.grid.grid-rows-2.h-full",
+        "columns": "1216px",
+        "rows": "154.844px 154.844px",
+        "gap": "32px",
+        "items": 2
+      },
+      {
+        "element": "div.grid.lg:grid-cols-2.gap-8",
+        "columns": "464px 464px",
+        "rows": "1435.2px",
+        "gap": "320px",
+        "items": 2
+      },
+      {
+        "element": "div.grid.grid-cols-1.gap-2",
+        "columns": "414px",
+        "rows": "24px 24px 24px 24px 24px 24px 24px",
+        "gap": "8px",
+        "items": 7
+      },
+      {
+        "element": "div.grid.grid-cols-1.md:grid-cols-3",
+        "columns": "384px 384px 384px",
+        "rows": "940.125px",
+        "gap": "48px",
+        "items": 3
+      },
+      {
+        "element": "div.grid.grid-cols-1.md:grid-cols-3",
+        "columns": "357.328px 357.328px 357.344px",
+        "rows": "351.125px",
+        "gap": "48px",
+        "items": 3
+      }
+    ],
+    "dom": {
+      "totalNodes": 294,
+      "maxDepth": 13,
+      "avgDepth": 9.4,
+      "deepestElement": "path.[object.SVGAnimatedString]",
+      "textNodes": 4448
+    },
+    "page": {
+      "scrollHeight": 7098,
+      "scrollWidth": 1425,
+      "viewport": "1440x900",
+      "viewportsTall": 7.9,
+      "horizontalOverflow": false,
+      "bodyBackground": "#000000 (0.00)"
+    },
+    "overflowingElements": [],
+    "displayStats": {
+      "grid": 5,
+      "flex": 62,
+      "sticky": 0,
+      "fixed": 1,
+      "absolute": 4,
+      "displays": [
+        {
+          "value": "block",
+          "count": 176
+        },
+        {
+          "value": "flex",
+          "count": 62
+        },
+        {
+          "value": "inline-block",
+          "count": 17
+        },
+        {
+          "value": "inline",
+          "count": 11
+        },
+        {
+          "value": "list-item",
+          "count": 9
+        },
+        {
+          "value": "grid",
+          "count": 5
+        }
+      ],
+      "positions": [
+        {
+          "value": "static",
+          "count": 269
+        },
+        {
+          "value": "relative",
+          "count": 6
+        },
+        {
+          "value": "absolute",
+          "count": 4
+        },
+        {
+          "value": "fixed",
+          "count": 1
+        }
+      ],
+      "overflows": [
+        {
+          "value": "clip",
+          "count": 25
+        },
+        {
+          "value": "hidden",
+          "count": 7
+        },
+        {
+          "value": "auto",
+          "count": 1
+        }
+      ],
+      "zIndexes": [
+        {
+          "value": "10",
+          "count": 2
+        },
+        {
+          "value": "50",
+          "count": 1
+        }
+      ],
+      "maxWidths": [
+        {
+          "value": "320px",
+          "count": 6
+        },
+        {
+          "value": "1280px",
+          "count": 4
+        },
+        {
+          "value": "896px",
+          "count": 2
+        },
+        {
+          "value": "1152px",
+          "count": 1
+        },
+        {
+          "value": "448px",
+          "count": 1
+        }
+      ],
+      "cursorPointer": 37
+    }
+  },
+  "typography": {
+    "fontFamilies": [
+      {
+        "value": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+        "count": 278
+      },
+      {
+        "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "count": 2
+      }
+    ],
+    "fontFamiliesAll": [
+      {
+        "value": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+        "count": 278
+      },
+      {
+        "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "count": 2
+      }
+    ],
+    "fontSizes": [
+      {
+        "value": "16px",
+        "count": 160
+      },
+      {
+        "value": "19.2px",
+        "count": 30
+      },
+      {
+        "value": "22.4px",
+        "count": 28
+      },
+      {
+        "value": "24px",
+        "count": 22
+      },
+      {
+        "value": "14.4px",
+        "count": 10
+      },
+      {
+        "value": "28.8px",
+        "count": 9
+      },
+      {
+        "value": "40px",
+        "count": 7
+      },
+      {
+        "value": "48px",
+        "count": 6
+      }
+    ],
+    "fontSizesAll": [
+      {
+        "value": "16px",
+        "count": 160
+      },
+      {
+        "value": "19.2px",
+        "count": 30
+      },
+      {
+        "value": "22.4px",
+        "count": 28
+      },
+      {
+        "value": "24px",
+        "count": 22
+      },
+      {
+        "value": "14.4px",
+        "count": 10
+      },
+      {
+        "value": "28.8px",
+        "count": 9
+      },
+      {
+        "value": "40px",
+        "count": 7
+      },
+      {
+        "value": "48px",
+        "count": 6
+      },
+      {
+        "value": "59.2px",
+        "count": 4
+      },
+      {
+        "value": "12px",
+        "count": 3
+      },
+      {
+        "value": "27.2px",
+        "count": 1
+      }
+    ],
+    "fontWeights": [
+      {
+        "value": "400",
+        "count": 231
+      },
+      {
+        "value": "700",
+        "count": 46
+      },
+      {
+        "value": "600",
+        "count": 3
+      }
+    ],
+    "lineHeights": [
+      {
+        "value": "24px",
+        "count": 159
+      },
+      {
+        "value": "26.4px",
+        "count": 30
+      },
+      {
+        "value": "33px",
+        "count": 20
+      },
+      {
+        "value": "36.4px",
+        "count": 12
+      },
+      {
+        "value": "20.5714px",
+        "count": 10
+      }
+    ],
+    "letterSpacings": [],
+    "textTransforms": [],
+    "textAligns": [
+      {
+        "value": "center",
+        "count": 148
+      },
+      {
+        "value": "left",
+        "count": 91
+      },
+      {
+        "value": "start",
+        "count": 23
+      },
+      {
+        "value": "right",
+        "count": 18
+      }
+    ],
+    "typeScale": {
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "fontFamily": "ui-sans-serif",
+        "letterSpacing": "normal",
+        "color": "#000000"
+      },
+      "h1": {
+        "fontSize": "59.2px",
+        "fontWeight": "700",
+        "lineHeight": "59.2px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "#ffffff"
+      },
+      "h2": {
+        "fontSize": "59.2px",
+        "fontWeight": "700",
+        "lineHeight": "59.2px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "#ffffff"
+      },
+      "h3": {
+        "fontSize": "59.2px",
+        "fontWeight": "700",
+        "lineHeight": "82.88px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "#ffffff"
+      },
+      "p": {
+        "fontSize": "22.4px",
+        "fontWeight": "700",
+        "lineHeight": "22.4px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "#ffffff"
+      },
+      "a": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "#ffffff"
+      },
+      "button": {
+        "fontSize": "22.4px",
+        "fontWeight": "700",
+        "lineHeight": "34.8444px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "#ffffff"
+      },
+      "input": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px",
+        "fontFamily": "Plus Jakarta Sans",
+        "letterSpacing": "normal",
+        "color": "oklch(0.278 0.033 256.848)"
+      }
+    },
+    "loadedFonts": [
+      "PlusJakartaSans-ExtraLight 200 normal (unloaded)",
+      "PlusJakartaSans-ExtraLightItalic 200 italic (unloaded)",
+      "PlusJakartaSans-Light 300 normal (unloaded)",
+      "PlusJakartaSans-LightItalic 300 italic (unloaded)",
+      "PlusJakartaSans-Regular 400 normal (unloaded)",
+      "PlusJakartaSans-Italic 400 italic (unloaded)",
+      "PlusJakartaSans-Medium 500 normal (unloaded)",
+      "PlusJakartaSans-MediumItalic 500 italic (unloaded)",
+      "PlusJakartaSans-SemiBold 600 normal (unloaded)",
+      "PlusJakartaSans-SemiBoldItalic 600 italic (unloaded)",
+      "PlusJakartaSans-Bold 700 normal (unloaded)",
+      "PlusJakartaSans-BoldItalic 700 italic (unloaded)",
+      "PlusJakartaSans-ExtraBold 800 normal (unloaded)",
+      "PlusJakartaSans-ExtraBoldItalic 800 italic (unloaded)",
+      "PlusJakartaSans-Variable 200 800 normal (unloaded)",
+      "PlusJakartaSans-VariableItalic 200 800 italic (unloaded)",
+      "Plus Jakarta Sans 200 800 normal (loaded)",
+      "Plus Jakarta Sans 200 800 italic (unloaded)"
+    ],
+    "distinct": {
+      "families": 2,
+      "sizes": 11,
+      "weights": 3,
+      "lineHeights": 23
+    }
+  },
+  "palette": {
+    "textColors": [
+      {
+        "value": "#ffffff",
+        "count": 145
+      },
+      {
+        "value": "#000000",
+        "count": 55
+      },
+      {
+        "value": "#fe0061",
+        "count": 10
+      },
+      {
+        "value": "#0045e5",
+        "count": 1
+      }
+    ],
+    "textColorsAll": [
+      {
+        "value": "#ffffff",
+        "count": 145
+      },
+      {
+        "value": "#000000",
+        "count": 55
+      },
+      {
+        "value": "#fe0061",
+        "count": 10
+      },
+      {
+        "value": "#0045e5",
+        "count": 1
+      }
+    ],
+    "backgrounds": [
+      {
+        "value": "#fe0061",
+        "count": 9
+      },
+      {
+        "value": "#0172bc",
+        "count": 5
+      },
+      {
+        "value": "#ffffff",
+        "count": 4
+      },
+      {
+        "value": "#0045e5",
+        "count": 3
+      }
+    ],
+    "backgroundsAll": [
+      {
+        "value": "#fe0061",
+        "count": 9
+      },
+      {
+        "value": "#0172bc",
+        "count": 5
+      },
+      {
+        "value": "#ffffff",
+        "count": 4
+      },
+      {
+        "value": "#0045e5",
+        "count": 3
+      }
+    ],
+    "borderColors": [
+      {
+        "value": "#ffffff",
+        "count": 4
+      }
+    ],
+    "gradients": [],
+    "distinct": {
+      "text": 4,
+      "background": 4,
+      "border": 1
+    }
+  },
+  "spacing": {
+    "borderRadius": [
+      {
+        "value": "3.35544e+07px",
+        "count": 20
+      },
+      {
+        "value": "24px",
+        "count": 6
+      },
+      {
+        "value": "8px",
+        "count": 1
+      }
+    ],
+    "boxShadows": [
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "count": 1
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+        "count": 1
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+        "count": 1
+      }
+    ],
+    "gaps": [
+      {
+        "value": "8px",
+        "count": 19
+      },
+      {
+        "value": "32px",
+        "count": 5
+      },
+      {
+        "value": "48px",
+        "count": 2
+      },
+      {
+        "value": "16px",
+        "count": 1
+      },
+      {
+        "value": "20px",
+        "count": 1
+      },
+      {
+        "value": "24px",
+        "count": 1
+      }
+    ],
+    "paddings": [
+      {
+        "value": "0px 0px 0px 24px",
+        "count": 9
+      },
+      {
+        "value": "12px 24px",
+        "count": 9
+      },
+      {
+        "value": "16px 24px",
+        "count": 8
+      },
+      {
+        "value": "0px 16px",
+        "count": 4
+      },
+      {
+        "value": "8px 24px",
+        "count": 4
+      },
+      {
+        "value": "0px 32px",
+        "count": 3
+      },
+      {
+        "value": "0px 0px 64px",
+        "count": 2
+      },
+      {
+        "value": "0px 0px 8px",
+        "count": 2
+      }
+    ],
+    "margins": [
+      {
+        "value": "0px 0px 16px",
+        "count": 17
+      },
+      {
+        "value": "0px 0px 4px",
+        "count": 10
+      },
+      {
+        "value": "0px 0px 12px",
+        "count": 8
+      },
+      {
+        "value": "0px 0px 8px",
+        "count": 7
+      },
+      {
+        "value": "0px 8px 0px 0px",
+        "count": 7
+      },
+      {
+        "value": "0px 0px 32px",
+        "count": 4
+      },
+      {
+        "value": "0px 72.5px",
+        "count": 4
+      },
+      {
+        "value": "0px 0px 48px",
+        "count": 3
+      }
+    ],
+    "borderWidths": [
+      {
+        "value": "3px",
+        "count": 4
+      }
+    ],
+    "distinct": {
+      "radius": 3,
+      "shadow": 3,
+      "gap": 8,
+      "padding": 30
+    }
+  },
+  "contrast": {
+    "issues": [
+      {
+        "ratio": 1,
+        "required": 3,
+        "color": "#ffffff",
+        "background": "#ffffff",
+        "fontSize": "59.2px",
+        "fontWeight": "700",
+        "sample": "Salón de ventas:",
+        "element": "h2.ml-2.text-center.text-lg"
+      },
+      {
+        "ratio": 1,
+        "required": 3,
+        "color": "#ffffff",
+        "background": "#ffffff",
+        "fontSize": "28.8px",
+        "fontWeight": "400",
+        "sample": "Ruta 88 y Magallanes",
+        "element": "p.ml-5.text-lg.md:text-[1.8rem]"
+      },
+      {
+        "ratio": 1,
+        "required": 3,
+        "color": "#ffffff",
+        "background": "#ffffff",
+        "fontSize": "22.4px",
+        "fontWeight": "700",
+        "sample": "Mayorista y distribución de productos de consumo m",
+        "element": "span.font-bold"
+      },
+      {
+        "ratio": 3.9,
+        "required": 4.5,
+        "color": "#ffffff",
+        "background": "#fe0061",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "sample": "MAR DEL PLATA – BATÁN – SIERRA DE LOS PADRES – BAL",
+        "element": "p.text-white.text-sm.md:text-base"
+      },
+      {
+        "ratio": 3.9,
+        "required": 4.5,
+        "color": "#fe0061",
+        "background": "#ffffff",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "sample": "+54 9 223 520 - 5392",
+        "element": "span.text-sm.md:text-base.font-bold"
+      }
+    ],
+    "totalIssues": 5
+  },
+  "elementsScanned": 283,
+  "elementsTotal": 283,
+  "scanCapped": false,
+  "components": {
+    "counts": {
+      "buttons": 12,
+      "links": 7,
+      "forms": 1,
+      "inputs": 18,
+      "images": 19,
+      "svg": 3,
+      "videosEmbeds": 1,
+      "modals": 0,
+      "tables": 0,
+      "carousels": 0,
+      "cards": 0,
+      "lists": 3,
+      "accordions": 0,
+      "tabs": 0,
+      "breadcrumbs": 0,
+      "pagination": 0,
+      "badges": 0,
+      "icons": 3,
+      "ratings": 20,
+      "prices": 0,
+      "addToCart": 0,
+      "search": 0,
+      "newsletter": 0,
+      "social": 3,
+      "skeletons": 0,
+      "banners": 0
+    },
+    "buttonVariants": [
+      {
+        "count": 4,
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "8px 24px",
+          "fontSize": "22.4px",
+          "fontWeight": "700",
+          "borderTopWidth": "3px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "textTransform": "none",
+          "boxShadow": "none"
+        },
+        "samples": [
+          "Empresa",
+          "Ofertas",
+          "Trabajar en Hergo"
+        ],
+        "commonSize": "150x57",
+        "element": "button.px-6.py-2.rounded-full",
+        "shotId": "btn-1"
+      },
+      {
+        "count": 2,
+        "styles": {
+          "backgroundColor": "rgb(254, 0, 97)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "12px 24px",
+          "fontSize": "22.4px",
+          "fontWeight": "700",
+          "borderTopWidth": "0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "textTransform": "none",
+          "boxShadow": "none"
+        },
+        "samples": [
+          "PORTAL AUTOGESTIÓN",
+          "GENERAR TARJETA VIRTUAL"
+        ],
+        "commonSize": "303x59",
+        "element": "button.bg-hergo-red.text-lg.font-bold",
+        "shotId": "btn-2"
+      },
+      {
+        "count": 1,
+        "styles": {
+          "backgroundColor": "rgb(254, 0, 97)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "12px 48px",
+          "fontSize": "22.4px",
+          "fontWeight": "700",
+          "borderTopWidth": "0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "textTransform": "none",
+          "boxShadow": "none"
+        },
+        "samples": [
+          "ENVIAR"
+        ],
+        "commonSize": "179x59",
+        "element": "button.bg-hergo-red.text-white.px-8",
+        "shotId": "btn-3"
+      },
+      {
+        "count": 1,
+        "styles": {
+          "backgroundColor": "rgb(0, 69, 229)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "16px 24px",
+          "fontSize": "22.4px",
+          "fontWeight": "700",
+          "borderTopWidth": "0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "textTransform": "none",
+          "boxShadow": "none"
+        },
+        "samples": [
+          "Solicitar tarjeta azul"
+        ],
+        "commonSize": "320x66",
+        "element": "button.w-full.bg-hergo-blue.transition",
+        "shotId": "btn-4"
+      },
+      {
+        "count": 1,
+        "styles": {
+          "backgroundColor": "rgb(254, 0, 97)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "16px 24px",
+          "fontSize": "22.4px",
+          "fontWeight": "700",
+          "borderTopWidth": "0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "textTransform": "none",
+          "boxShadow": "none"
+        },
+        "samples": [
+          "Ir a generar tarjeta virtual"
+        ],
+        "commonSize": "320x66",
+        "element": "button.w-full.bg-hergo-red.transition",
+        "shotId": "btn-5"
+      }
+    ],
+    "cardVariants": [],
+    "inputVariants": [
+      {
+        "count": 11,
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "oklch(0.278 0.033 256.848)",
+          "borderRadius": "0px",
+          "padding": "0px",
+          "fontSize": "16px",
+          "borderTopWidth": "0px",
+          "borderTopColor": "oklch(0.278 0.033 256.848)",
+          "height": "13px"
+        },
+        "samples": [
+          "ownMobility",
+          "ownMobility",
+          "workTime"
+        ],
+        "commonSize": "13x13",
+        "element": "input.accent-hergo-red",
+        "shotId": "input-1"
+      },
+      {
+        "count": 5,
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "oklch(0.278 0.033 256.848)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "12px 24px",
+          "fontSize": "16px",
+          "borderTopWidth": "1px",
+          "borderTopColor": "oklch(0.872 0.01 258.338)",
+          "height": "50px"
+        },
+        "samples": [
+          "nameLastName",
+          "birthDate",
+          "address"
+        ],
+        "commonSize": "464x50",
+        "element": "input.px-4.md:px-6.py-2",
+        "shotId": "input-2"
+      },
+      {
+        "count": 1,
+        "styles": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "oklch(0.278 0.033 256.848)",
+          "borderRadius": "24px",
+          "padding": "16px 24px",
+          "fontSize": "16px",
+          "borderTopWidth": "1px",
+          "borderTopColor": "oklch(0.872 0.01 258.338)",
+          "height": "154px"
+        },
+        "samples": [
+          "comments"
+        ],
+        "commonSize": "464x154",
+        "element": "textarea.px-4.md:px-6.py-3",
+        "shotId": "input-3"
+      }
+    ],
+    "zoneShots": [
+      {
+        "shotId": "zone-header",
+        "label": "Header",
+        "element": "nav.fixed.top-0.left-0",
+        "size": "1425x177"
+      },
+      {
+        "shotId": "zone-nav",
+        "label": "Navegación",
+        "element": "nav.fixed.top-0.left-0",
+        "size": "1425x177"
+      },
+      {
+        "shotId": "zone-hero",
+        "label": "Primera sección / hero",
+        "element": "div#root",
+        "size": "1425x7098"
+      },
+      {
+        "shotId": "zone-footer",
+        "label": "Footer",
+        "element": "footer.bg-hergo-blue.text-white.py-8",
+        "size": "1425x447"
+      },
+      {
+        "shotId": "zone-form",
+        "label": "Primer formulario",
+        "element": "form.space-y-4",
+        "size": "464x1351"
+      }
+    ],
+    "links": {
+      "total": 7,
+      "internal": 0,
+      "external": 7,
+      "anchors": 0,
+      "tel": 0,
+      "mail": 0,
+      "javascript": 0,
+      "nofollow": 0,
+      "targetBlank": 7,
+      "withoutText": 0,
+      "topExternalHosts": [
+        {
+          "value": "drive.google.com",
+          "count": 2
+        },
+        {
+          "value": "portal.hergo.com.ar",
+          "count": 2
+        },
+        {
+          "value": "api.whatsapp.com",
+          "count": 1
+        },
+        {
+          "value": "www.facebook.com",
+          "count": 1
+        },
+        {
+          "value": "www.instagram.com",
+          "count": 1
+        }
+      ]
+    },
+    "forms": [
+      {
+        "element": "form.space-y-4",
+        "action": "(mismo)",
+        "method": "GET",
+        "novalidate": false,
+        "fields": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "nameLastName",
+            "placeholder": null,
+            "required": true,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "date",
+            "name": "birthDate",
+            "placeholder": null,
+            "required": true,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "address",
+            "placeholder": null,
+            "required": true,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "tel",
+            "name": "phone",
+            "placeholder": null,
+            "required": true,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "email",
+            "name": "email",
+            "placeholder": null,
+            "required": true,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "ownMobility",
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "ownMobility",
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "workTime",
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "workTime",
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": null,
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "textarea",
+            "type": "text",
+            "name": "comments",
+            "placeholder": null,
+            "required": true,
+            "autocomplete": null,
+            "pattern": null
+          },
+          {
+            "tag": "input",
+            "type": "file",
+            "name": "cv-upload",
+            "placeholder": null,
+            "required": false,
+            "autocomplete": null,
+            "pattern": null
+          }
+        ],
+        "submit": "ENVIAR"
+      }
+    ],
+    "images": {
+      "total": 19,
+      "formats": [
+        {
+          "value": "svg",
+          "count": 7
+        },
+        {
+          "value": "jpg",
+          "count": 5
+        },
+        {
+          "value": "png",
+          "count": 5
+        },
+        {
+          "value": "sin-extensión",
+          "count": 2
+        }
+      ],
+      "lazy": 0,
+      "eager": 0,
+      "withoutLoadingAttr": 19,
+      "withSrcset": 0,
+      "oversized": 12,
+      "missingDimensions": 19,
+      "decorative": 0,
+      "detail": [
+        {
+          "src": "https://www.hergo.com.ar/logos/hergo-logo.png",
+          "host": "www.hergo.com.ar",
+          "displayed": "202x64",
+          "natural": "619x196",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Hergo",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/hergui-frente-D2dhCVOa.png",
+          "host": "www.hergo.com.ar",
+          "displayed": "320x255",
+          "natural": "352x280",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Hergui",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/folder-ofertas-D3A8-O_c.png",
+          "host": "www.hergo.com.ar",
+          "displayed": "448x436",
+          "natural": "505x491",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Revista Ofertas Hergo",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/logo-visa.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "99x32",
+          "natural": "1599x519",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Visa",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/logo-cabal.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "95x32",
+          "natural": "808x272",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Cabal",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/maestro.png",
+          "host": "www.hergo.com.ar",
+          "displayed": "100x56",
+          "natural": "500x281",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Mastercard",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/logo-visa.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "99x32",
+          "natural": "1599x519",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Visa",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/mastercard.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "56x56",
+          "natural": "150x150",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Mastercard",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/deposito-6iGnCbWY.jpg",
+          "host": "www.hergo.com.ar",
+          "displayed": "1425x438",
+          "natural": "6000x4000",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Depósito Hergo",
+          "objectFit": "cover",
+          "radius": "0px"
+        },
+        {
+          "src": "78.8%2017.3%2078.8%2024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+          "host": "",
+          "displayed": "15x20",
+          "natural": "113x150",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "(falta)",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "78.8%2017.3%2078.8%2024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+          "host": "",
+          "displayed": "15x20",
+          "natural": "113x150",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "(falta)",
+          "objectFit": "fill",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/company-img-1-DvhAdTat.jpg",
+          "host": "www.hergo.com.ar",
+          "displayed": "1140x661",
+          "natural": "1600x1066",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "(falta)",
+          "objectFit": "cover",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/company-img-2-BT8vnYMB.jpg",
+          "host": "www.hergo.com.ar",
+          "displayed": "285x661",
+          "natural": "1600x1066",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Operarios en almacén",
+          "objectFit": "cover",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/company-img-3-DurHHsed.jpg",
+          "host": "www.hergo.com.ar",
+          "displayed": "285x672",
+          "natural": "1600x1066",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Almacén logístico",
+          "objectFit": "cover",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/assets/company-img-4-Cvsq3290.jpg",
+          "host": "www.hergo.com.ar",
+          "displayed": "1140x672",
+          "natural": "1600x1066",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "(falta)",
+          "objectFit": "cover",
+          "radius": "0px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/tarjeta-mayorista.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "320x194",
+          "natural": "248x150",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Tarjeta Mayorista",
+          "objectFit": "fill",
+          "radius": "24px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/tarjeta-minorista.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "320x205",
+          "natural": "234x150",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Tarjeta Mayorista",
+          "objectFit": "fill",
+          "radius": "24px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/tarjeta-virtual.svg",
+          "host": "www.hergo.com.ar",
+          "displayed": "320x199",
+          "natural": "242x150",
+          "oversized": false,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Tarjeta Mayorista",
+          "objectFit": "fill",
+          "radius": "24px"
+        },
+        {
+          "src": "https://www.hergo.com.ar/logos/hergo-logo.png",
+          "host": "www.hergo.com.ar",
+          "displayed": "177x56",
+          "natural": "619x196",
+          "oversized": true,
+          "loading": "(default)",
+          "srcset": false,
+          "alt": "Hergo",
+          "objectFit": "fill",
+          "radius": "0px"
+        }
+      ]
+    },
+    "carousels": [],
+    "tables": [],
+    "navigation": {
+      "element": "nav.fixed.top-0.left-0",
+      "totalLinks": 5,
+      "topLevelItems": 0,
+      "items": [],
+      "sticky": "fixed",
+      "hasBurger": true,
+      "hasSearch": false
+    },
+    "footer": {
+      "columns": 1,
+      "links": 0,
+      "headings": 2,
+      "socialLinks": 0,
+      "height": 447,
+      "background": "#0045e5",
+      "hasNewsletter": false,
+      "paymentIcons": 0
+    },
+    "embeds": [
+      {
+        "tag": "iframe",
+        "host": "www.google.com",
+        "size": "1425x400",
+        "title": "Ubicación de Alta Distribuidora",
+        "lazy": true,
+        "autoplay": false,
+        "muted": false,
+        "controls": false
+      }
+    ]
+  },
+  "a11y": {
+    "imagesTotal": 19,
+    "imagesWithoutAlt": 4,
+    "imagesEmptyAlt": 0,
+    "imagesWithoutAltSamples": [
+      "024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+      "024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+      "https://www.hergo.com.ar/assets/company-img-1-DvhAdTat.jpg",
+      "https://www.hergo.com.ar/assets/company-img-4-Cvsq3290.jpg"
+    ],
+    "h1Count": 2,
+    "headings": {
+      "h1": 2,
+      "h2": 5,
+      "h3": 8,
+      "h4": 0,
+      "h5": 0,
+      "h6": 0
+    },
+    "headingOutline": [
+      {
+        "level": 1,
+        "text": "Primeras marcas.",
+        "visible": true,
+        "fontSize": "59.2px"
+      },
+      {
+        "level": 2,
+        "text": "El mejor precio.",
+        "visible": true,
+        "fontSize": "59.2px"
+      },
+      {
+        "level": 2,
+        "text": "Revista Ofertas #3226",
+        "visible": true,
+        "fontSize": "48px"
+      },
+      {
+        "level": 2,
+        "text": "Salón de ventas:",
+        "visible": true,
+        "fontSize": "59.2px"
+      },
+      {
+        "level": 3,
+        "text": "Días y Horarios de atención:",
+        "visible": true,
+        "fontSize": "59.2px"
+      },
+      {
+        "level": 1,
+        "text": "¿Quiénes somos?",
+        "visible": true,
+        "fontSize": "28.8px"
+      },
+      {
+        "level": 2,
+        "text": "Nuestra distribución y logística",
+        "visible": true,
+        "fontSize": "28.8px"
+      },
+      {
+        "level": 3,
+        "text": "› Si querés que visitemos tu comercio.",
+        "visible": true,
+        "fontSize": "48px"
+      },
+      {
+        "level": 2,
+        "text": "Trabajar en Hergo",
+        "visible": true,
+        "fontSize": "48px"
+      },
+      {
+        "level": 3,
+        "text": "MEDIOS DE PAGO:",
+        "visible": true,
+        "fontSize": "27.2px"
+      },
+      {
+        "level": 3,
+        "text": "› Tarjeta Azul",
+        "visible": true,
+        "fontSize": "40px"
+      },
+      {
+        "level": 3,
+        "text": "› Tarjeta Roja",
+        "visible": true,
+        "fontSize": "40px"
+      },
+      {
+        "level": 3,
+        "text": "› Tarjeta Digital",
+        "visible": true,
+        "fontSize": "40px"
+      },
+      {
+        "level": 3,
+        "text": "INSTITUCIONAL",
+        "visible": true,
+        "fontSize": "48px"
+      },
+      {
+        "level": 3,
+        "text": "OFERTAS",
+        "visible": true,
+        "fontSize": "48px"
+      }
+    ],
+    "headingOrderIssues": [],
+    "ariaLabelElements": 1,
+    "ariaAttributes": [
+      {
+        "value": "aria-label",
+        "count": 1
+      }
+    ],
+    "roles": [],
+    "inputsTotal": 18,
+    "inputsWithoutLabel": 6,
+    "inputsWithoutLabelSamples": [
+      "input[text] name=nameLastName ph=—",
+      "input[date] name=birthDate ph=—",
+      "input[text] name=address ph=—",
+      "input[tel] name=phone ph=—",
+      "input[email] name=email ph=—",
+      "textarea[text] name=comments ph=—"
+    ],
+    "buttonsWithoutAccessibleName": 0,
+    "buttonsWithoutAccessibleNameSamples": [],
+    "linksWithoutAccessibleName": 3,
+    "focusOutlineRemoved": 44,
+    "positiveTabindex": 0,
+    "skipLink": false,
+    "landmarksPresent": {
+      "banner": false,
+      "navigation": true,
+      "main": false,
+      "contentinfo": true,
+      "search": false
+    },
+    "iframesWithoutTitle": 0,
+    "tablesWithoutHeaders": 0,
+    "autoplayMedia": 0,
+    "langIssues": []
+  },
+  "animations": {
+    "elementsWithTransition": 21,
+    "elementsWithAnimation": 0,
+    "elementsWithTransform": 0,
+    "elementsWithWillChange": 0,
+    "elementsWithFilter": 4,
+    "elementsWithBackdropFilter": 0,
+    "transitionProperties": [
+      {
+        "value": "--tw-gradient-from",
+        "count": 21
+      },
+      {
+        "value": "--tw-gradient-to",
+        "count": 21
+      },
+      {
+        "value": "--tw-gradient-via",
+        "count": 21
+      },
+      {
+        "value": "background-color",
+        "count": 21
+      },
+      {
+        "value": "border-color",
+        "count": 21
+      },
+      {
+        "value": "color",
+        "count": 21
+      },
+      {
+        "value": "fill",
+        "count": 21
+      },
+      {
+        "value": "outline-color",
+        "count": 21
+      }
+    ],
+    "transitionDurations": [
+      {
+        "value": "0.15s",
+        "count": 18
+      },
+      {
+        "value": "0.2s",
+        "count": 3
+      }
+    ],
+    "transitionEasings": [
+      {
+        "value": "cubic-bezier(0.4",
+        "count": 21
+      }
+    ],
+    "transitionDelays": [],
+    "transitionSamples": [
+      {
+        "element": "button.bg-hergo-red.text-lg.font-bold",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.bg-hergo-red.text-lg.font-bold",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.bg-hergo-red.text-base.font-bold",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.bg-hergo-red.text-base.font-bold",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.px-6.py-2.rounded-full",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.px-6.py-2.rounded-full",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.px-6.py-2.rounded-full",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "button.px-6.py-2.rounded-full",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "a.text-white.hover:text-hergo-red.transition-colors",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "a.text-white.hover:text-hergo-red.transition-colors",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "a.text-white.hover:text-hergo-red.transition-colors",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.15s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      },
+      {
+        "element": "a.bg-white.text-hergo-red.px-8",
+        "property": "color, background-color, border-color, outline-color, text-d",
+        "duration": "0.2s",
+        "easing": "cubic-bezier(0.4",
+        "delay": "0s"
+      }
+    ],
+    "animationNames": [],
+    "animationDurations": [],
+    "animationIterations": [],
+    "animationSamples": [],
+    "keyframesDefined": [
+      "spin"
+    ],
+    "transforms": [],
+    "willChange": [],
+    "filters": [
+      {
+        "value": "brightness(0) invert(1)",
+        "count": 4
+      }
+    ],
+    "hoverProperties": [],
+    "scrollRevealHints": [],
+    "prefersReducedMotionSupport": false
+  },
+  "cssom": {
+    "stats": {
+      "stylesheets": 1,
+      "accessible": 1,
+      "crossOrigin": 0,
+      "totalRules": 90,
+      "styleRules": 2,
+      "mediaRules": 0,
+      "keyframeRules": 1,
+      "fontFaceRules": 18,
+      "supportsRules": 0,
+      "importRules": 0,
+      "importantCount": 0,
+      "customPropertyDeclarations": 0,
+      "inlineStyleAttributes": 2,
+      "approxCssBytes": 80
+    },
+    "sheets": [
+      {
+        "href": "https://www.hergo.com.ar/assets/index-B-oToTjL.css",
+        "host": "www.hergo.com.ar",
+        "rules": 2,
+        "media": ""
+      }
+    ],
+    "mediaQueries": [],
+    "mediaQueryCount": 0,
+    "widthBreakpoints": [],
+    "inferredBreakpoints": [],
+    "fontFaces": [
+      {
+        "family": "PlusJakartaSans-ExtraLight",
+        "weight": "200",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-ExtraLightItalic",
+        "weight": "200",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-Light",
+        "weight": "300",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-LightItalic",
+        "weight": "300",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-Regular",
+        "weight": "400",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-Italic",
+        "weight": "400",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-Medium",
+        "weight": "500",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-MediumItalic",
+        "weight": "500",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-SemiBold",
+        "weight": "600",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-SemiBoldItalic",
+        "weight": "600",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-Bold",
+        "weight": "700",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-BoldItalic",
+        "weight": "700",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-ExtraBold",
+        "weight": "800",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-ExtraBoldItalic",
+        "weight": "800",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-Variable",
+        "weight": "200 800",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "PlusJakartaSans-VariableItalic",
+        "weight": "200 800",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "Plus Jakarta Sans",
+        "weight": "200 800",
+        "style": "normal",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "family": "Plus Jakarta Sans",
+        "weight": "200 800",
+        "style": "italic",
+        "display": "swap",
+        "format": "woff2, woff, truetype",
+        "host": "www.hergo.com.ar"
+      }
+    ],
+    "supportsQueries": [],
+    "selectorDepthDistribution": [
+      {
+        "value": "1",
+        "count": 2
+      }
+    ],
+    "longestSelector": "#root",
+    "hasDarkModeQuery": false,
+    "hasPrintStyles": false,
+    "hasHoverQuery": false
+  },
+  "perf": {
+    "navigation": {
+      "type": "navigate",
+      "redirects": 0,
+      "ttfbMs": 180,
+      "dnsMs": 183,
+      "tcpMs": 361,
+      "tlsMs": 186,
+      "responseMs": 1,
+      "domInteractiveMs": 778,
+      "domContentLoadedMs": 1658,
+      "loadEventMs": 1659,
+      "transferSize": 777,
+      "encodedBodySize": 477,
+      "decodedBodySize": 811,
+      "protocol": "h2"
+    },
+    "paint": {
+      "first-paint": 2144,
+      "first-contentful-paint": 2144
+    },
+    "lcp": null,
+    "cls": 0.1274,
+    "resources": {
+      "script": {
+        "count": 2,
+        "bytes": 124501,
+        "durationMs": 1005
+      },
+      "link": {
+        "count": 1,
+        "bytes": 8534,
+        "durationMs": 363
+      },
+      "fetch": {
+        "count": 5,
+        "bytes": 0,
+        "durationMs": 3659
+      },
+      "iframe": {
+        "count": 1,
+        "bytes": 0,
+        "durationMs": 1930
+      },
+      "img": {
+        "count": 15,
+        "bytes": 5401038,
+        "durationMs": 12765
+      },
+      "css": {
+        "count": 1,
+        "bytes": 60624,
+        "durationMs": 756
+      },
+      "other": {
+        "count": 1,
+        "bytes": 635,
+        "durationMs": 538
+      }
+    },
+    "slowest": [
+      {
+        "url": "x5b51b7b3f8b75bf9!2sMayorista%20Hergo!5e0!3m2!1ses!2sar!4v1764162250010!5m2!1ses!2sar",
+        "type": "iframe",
+        "ms": 1930,
+        "kb": 0,
+        "host": "www.google.com"
+      },
+      {
+        "url": "https://www.hergo.com.ar/assets/deposito-6iGnCbWY.jpg",
+        "type": "img",
+        "ms": 1912,
+        "kb": 2944,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/assets/company-img-1-DvhAdTat.jpg",
+        "type": "img",
+        "ms": 1134,
+        "kb": 728,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/assets/company-img-3-DurHHsed.jpg",
+        "type": "img",
+        "ms": 1131,
+        "kb": 637,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/assets/company-img-2-BT8vnYMB.jpg",
+        "type": "img",
+        "ms": 1121,
+        "kb": 410,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/assets/company-img-4-Cvsq3290.jpg",
+        "type": "img",
+        "ms": 1119,
+        "kb": 262,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://portal.hergo.com.ar:8099/Imagenes/www/popup/",
+        "type": "fetch",
+        "ms": 1060,
+        "kb": 0,
+        "host": "portal.hergo.com.ar"
+      },
+      {
+        "url": "https://portal.hergo.com.ar:8099/Imagenes/www/banners/pc/",
+        "type": "fetch",
+        "ms": 1059,
+        "kb": 0,
+        "host": "portal.hergo.com.ar"
+      },
+      {
+        "url": "https://portal.hergo.com.ar:8099/Imagenes/www/banners/mobile/",
+        "type": "fetch",
+        "ms": 1048,
+        "kb": 0,
+        "host": "portal.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/logos/tarjeta-virtual.svg",
+        "type": "img",
+        "ms": 889,
+        "kb": 2,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/logos/tarjeta-minorista.svg",
+        "type": "img",
+        "ms": 889,
+        "kb": 2,
+        "host": "www.hergo.com.ar"
+      },
+      {
+        "url": "https://www.hergo.com.ar/logos/tarjeta-mayorista.svg",
+        "type": "img",
+        "ms": 889,
+        "kb": 2,
+        "host": "www.hergo.com.ar"
+      }
+    ],
+    "byHost": [
+      {
+        "host": "www.hergo.com.ar",
+        "count": 19,
+        "kb": 5464
+      },
+      {
+        "host": "portal.hergo.com.ar",
+        "count": 3,
+        "kb": 0
+      },
+      {
+        "host": "www.google-analytics.com",
+        "count": 2,
+        "kb": 0
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "count": 1,
+        "kb": 0
+      },
+      {
+        "host": "www.google.com",
+        "count": 1,
+        "kb": 0
+      }
+    ],
+    "totals": {
+      "requests": 26,
+      "transferKb": 5464,
+      "thirdPartyRequests": 7,
+      "thirdPartyHosts": 4
+    }
+  },
+  "network": {
+    "totalRequests": 81,
+    "totalResponses": 81,
+    "totalKb": 6251,
+    "byType": {
+      "document": {
+        "count": 2,
+        "kb": 2
+      },
+      "stylesheet": {
+        "count": 4,
+        "kb": 0
+      },
+      "script": {
+        "count": 16,
+        "kb": 601
+      },
+      "image": {
+        "count": 38,
+        "kb": 5444
+      },
+      "font": {
+        "count": 5,
+        "kb": 188
+      },
+      "fetch": {
+        "count": 5,
+        "kb": 1
+      },
+      "xhr": {
+        "count": 10,
+        "kb": 16
+      },
+      "media": {
+        "count": 0,
+        "kb": 0
+      },
+      "other": {
+        "count": 1,
+        "kb": 0
+      }
+    },
+    "byStatus": {
+      "2xx": 81
+    },
+    "redirects": 0,
+    "notModified": 0,
+    "hosts": [
+      {
+        "host": "www.google.com",
+        "count": 25,
+        "kb": 191,
+        "thirdParty": true
+      },
+      {
+        "host": "www.hergo.com.ar",
+        "count": 20,
+        "kb": 5319,
+        "thirdParty": false
+      },
+      {
+        "host": "maps.googleapis.com",
+        "count": 19,
+        "kb": 372,
+        "thirdParty": true
+      },
+      {
+        "host": "fonts.gstatic.com",
+        "count": 4,
+        "kb": 129,
+        "thirdParty": true
+      },
+      {
+        "host": "fonts.googleapis.com",
+        "count": 3,
+        "kb": 0,
+        "thirdParty": true
+      },
+      {
+        "host": "portal.hergo.com.ar",
+        "count": 3,
+        "kb": 1,
+        "thirdParty": true
+      },
+      {
+        "host": "www.google-analytics.com",
+        "count": 2,
+        "kb": 0,
+        "thirdParty": true
+      },
+      {
+        "host": "maps.gstatic.com",
+        "count": 2,
+        "kb": 74,
+        "thirdParty": true
+      },
+      {
+        "host": "places.googleapis.com",
+        "count": 2,
+        "kb": 1,
+        "thirdParty": true
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "count": 1,
+        "kb": 165,
+        "thirdParty": true
+      }
+    ],
+    "thirdPartyHosts": 9,
+    "failed": [
+      {
+        "url": "=https%3A%2F%2Fwww.hergo.com.ar%2F&dt=Hergo&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1152",
+        "type": "fetch",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "ttps%3A%2F%2Fwww.hergo.com.ar%2F&dt=Hergo&en=scroll&epn.percent_scrolled=90&_et=8&tfd=6248",
+        "type": "fetch",
+        "error": "net::ERR_ABORTED"
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "width": 360,
+      "height": 844,
+      "dpr": 1,
+      "scrollHeight": 8505,
+      "viewportsTall": 10.1,
+      "horizontalOverflow": false,
+      "overflowWidth": 345,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": true,
+      "burgerVisibleIncludingHeuristic": true,
+      "burgerSource": "selector conocido",
+      "burgerElement": "button.md:hidden.text-white.text-lg",
+      "navVisible": true,
+      "navLinksVisible": 0,
+      "headerHeight": 59,
+      "headerPosition": "fixed",
+      "bodyFontSize": "16px",
+      "h1FontSize": "32px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 345,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "24px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 1,
+          "gap": "32px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 7,
+      "tapTargetsTotal": 12,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 90
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "scrollHeight": 8148,
+      "viewportsTall": 9.7,
+      "horizontalOverflow": false,
+      "overflowWidth": 375,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": true,
+      "burgerVisibleIncludingHeuristic": true,
+      "burgerSource": "selector conocido",
+      "burgerElement": "button.md:hidden.text-white.text-lg",
+      "navVisible": true,
+      "navLinksVisible": 0,
+      "headerHeight": 59,
+      "headerPosition": "fixed",
+      "bodyFontSize": "16px",
+      "h1FontSize": "32px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 375,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "24px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 1,
+          "gap": "32px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 7,
+      "tapTargetsTotal": 12,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 90
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "dpr": 1,
+      "scrollHeight": 8997,
+      "viewportsTall": 8.8,
+      "horizontalOverflow": false,
+      "overflowWidth": 819,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": false,
+      "burgerVisibleIncludingHeuristic": false,
+      "burgerSource": null,
+      "burgerElement": null,
+      "navVisible": true,
+      "navLinksVisible": 4,
+      "headerHeight": null,
+      "headerPosition": null,
+      "bodyFontSize": "16px",
+      "h1FontSize": "59.2px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 753,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 8,
+      "tapTargetsTotal": 21,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 91
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "dpr": 1,
+      "scrollHeight": 7655,
+      "viewportsTall": 8.5,
+      "horizontalOverflow": false,
+      "overflowWidth": 1040,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": false,
+      "burgerVisibleIncludingHeuristic": false,
+      "burgerSource": null,
+      "burgerElement": null,
+      "navVisible": true,
+      "navLinksVisible": 4,
+      "headerHeight": 177,
+      "headerPosition": "fixed",
+      "bodyFontSize": "16px",
+      "h1FontSize": "59.2px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 1009,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 2,
+          "gap": "320px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 8,
+      "tapTargetsTotal": 21,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 91
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "dpr": 1,
+      "scrollHeight": 7214,
+      "viewportsTall": 8,
+      "horizontalOverflow": false,
+      "overflowWidth": 1265,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": false,
+      "burgerVisibleIncludingHeuristic": false,
+      "burgerSource": null,
+      "burgerElement": null,
+      "navVisible": true,
+      "navLinksVisible": 4,
+      "headerHeight": 177,
+      "headerPosition": "fixed",
+      "bodyFontSize": "16px",
+      "h1FontSize": "59.2px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 1265,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 2,
+          "gap": "320px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 9,
+      "tapTargetsTotal": 21,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 91
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "scrollHeight": 7098,
+      "viewportsTall": 7.9,
+      "horizontalOverflow": false,
+      "overflowWidth": 1425,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": false,
+      "burgerVisibleIncludingHeuristic": false,
+      "burgerSource": null,
+      "burgerElement": null,
+      "navVisible": true,
+      "navLinksVisible": 4,
+      "headerHeight": 177,
+      "headerPosition": "fixed",
+      "bodyFontSize": "16px",
+      "h1FontSize": "59.2px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 1280,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 2,
+          "gap": "320px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 10,
+      "tapTargetsTotal": 21,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 91
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 900,
+      "dpr": 1,
+      "scrollHeight": 7042,
+      "viewportsTall": 7.8,
+      "horizontalOverflow": false,
+      "overflowWidth": 1905,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": false,
+      "burgerVisibleIncludingHeuristic": false,
+      "burgerSource": null,
+      "burgerElement": null,
+      "navVisible": true,
+      "navLinksVisible": 4,
+      "headerHeight": 177,
+      "headerPosition": "fixed",
+      "bodyFontSize": "16px",
+      "h1FontSize": "59.2px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 1536,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 2,
+          "gap": "320px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 3,
+          "gap": "48px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 10,
+      "tapTargetsTotal": 21,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 91
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "scrollHeight": 7991,
+      "viewportsTall": 9.5,
+      "horizontalOverflow": false,
+      "overflowWidth": 390,
+      "overflowingElements": [],
+      "visibleElements": 280,
+      "hiddenElements": 3,
+      "burgerVisible": false,
+      "burgerVisibleIncludingHeuristic": false,
+      "burgerSource": null,
+      "burgerElement": null,
+      "navVisible": true,
+      "navLinksVisible": 0,
+      "headerHeight": null,
+      "headerPosition": null,
+      "bodyFontSize": "16px",
+      "h1FontSize": "32px",
+      "h1Text": "Primeras marcas.",
+      "containerWidth": 390,
+      "mainGrids": [
+        {
+          "element": "div.grid.grid-rows-2.h-full",
+          "columns": 1,
+          "gap": "24px"
+        },
+        {
+          "element": "div.grid.lg:grid-cols-2.gap-8",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.gap-2",
+          "columns": 1,
+          "gap": "8px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 1,
+          "gap": "32px"
+        },
+        {
+          "element": "div.grid.grid-cols-1.md:grid-cols-3",
+          "columns": 1,
+          "gap": "32px"
+        }
+      ],
+      "cardsPerRow": null,
+      "imagesVisible": 19,
+      "smallTapTargets": 7,
+      "tapTargetsTotal": 12,
+      "fixedElements": 1,
+      "topTags": [
+        {
+          "value": "div",
+          "count": 90
+        },
+        {
+          "value": "p",
+          "count": 47
+        },
+        {
+          "value": "img",
+          "count": 19
+        },
+        {
+          "value": "label",
+          "count": 18
+        },
+        {
+          "value": "span",
+          "count": 17
+        },
+        {
+          "value": "input",
+          "count": 16
+        }
+      ],
+      "emulatedTouch": true
+    }
+  ],
+  "responsiveSummary": {
+    "breakpointsProbed": [
+      360,
+      390,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "declaredBreakpoints": [],
+    "transitions": [
+      {
+        "from": 390,
+        "to": 768,
+        "changes": [
+          "desaparece hamburguesa (menú completo)",
+          "links de nav visibles 0 → 4",
+          "h1 32px → 59.2px",
+          "header 59px → nullpx",
+          "columnas de grid [1,1,1,1,1] → [1,1,1,3,3]"
+        ]
+      },
+      {
+        "from": 768,
+        "to": 1024,
+        "changes": [
+          "header nullpx → 177px",
+          "columnas de grid [1,1,1,3,3] → [1,2,1,3,3]"
+        ]
+      }
+    ],
+    "horizontalOverflowAt": [],
+    "burgerVisibleAt": [
+      360,
+      390
+    ],
+    "burgerHeuristicAt": [],
+    "burgerElement": "button.md:hidden.text-white.text-lg",
+    "burgerThreshold": 390,
+    "smallTapTargetsMobile": [
+      {
+        "width": 360,
+        "small": 7,
+        "total": 12
+      },
+      {
+        "width": 390,
+        "small": 7,
+        "total": 12
+      }
+    ],
+    "isResponsive": true,
+    "verdict": "responsive: 2 transición(es) de layout detectadas, sin overflow horizontal"
+  },
+  "popups": {
+    "detected": [],
+    "dismissed": [],
+    "remaining": [],
+    "stillVisible": 0
+  },
+  "consoleErrors": [],
+  "steps": [
+    "   384ms  navegando (networkidle, 60s)",
+    "  9703ms  cargado HTTP 200 → https://www.hergo.com.ar/",
+    "  9703ms  scroll completo (lazy-load + animaciones de scroll)",
+    " 11989ms  extrayendo: meta y SEO",
+    " 11995ms  extrayendo: stack tecnológico",
+    " 12016ms  extrayendo: tipografía, paleta y espaciado",
+    " 12105ms  extrayendo: estructura y layout",
+    " 12120ms  extrayendo: inventario de componentes",
+    " 12145ms  extrayendo: accesibilidad",
+    " 12155ms  extrayendo: animaciones",
+    " 12165ms  extrayendo: CSSOM y media queries",
+    " 12174ms  extrayendo: performance timing",
+    " 12186ms  recortando 13 componentes y zonas",
+    " 14698ms  recortes guardados: 12/13",
+    " 15895ms  screenshot desktop 1440 fullPage",
+    " 17050ms  probando breakpoint 360x844",
+    " 18168ms  probando breakpoint 390x844",
+    " 18957ms  probando breakpoint 768x1024",
+    " 19846ms  probando breakpoint 1024x900",
+    " 20720ms  probando breakpoint 1280x900",
+    " 21651ms  probando breakpoint 1440x900",
+    " 23436ms  probando breakpoint 1920x900",
+    " 24555ms  contexto mobile 390x844 (touch) + screenshot fullPage"
+  ],
+  "screenshots": {
+    "desktop": "shots/hergo.com.ar/00-home/01-desktop/desktop-1440-fullpage.png",
+    "mobile": "shots/hergo.com.ar/00-home/02-mobile/mobile-390x844-fullpage.png",
+    "popup": null,
+    "popupMobile": null,
+    "breakpoints": {
+      "360": "shots/hergo.com.ar/00-home/03-breakpoints/bp-0360x844.png",
+      "390": "shots/hergo.com.ar/00-home/03-breakpoints/bp-0390x844.png",
+      "768": "shots/hergo.com.ar/00-home/03-breakpoints/bp-0768x1024.png",
+      "1024": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1024x900.png",
+      "1280": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1280x900.png",
+      "1440": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1440x900.png",
+      "1920": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1920x900.png"
+    },
+    "components": {
+      "btn-1": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/boton-01.png",
+        "label": "Botón variante 1"
+      },
+      "btn-2": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/boton-02.png",
+        "label": "Botón variante 2"
+      },
+      "btn-3": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/boton-03.png",
+        "label": "Botón variante 3"
+      },
+      "btn-4": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/boton-04.png",
+        "label": "Botón variante 4"
+      },
+      "btn-5": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/boton-05.png",
+        "label": "Botón variante 5"
+      },
+      "input-1": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/input-01.png",
+        "label": "Input variante 1"
+      },
+      "input-2": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/input-02.png",
+        "label": "Input variante 2"
+      },
+      "input-3": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/input-03.png",
+        "label": "Input variante 3"
+      },
+      "zone-nav": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/zone-nav.png",
+        "label": "Navegación"
+      },
+      "zone-hero": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/zone-hero.png",
+        "label": "Primera sección / hero"
+      },
+      "zone-footer": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/zone-footer.png",
+        "label": "Footer"
+      },
+      "zone-form": {
+        "path": "shots/hergo.com.ar/00-home/05-componentes/zone-form.png",
+        "label": "Primer formulario"
+      }
+    }
+  },
+  "name": "hergo.com.ar",
+  "siteTotalMs": 75854,
+  "discovery": {
+    "requested": 10,
+    "found": 1,
+    "pages": [
+      {
+        "url": "https://www.hergo.com.ar/",
+        "type": "home",
+        "label": "Home",
+        "source": "entrada"
+      }
+    ]
+  },
+  "lighthouse": {
+    "preset": "desktop",
+    "lighthouseVersion": "12.8.2",
+    "fetchTime": "2026-08-17T19:29:46.674Z",
+    "finalUrl": "https://www.hergo.com.ar/",
+    "categories": {
+      "performance": 62,
+      "accessibility": 73,
+      "best-practices": 100,
+      "seo": 67
+    },
+    "metrics": {
+      "largest-contentful-paint": 2662,
+      "first-contentful-paint": 1507,
+      "cumulative-layout-shift": 0,
+      "total-blocking-time": 190,
+      "speed-index": 4205,
+      "interactive": 2804,
+      "server-response-time": 188,
+      "total-byte-weight": 6216077,
+      "dom-size": 283,
+      "unused-javascript": 390,
+      "unused-css-rules": 0,
+      "render-blocking-resources": 0,
+      "modern-image-formats": 540,
+      "uses-responsive-images": 200,
+      "uses-text-compression": 0,
+      "unminified-javascript": 0,
+      "legacy-javascript": 0,
+      "mainthread-work-breakdown": 2328,
+      "bootup-time": 342
+    },
+    "audits": {
+      "largest-contentful-paint": {
+        "title": "Largest Contentful Paint",
+        "score": 0.42,
+        "display": "2.7 s",
+        "numericValue": 2661.77
+      },
+      "first-contentful-paint": {
+        "title": "First Contentful Paint",
+        "score": 0.55,
+        "display": "1.5 s",
+        "numericValue": 1506.58
+      },
+      "cumulative-layout-shift": {
+        "title": "Cumulative Layout Shift",
+        "score": 0.83,
+        "display": "0.125",
+        "numericValue": 0.13
+      },
+      "total-blocking-time": {
+        "title": "Total Blocking Time",
+        "score": 0.82,
+        "display": "190 ms",
+        "numericValue": 190.41
+      },
+      "speed-index": {
+        "title": "Speed Index",
+        "score": 0.08,
+        "display": "4.2 s",
+        "numericValue": 4205.33
+      },
+      "interactive": {
+        "title": "Time to Interactive",
+        "score": 0.84,
+        "display": "2.8 s",
+        "numericValue": 2804.07
+      },
+      "server-response-time": {
+        "title": "Initial server response time was short",
+        "score": 1,
+        "display": "Root document took 190 ms",
+        "numericValue": 188.3
+      },
+      "total-byte-weight": {
+        "title": "Avoid enormous network payloads",
+        "score": 0.5,
+        "display": "Total size was 6,070 KiB",
+        "numericValue": 6216077
+      },
+      "dom-size": {
+        "title": "Avoids an excessive DOM size",
+        "score": 1,
+        "display": "283 elements",
+        "numericValue": 283
+      },
+      "unused-javascript": {
+        "title": "Reduce unused JavaScript",
+        "score": 0,
+        "display": "Est savings of 261 KiB",
+        "numericValue": 390
+      },
+      "unused-css-rules": {
+        "title": "Reduce unused CSS",
+        "score": 1,
+        "display": null,
+        "numericValue": 0
+      },
+      "render-blocking-resources": {
+        "title": "Eliminate render-blocking resources",
+        "score": 1,
+        "display": null,
+        "numericValue": 0
+      },
+      "modern-image-formats": {
+        "title": "Serve images in next-gen formats",
+        "score": 0,
+        "display": "Est savings of 1,268 KiB",
+        "numericValue": 540
+      },
+      "uses-responsive-images": {
+        "title": "Properly size images",
+        "score": 0,
+        "display": "Est savings of 4,430 KiB",
+        "numericValue": 200
+      },
+      "uses-text-compression": {
+        "title": "Enable text compression",
+        "score": 1,
+        "display": null,
+        "numericValue": 0
+      },
+      "unminified-javascript": {
+        "title": "Minify JavaScript",
+        "score": 1,
+        "display": null,
+        "numericValue": 0
+      },
+      "third-party-summary": {
+        "title": "Minimize third-party usage",
+        "score": 1,
+        "display": "Third-party code blocked the main thread for 20 ms",
+        "numericValue": null
+      },
+      "font-display": {
+        "title": "All text remains visible during webfont loads",
+        "score": 1,
+        "display": null,
+        "numericValue": null
+      },
+      "legacy-javascript": {
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "score": 0.5,
+        "display": null,
+        "numericValue": 0
+      },
+      "mainthread-work-breakdown": {
+        "title": "Minimize main-thread work",
+        "score": 0,
+        "display": "2.3 s",
+        "numericValue": 2327.81
+      },
+      "bootup-time": {
+        "title": "JavaScript execution time",
+        "score": 1,
+        "display": "0.3 s",
+        "numericValue": 342.03
+      }
+    },
+    "opportunities": [
+      {
+        "audit": "modern-image-formats",
+        "title": "Serve images in next-gen formats",
+        "savingsMs": 540,
+        "savingsKb": 1268
+      },
+      {
+        "audit": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "savingsMs": 390,
+        "savingsKb": 261
+      },
+      {
+        "audit": "uses-responsive-images",
+        "title": "Properly size images",
+        "savingsMs": 200,
+        "savingsKb": 4430
+      }
+    ],
+    "failedAccessibilityAudits": [
+      {
+        "audit": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "items": 3
+      },
+      {
+        "audit": "image-alt",
+        "title": "Image elements do not have `[alt]` attributes",
+        "items": 4
+      },
+      {
+        "audit": "label",
+        "title": "Form elements do not have associated labels",
+        "items": 6
+      },
+      {
+        "audit": "link-name",
+        "title": "Links do not have a discernible name",
+        "items": 3
+      }
+    ],
+    "runWarnings": []
+  },
+  "pages": [
+    {
+      "ok": true,
+      "url": "https://www.hergo.com.ar/",
+      "pageType": "home",
+      "pageLabel": "Home",
+      "slug": "00-home",
+      "source": "entrada",
+      "finalUrl": "https://www.hergo.com.ar/",
+      "status": 200,
+      "waitStrategy": "networkidle",
+      "loadMs": 9703,
+      "totalMs": 32922,
+      "meta": {
+        "title": "Hergo",
+        "titleLength": 5,
+        "description": null,
+        "descriptionLength": 0,
+        "viewport": "width=device-width, initial-scale=1.0",
+        "lang": "en",
+        "dir": null,
+        "charset": "utf-8",
+        "favicon": "https://www.hergo.com.ar/assets/flecha-eogHN02H.svg",
+        "ogImage": null,
+        "canonical": null,
+        "robots": null,
+        "themeColor": null,
+        "generator": null,
+        "manifest": null,
+        "og": {},
+        "twitter": {},
+        "hreflang": [],
+        "jsonLdTypes": [],
+        "resourceHints": [],
+        "metaTagCount": 2,
+        "htmlBytes": 29201
+      },
+      "stack": {
+        "react": true,
+        "next": false,
+        "vue": false,
+        "angular": false,
+        "jquery": false,
+        "tailwind": true,
+        "bootstrap": false,
+        "wordpress": false
+      },
+      "stackExtras": [
+        "Google Tag Manager",
+        "Google Analytics"
+      ],
+      "stackAssets": {
+        "scriptHosts": [
+          "www.googletagmanager.com",
+          "www.hergo.com.ar"
+        ],
+        "inlineScripts": 1,
+        "externalScripts": 2,
+        "externalStylesheets": 1,
+        "inlineStyleTags": 0
+      },
+      "layout": {
+        "landmarks": {
+          "header": 0,
+          "nav": 1,
+          "footer": 1,
+          "main": 0,
+          "aside": 0,
+          "section": 9,
+          "article": 0,
+          "search": 0
+        },
+        "header": false,
+        "nav": true,
+        "footer": true,
+        "main": false,
+        "sections": 9,
+        "containerMaxWidths": [
+          {
+            "value": "1280px",
+            "count": 4
+          },
+          {
+            "value": "320px",
+            "count": 3
+          },
+          {
+            "value": "896px",
+            "count": 2
+          },
+          {
+            "value": "1152px",
+            "count": 1
+          }
+        ],
+        "containerPaddings": [
+          {
+            "value": "0px / 0px",
+            "count": 5
+          },
+          {
+            "value": "16px / 16px",
+            "count": 4
+          },
+          {
+            "value": "32px / 32px",
+            "count": 1
+          }
+        ],
+        "blocks": [
+          {
+            "order": 1,
+            "element": "section#hero.bg-hergo-red.text-white.pt-12",
+            "heading": "Primeras marcas.",
+            "height": 415,
+            "viewportsTall": 0.46,
+            "display": "block",
+            "columns": null,
+            "gridTemplate": null,
+            "padding": "160px 0px 0px",
+            "background": "#fe0061",
+            "children": 2,
+            "images": 2,
+            "links": 5,
+            "buttons": 9,
+            "cards": 0,
+            "text": "PORTAL AUTOGESTIÓN GENERAR TARJETA VIRTUAL Empresa Ofertas Trabajar en Hergo Tarjeta Hergo"
+          },
+          {
+            "order": 2,
+            "element": "div.flex.flex-col.lg:flex-row",
+            "heading": "Revista Ofertas #3226",
+            "height": 436,
+            "viewportsTall": 0.48,
+            "display": "flex",
+            "columns": 2,
+            "gridTemplate": null,
+            "padding": "0px",
+            "background": "transparente",
+            "children": 2,
+            "images": 1,
+            "links": 1,
+            "buttons": 0,
+            "cards": 0,
+            "text": "Revista Ofertas #3226 Hacé click y descubrí lo sencillo que es ahorrar con nosotros. Desca"
+          },
+          {
+            "order": 3,
+            "element": "div.flex.flex-col.md:flex-row",
+            "heading": null,
+            "height": 64,
+            "viewportsTall": 0.07,
+            "display": "flex",
+            "columns": 4,
+            "gridTemplate": null,
+            "padding": "4px 16px",
+            "background": "#0172bc",
+            "children": 4,
+            "images": 5,
+            "links": 0,
+            "buttons": 0,
+            "cards": 0,
+            "text": "Medios de pago: efectivo y tarjetas de débito Tarjeta de crédito"
+          },
+          {
+            "order": 4,
+            "element": "section.relative.py-8.md:py-12",
+            "heading": "Salón de ventas:",
+            "height": 438,
+            "viewportsTall": 0.49,
+            "display": "block",
+            "columns": null,
+            "gridTemplate": null,
+            "padding": "48px 0px",
+            "background": "transparente",
+            "children": 2,
+            "images": 3,
+            "links": 0,
+            "buttons": 0,
+            "cards": 0,
+            "text": "Salón de ventas: Ruta 88 y Magallanes a 600 metros de Champagnat y de Juan B. Justo Días y"
+          },
+          {
+            "order": 5,
+            "element": "iframe",
+            "heading": null,
+            "height": 400,
+            "viewportsTall": 0.44,
+            "display": "block",
+            "columns": null,
+            "gridTemplate": null,
+            "padding": "0px",
+            "background": "transparente",
+            "children": 0,
+            "images": 0,
+            "links": 0,
+            "buttons": 0,
+            "cards": 0,
+            "text": ""
+          },
+          {
+            "order": 6,
+            "element": "section#company.w-full.bg-white",
+            "heading": "¿Quiénes somos?",
+            "height": 1451,
+            "viewportsTall": 1.61,
+            "display": "block",
+            "columns": null,
+            "gridTemplate": null,
+            "padding": "0px",
+            "background": "#ffffff",
+            "children": 4,
+            "images": 4,
+            "links": 0,
+            "buttons": 0,
+            "cards": 0,
+            "text": "¿Quiénes somos? Somos una empresa marplatense dedicada a la venta Mayorista y distribución"
+          },
+          {
+            "order": 7,
+            "element": "section#offers.bg-hergo-red.py-12.md:py-20",
+            "heading": null,
+            "height": 248,
+            "viewportsTall": 0.28,
+            "display": "block",
+            "columns": null,
+            "gridTemplate": null,
+            "padding": "80px 0px",
+            "background": "#fe0061",
+            "children": 1,
+            "images": 0,
+            "links": 1,
+            "buttons": 0,
+            "cards": 0,
+            "text": "DESCARGAR PDF: 12/08/2026 al 18/08/2026"
+          },
+          {
+            "order": 8,
+            "element": "div.grid.lg:grid-cols-2.gap-8",
+            "heading": "Trabajar en Hergo",
+            "height": 1435,
+            "viewportsTall": 1.59,
+            "display": "grid",
+            "columns": 2,
+            "gridTemplate": "464px 464px",
+            "padding": "0px",
+            "background": "transparente",
+            "children": 2,
+            "images": 0,
+            "links": 0,
+            "buttons": 1,
+            "cards": 0,
+            "text": "Entendemos que el recurso humano es el que hace la diferencia, por eso propiciamos un ámbi"
+          },
+          {
+            "order": 9,
+            "element": "div.w-full.bg-hergo-blue-light.px-6",
+            "heading": "MEDIOS DE PAGO:",
+            "height": 369,
+            "viewportsTall": 0.41,
+            "display": "flex",
+            "columns": 1,
+            "gridTemplate": null,
+            "padding": "48px 40px",
+            "background": "#0172bc",
+            "children": 1,
+            "images": 0,
+            "links": 0,
+            "buttons": 0,
+            "cards": 3,
+            "text": "En nuestro salón mayorista podrás disfrutar nuestras ofertas siendo comerciante y/o consum"
+          },
+          {
+            "order": 10,
+            "element": "div.grid.grid-cols-1.md:grid-cols-3",
+            "heading": "› Tarjeta Azul",
+            "height": 940,
+            "viewportsTall": 1.04,
+            "display": "grid",
+            "columns": 3,
+            "gridTemplate": "384px 384px 384px",
+            "padding": "0px",
+            "background": "transparente",
+            "children": 3,
+            "images": 3,
+            "links": 0,
+            "buttons": 2,
+            "cards": 0,
+            "text": "› Tarjeta Azul REQUISITOS: Ser comerciante del rubro Dni del titular del comercio Fotocopi"
+          },
+          {
+            "order": 11,
+            "element": "footer.bg-hergo-blue.text-white.py-8",
+            "heading": "INSTITUCIONAL",
+            "height": 447,
+            "viewportsTall": 0.5,
+            "display": "block",
+            "columns": null,
+            "gridTemplate": null,
+            "padding": "48px 0px",
+            "background": "#0045e5",
+            "children": 1,
+            "images": 1,
+            "links": 0,
+            "buttons": 0,
+            "cards": 6,
+            "text": "Magallanes 9526 (Ruta 88 y Magallanes) (0223) 465 3434 (B7611FRZ) Mar del Plata Pcia de Bu"
+          }
+        ],
+        "blocksCount": 11,
+        "layers": [
+          {
+            "element": "nav.fixed.top-0.left-0",
+            "position": "fixed",
+            "zIndex": "50",
+            "size": "1425x177",
+            "top": "0px",
+            "bottom": "723.156px",
+            "background": "#0045e5",
+            "role": "header/nav"
+          }
+        ],
+        "grids": [
+          {
+            "element": "div.grid.grid-rows-2.h-full",
+            "columns": "1216px",
+            "rows": "154.844px 154.844px",
+            "gap": "32px",
+            "items": 2
+          },
+          {
+            "element": "div.grid.lg:grid-cols-2.gap-8",
+            "columns": "464px 464px",
+            "rows": "1435.2px",
+            "gap": "320px",
+            "items": 2
+          },
+          {
+            "element": "div.grid.grid-cols-1.gap-2",
+            "columns": "414px",
+            "rows": "24px 24px 24px 24px 24px 24px 24px",
+            "gap": "8px",
+            "items": 7
+          },
+          {
+            "element": "div.grid.grid-cols-1.md:grid-cols-3",
+            "columns": "384px 384px 384px",
+            "rows": "940.125px",
+            "gap": "48px",
+            "items": 3
+          },
+          {
+            "element": "div.grid.grid-cols-1.md:grid-cols-3",
+            "columns": "357.328px 357.328px 357.344px",
+            "rows": "351.125px",
+            "gap": "48px",
+            "items": 3
+          }
+        ],
+        "dom": {
+          "totalNodes": 294,
+          "maxDepth": 13,
+          "avgDepth": 9.4,
+          "deepestElement": "path.[object.SVGAnimatedString]",
+          "textNodes": 4448
+        },
+        "page": {
+          "scrollHeight": 7098,
+          "scrollWidth": 1425,
+          "viewport": "1440x900",
+          "viewportsTall": 7.9,
+          "horizontalOverflow": false,
+          "bodyBackground": "#000000 (0.00)"
+        },
+        "overflowingElements": [],
+        "displayStats": {
+          "grid": 5,
+          "flex": 62,
+          "sticky": 0,
+          "fixed": 1,
+          "absolute": 4,
+          "displays": [
+            {
+              "value": "block",
+              "count": 176
+            },
+            {
+              "value": "flex",
+              "count": 62
+            },
+            {
+              "value": "inline-block",
+              "count": 17
+            },
+            {
+              "value": "inline",
+              "count": 11
+            },
+            {
+              "value": "list-item",
+              "count": 9
+            },
+            {
+              "value": "grid",
+              "count": 5
+            }
+          ],
+          "positions": [
+            {
+              "value": "static",
+              "count": 269
+            },
+            {
+              "value": "relative",
+              "count": 6
+            },
+            {
+              "value": "absolute",
+              "count": 4
+            },
+            {
+              "value": "fixed",
+              "count": 1
+            }
+          ],
+          "overflows": [
+            {
+              "value": "clip",
+              "count": 25
+            },
+            {
+              "value": "hidden",
+              "count": 7
+            },
+            {
+              "value": "auto",
+              "count": 1
+            }
+          ],
+          "zIndexes": [
+            {
+              "value": "10",
+              "count": 2
+            },
+            {
+              "value": "50",
+              "count": 1
+            }
+          ],
+          "maxWidths": [
+            {
+              "value": "320px",
+              "count": 6
+            },
+            {
+              "value": "1280px",
+              "count": 4
+            },
+            {
+              "value": "896px",
+              "count": 2
+            },
+            {
+              "value": "1152px",
+              "count": 1
+            },
+            {
+              "value": "448px",
+              "count": 1
+            }
+          ],
+          "cursorPointer": 37
+        }
+      },
+      "typography": {
+        "fontFamilies": [
+          {
+            "value": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+            "count": 278
+          },
+          {
+            "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+            "count": 2
+          }
+        ],
+        "fontFamiliesAll": [
+          {
+            "value": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+            "count": 278
+          },
+          {
+            "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+            "count": 2
+          }
+        ],
+        "fontSizes": [
+          {
+            "value": "16px",
+            "count": 160
+          },
+          {
+            "value": "19.2px",
+            "count": 30
+          },
+          {
+            "value": "22.4px",
+            "count": 28
+          },
+          {
+            "value": "24px",
+            "count": 22
+          },
+          {
+            "value": "14.4px",
+            "count": 10
+          },
+          {
+            "value": "28.8px",
+            "count": 9
+          },
+          {
+            "value": "40px",
+            "count": 7
+          },
+          {
+            "value": "48px",
+            "count": 6
+          }
+        ],
+        "fontSizesAll": [
+          {
+            "value": "16px",
+            "count": 160
+          },
+          {
+            "value": "19.2px",
+            "count": 30
+          },
+          {
+            "value": "22.4px",
+            "count": 28
+          },
+          {
+            "value": "24px",
+            "count": 22
+          },
+          {
+            "value": "14.4px",
+            "count": 10
+          },
+          {
+            "value": "28.8px",
+            "count": 9
+          },
+          {
+            "value": "40px",
+            "count": 7
+          },
+          {
+            "value": "48px",
+            "count": 6
+          },
+          {
+            "value": "59.2px",
+            "count": 4
+          },
+          {
+            "value": "12px",
+            "count": 3
+          },
+          {
+            "value": "27.2px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          {
+            "value": "400",
+            "count": 231
+          },
+          {
+            "value": "700",
+            "count": 46
+          },
+          {
+            "value": "600",
+            "count": 3
+          }
+        ],
+        "lineHeights": [
+          {
+            "value": "24px",
+            "count": 159
+          },
+          {
+            "value": "26.4px",
+            "count": 30
+          },
+          {
+            "value": "33px",
+            "count": 20
+          },
+          {
+            "value": "36.4px",
+            "count": 12
+          },
+          {
+            "value": "20.5714px",
+            "count": 10
+          }
+        ],
+        "letterSpacings": [],
+        "textTransforms": [],
+        "textAligns": [
+          {
+            "value": "center",
+            "count": 148
+          },
+          {
+            "value": "left",
+            "count": 91
+          },
+          {
+            "value": "start",
+            "count": 23
+          },
+          {
+            "value": "right",
+            "count": 18
+          }
+        ],
+        "typeScale": {
+          "body": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "fontFamily": "ui-sans-serif",
+            "letterSpacing": "normal",
+            "color": "#000000"
+          },
+          "h1": {
+            "fontSize": "59.2px",
+            "fontWeight": "700",
+            "lineHeight": "59.2px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "#ffffff"
+          },
+          "h2": {
+            "fontSize": "59.2px",
+            "fontWeight": "700",
+            "lineHeight": "59.2px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "#ffffff"
+          },
+          "h3": {
+            "fontSize": "59.2px",
+            "fontWeight": "700",
+            "lineHeight": "82.88px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "#ffffff"
+          },
+          "p": {
+            "fontSize": "22.4px",
+            "fontWeight": "700",
+            "lineHeight": "22.4px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "#ffffff"
+          },
+          "a": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "#ffffff"
+          },
+          "button": {
+            "fontSize": "22.4px",
+            "fontWeight": "700",
+            "lineHeight": "34.8444px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "#ffffff"
+          },
+          "input": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px",
+            "fontFamily": "Plus Jakarta Sans",
+            "letterSpacing": "normal",
+            "color": "oklch(0.278 0.033 256.848)"
+          }
+        },
+        "loadedFonts": [
+          "PlusJakartaSans-ExtraLight 200 normal (unloaded)",
+          "PlusJakartaSans-ExtraLightItalic 200 italic (unloaded)",
+          "PlusJakartaSans-Light 300 normal (unloaded)",
+          "PlusJakartaSans-LightItalic 300 italic (unloaded)",
+          "PlusJakartaSans-Regular 400 normal (unloaded)",
+          "PlusJakartaSans-Italic 400 italic (unloaded)",
+          "PlusJakartaSans-Medium 500 normal (unloaded)",
+          "PlusJakartaSans-MediumItalic 500 italic (unloaded)",
+          "PlusJakartaSans-SemiBold 600 normal (unloaded)",
+          "PlusJakartaSans-SemiBoldItalic 600 italic (unloaded)",
+          "PlusJakartaSans-Bold 700 normal (unloaded)",
+          "PlusJakartaSans-BoldItalic 700 italic (unloaded)",
+          "PlusJakartaSans-ExtraBold 800 normal (unloaded)",
+          "PlusJakartaSans-ExtraBoldItalic 800 italic (unloaded)",
+          "PlusJakartaSans-Variable 200 800 normal (unloaded)",
+          "PlusJakartaSans-VariableItalic 200 800 italic (unloaded)",
+          "Plus Jakarta Sans 200 800 normal (loaded)",
+          "Plus Jakarta Sans 200 800 italic (unloaded)"
+        ],
+        "distinct": {
+          "families": 2,
+          "sizes": 11,
+          "weights": 3,
+          "lineHeights": 23
+        }
+      },
+      "palette": {
+        "textColors": [
+          {
+            "value": "#ffffff",
+            "count": 145
+          },
+          {
+            "value": "#000000",
+            "count": 55
+          },
+          {
+            "value": "#fe0061",
+            "count": 10
+          },
+          {
+            "value": "#0045e5",
+            "count": 1
+          }
+        ],
+        "textColorsAll": [
+          {
+            "value": "#ffffff",
+            "count": 145
+          },
+          {
+            "value": "#000000",
+            "count": 55
+          },
+          {
+            "value": "#fe0061",
+            "count": 10
+          },
+          {
+            "value": "#0045e5",
+            "count": 1
+          }
+        ],
+        "backgrounds": [
+          {
+            "value": "#fe0061",
+            "count": 9
+          },
+          {
+            "value": "#0172bc",
+            "count": 5
+          },
+          {
+            "value": "#ffffff",
+            "count": 4
+          },
+          {
+            "value": "#0045e5",
+            "count": 3
+          }
+        ],
+        "backgroundsAll": [
+          {
+            "value": "#fe0061",
+            "count": 9
+          },
+          {
+            "value": "#0172bc",
+            "count": 5
+          },
+          {
+            "value": "#ffffff",
+            "count": 4
+          },
+          {
+            "value": "#0045e5",
+            "count": 3
+          }
+        ],
+        "borderColors": [
+          {
+            "value": "#ffffff",
+            "count": 4
+          }
+        ],
+        "gradients": [],
+        "distinct": {
+          "text": 4,
+          "background": 4,
+          "border": 1
+        }
+      },
+      "spacing": {
+        "borderRadius": [
+          {
+            "value": "3.35544e+07px",
+            "count": 20
+          },
+          {
+            "value": "24px",
+            "count": 6
+          },
+          {
+            "value": "8px",
+            "count": 1
+          }
+        ],
+        "boxShadows": [
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+            "count": 1
+          }
+        ],
+        "gaps": [
+          {
+            "value": "8px",
+            "count": 19
+          },
+          {
+            "value": "32px",
+            "count": 5
+          },
+          {
+            "value": "48px",
+            "count": 2
+          },
+          {
+            "value": "16px",
+            "count": 1
+          },
+          {
+            "value": "20px",
+            "count": 1
+          },
+          {
+            "value": "24px",
+            "count": 1
+          }
+        ],
+        "paddings": [
+          {
+            "value": "0px 0px 0px 24px",
+            "count": 9
+          },
+          {
+            "value": "12px 24px",
+            "count": 9
+          },
+          {
+            "value": "16px 24px",
+            "count": 8
+          },
+          {
+            "value": "0px 16px",
+            "count": 4
+          },
+          {
+            "value": "8px 24px",
+            "count": 4
+          },
+          {
+            "value": "0px 32px",
+            "count": 3
+          },
+          {
+            "value": "0px 0px 64px",
+            "count": 2
+          },
+          {
+            "value": "0px 0px 8px",
+            "count": 2
+          }
+        ],
+        "margins": [
+          {
+            "value": "0px 0px 16px",
+            "count": 17
+          },
+          {
+            "value": "0px 0px 4px",
+            "count": 10
+          },
+          {
+            "value": "0px 0px 12px",
+            "count": 8
+          },
+          {
+            "value": "0px 0px 8px",
+            "count": 7
+          },
+          {
+            "value": "0px 8px 0px 0px",
+            "count": 7
+          },
+          {
+            "value": "0px 0px 32px",
+            "count": 4
+          },
+          {
+            "value": "0px 72.5px",
+            "count": 4
+          },
+          {
+            "value": "0px 0px 48px",
+            "count": 3
+          }
+        ],
+        "borderWidths": [
+          {
+            "value": "3px",
+            "count": 4
+          }
+        ],
+        "distinct": {
+          "radius": 3,
+          "shadow": 3,
+          "gap": 8,
+          "padding": 30
+        }
+      },
+      "contrast": {
+        "issues": [
+          {
+            "ratio": 1,
+            "required": 3,
+            "color": "#ffffff",
+            "background": "#ffffff",
+            "fontSize": "59.2px",
+            "fontWeight": "700",
+            "sample": "Salón de ventas:",
+            "element": "h2.ml-2.text-center.text-lg"
+          },
+          {
+            "ratio": 1,
+            "required": 3,
+            "color": "#ffffff",
+            "background": "#ffffff",
+            "fontSize": "28.8px",
+            "fontWeight": "400",
+            "sample": "Ruta 88 y Magallanes",
+            "element": "p.ml-5.text-lg.md:text-[1.8rem]"
+          },
+          {
+            "ratio": 1,
+            "required": 3,
+            "color": "#ffffff",
+            "background": "#ffffff",
+            "fontSize": "22.4px",
+            "fontWeight": "700",
+            "sample": "Mayorista y distribución de productos de consumo m",
+            "element": "span.font-bold"
+          },
+          {
+            "ratio": 3.9,
+            "required": 4.5,
+            "color": "#ffffff",
+            "background": "#fe0061",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "sample": "MAR DEL PLATA – BATÁN – SIERRA DE LOS PADRES – BAL",
+            "element": "p.text-white.text-sm.md:text-base"
+          },
+          {
+            "ratio": 3.9,
+            "required": 4.5,
+            "color": "#fe0061",
+            "background": "#ffffff",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "sample": "+54 9 223 520 - 5392",
+            "element": "span.text-sm.md:text-base.font-bold"
+          }
+        ],
+        "totalIssues": 5
+      },
+      "elementsScanned": 283,
+      "elementsTotal": 283,
+      "scanCapped": false,
+      "components": {
+        "counts": {
+          "buttons": 12,
+          "links": 7,
+          "forms": 1,
+          "inputs": 18,
+          "images": 19,
+          "svg": 3,
+          "videosEmbeds": 1,
+          "modals": 0,
+          "tables": 0,
+          "carousels": 0,
+          "cards": 0,
+          "lists": 3,
+          "accordions": 0,
+          "tabs": 0,
+          "breadcrumbs": 0,
+          "pagination": 0,
+          "badges": 0,
+          "icons": 3,
+          "ratings": 20,
+          "prices": 0,
+          "addToCart": 0,
+          "search": 0,
+          "newsletter": 0,
+          "social": 3,
+          "skeletons": 0,
+          "banners": 0
+        },
+        "buttonVariants": [
+          {
+            "count": 4,
+            "styles": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "3.35544e+07px",
+              "padding": "8px 24px",
+              "fontSize": "22.4px",
+              "fontWeight": "700",
+              "borderTopWidth": "3px",
+              "borderTopColor": "rgb(255, 255, 255)",
+              "textTransform": "none",
+              "boxShadow": "none"
+            },
+            "samples": [
+              "Empresa",
+              "Ofertas",
+              "Trabajar en Hergo"
+            ],
+            "commonSize": "150x57",
+            "element": "button.px-6.py-2.rounded-full",
+            "shotId": "btn-1"
+          },
+          {
+            "count": 2,
+            "styles": {
+              "backgroundColor": "rgb(254, 0, 97)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "3.35544e+07px",
+              "padding": "12px 24px",
+              "fontSize": "22.4px",
+              "fontWeight": "700",
+              "borderTopWidth": "0px",
+              "borderTopColor": "rgb(255, 255, 255)",
+              "textTransform": "none",
+              "boxShadow": "none"
+            },
+            "samples": [
+              "PORTAL AUTOGESTIÓN",
+              "GENERAR TARJETA VIRTUAL"
+            ],
+            "commonSize": "303x59",
+            "element": "button.bg-hergo-red.text-lg.font-bold",
+            "shotId": "btn-2"
+          },
+          {
+            "count": 1,
+            "styles": {
+              "backgroundColor": "rgb(254, 0, 97)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "3.35544e+07px",
+              "padding": "12px 48px",
+              "fontSize": "22.4px",
+              "fontWeight": "700",
+              "borderTopWidth": "0px",
+              "borderTopColor": "rgb(255, 255, 255)",
+              "textTransform": "none",
+              "boxShadow": "none"
+            },
+            "samples": [
+              "ENVIAR"
+            ],
+            "commonSize": "179x59",
+            "element": "button.bg-hergo-red.text-white.px-8",
+            "shotId": "btn-3"
+          },
+          {
+            "count": 1,
+            "styles": {
+              "backgroundColor": "rgb(0, 69, 229)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "3.35544e+07px",
+              "padding": "16px 24px",
+              "fontSize": "22.4px",
+              "fontWeight": "700",
+              "borderTopWidth": "0px",
+              "borderTopColor": "rgb(255, 255, 255)",
+              "textTransform": "none",
+              "boxShadow": "none"
+            },
+            "samples": [
+              "Solicitar tarjeta azul"
+            ],
+            "commonSize": "320x66",
+            "element": "button.w-full.bg-hergo-blue.transition",
+            "shotId": "btn-4"
+          },
+          {
+            "count": 1,
+            "styles": {
+              "backgroundColor": "rgb(254, 0, 97)",
+              "color": "rgb(255, 255, 255)",
+              "borderRadius": "3.35544e+07px",
+              "padding": "16px 24px",
+              "fontSize": "22.4px",
+              "fontWeight": "700",
+              "borderTopWidth": "0px",
+              "borderTopColor": "rgb(255, 255, 255)",
+              "textTransform": "none",
+              "boxShadow": "none"
+            },
+            "samples": [
+              "Ir a generar tarjeta virtual"
+            ],
+            "commonSize": "320x66",
+            "element": "button.w-full.bg-hergo-red.transition",
+            "shotId": "btn-5"
+          }
+        ],
+        "cardVariants": [],
+        "inputVariants": [
+          {
+            "count": 11,
+            "styles": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "oklch(0.278 0.033 256.848)",
+              "borderRadius": "0px",
+              "padding": "0px",
+              "fontSize": "16px",
+              "borderTopWidth": "0px",
+              "borderTopColor": "oklch(0.278 0.033 256.848)",
+              "height": "13px"
+            },
+            "samples": [
+              "ownMobility",
+              "ownMobility",
+              "workTime"
+            ],
+            "commonSize": "13x13",
+            "element": "input.accent-hergo-red",
+            "shotId": "input-1"
+          },
+          {
+            "count": 5,
+            "styles": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "oklch(0.278 0.033 256.848)",
+              "borderRadius": "3.35544e+07px",
+              "padding": "12px 24px",
+              "fontSize": "16px",
+              "borderTopWidth": "1px",
+              "borderTopColor": "oklch(0.872 0.01 258.338)",
+              "height": "50px"
+            },
+            "samples": [
+              "nameLastName",
+              "birthDate",
+              "address"
+            ],
+            "commonSize": "464x50",
+            "element": "input.px-4.md:px-6.py-2",
+            "shotId": "input-2"
+          },
+          {
+            "count": 1,
+            "styles": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "oklch(0.278 0.033 256.848)",
+              "borderRadius": "24px",
+              "padding": "16px 24px",
+              "fontSize": "16px",
+              "borderTopWidth": "1px",
+              "borderTopColor": "oklch(0.872 0.01 258.338)",
+              "height": "154px"
+            },
+            "samples": [
+              "comments"
+            ],
+            "commonSize": "464x154",
+            "element": "textarea.px-4.md:px-6.py-3",
+            "shotId": "input-3"
+          }
+        ],
+        "zoneShots": [
+          {
+            "shotId": "zone-header",
+            "label": "Header",
+            "element": "nav.fixed.top-0.left-0",
+            "size": "1425x177"
+          },
+          {
+            "shotId": "zone-nav",
+            "label": "Navegación",
+            "element": "nav.fixed.top-0.left-0",
+            "size": "1425x177"
+          },
+          {
+            "shotId": "zone-hero",
+            "label": "Primera sección / hero",
+            "element": "div#root",
+            "size": "1425x7098"
+          },
+          {
+            "shotId": "zone-footer",
+            "label": "Footer",
+            "element": "footer.bg-hergo-blue.text-white.py-8",
+            "size": "1425x447"
+          },
+          {
+            "shotId": "zone-form",
+            "label": "Primer formulario",
+            "element": "form.space-y-4",
+            "size": "464x1351"
+          }
+        ],
+        "links": {
+          "total": 7,
+          "internal": 0,
+          "external": 7,
+          "anchors": 0,
+          "tel": 0,
+          "mail": 0,
+          "javascript": 0,
+          "nofollow": 0,
+          "targetBlank": 7,
+          "withoutText": 0,
+          "topExternalHosts": [
+            {
+              "value": "drive.google.com",
+              "count": 2
+            },
+            {
+              "value": "portal.hergo.com.ar",
+              "count": 2
+            },
+            {
+              "value": "api.whatsapp.com",
+              "count": 1
+            },
+            {
+              "value": "www.facebook.com",
+              "count": 1
+            },
+            {
+              "value": "www.instagram.com",
+              "count": 1
+            }
+          ]
+        },
+        "forms": [
+          {
+            "element": "form.space-y-4",
+            "action": "(mismo)",
+            "method": "GET",
+            "novalidate": false,
+            "fields": [
+              {
+                "tag": "input",
+                "type": "text",
+                "name": "nameLastName",
+                "placeholder": null,
+                "required": true,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "date",
+                "name": "birthDate",
+                "placeholder": null,
+                "required": true,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "text",
+                "name": "address",
+                "placeholder": null,
+                "required": true,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "tel",
+                "name": "phone",
+                "placeholder": null,
+                "required": true,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "email",
+                "name": "email",
+                "placeholder": null,
+                "required": true,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "radio",
+                "name": "ownMobility",
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "radio",
+                "name": "ownMobility",
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "radio",
+                "name": "workTime",
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "radio",
+                "name": "workTime",
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "checkbox",
+                "name": null,
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "textarea",
+                "type": "text",
+                "name": "comments",
+                "placeholder": null,
+                "required": true,
+                "autocomplete": null,
+                "pattern": null
+              },
+              {
+                "tag": "input",
+                "type": "file",
+                "name": "cv-upload",
+                "placeholder": null,
+                "required": false,
+                "autocomplete": null,
+                "pattern": null
+              }
+            ],
+            "submit": "ENVIAR"
+          }
+        ],
+        "images": {
+          "total": 19,
+          "formats": [
+            {
+              "value": "svg",
+              "count": 7
+            },
+            {
+              "value": "jpg",
+              "count": 5
+            },
+            {
+              "value": "png",
+              "count": 5
+            },
+            {
+              "value": "sin-extensión",
+              "count": 2
+            }
+          ],
+          "lazy": 0,
+          "eager": 0,
+          "withoutLoadingAttr": 19,
+          "withSrcset": 0,
+          "oversized": 12,
+          "missingDimensions": 19,
+          "decorative": 0,
+          "detail": [
+            {
+              "src": "https://www.hergo.com.ar/logos/hergo-logo.png",
+              "host": "www.hergo.com.ar",
+              "displayed": "202x64",
+              "natural": "619x196",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Hergo",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/hergui-frente-D2dhCVOa.png",
+              "host": "www.hergo.com.ar",
+              "displayed": "320x255",
+              "natural": "352x280",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Hergui",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/folder-ofertas-D3A8-O_c.png",
+              "host": "www.hergo.com.ar",
+              "displayed": "448x436",
+              "natural": "505x491",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Revista Ofertas Hergo",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/logo-visa.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "99x32",
+              "natural": "1599x519",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Visa",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/logo-cabal.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "95x32",
+              "natural": "808x272",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Cabal",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/maestro.png",
+              "host": "www.hergo.com.ar",
+              "displayed": "100x56",
+              "natural": "500x281",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Mastercard",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/logo-visa.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "99x32",
+              "natural": "1599x519",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Visa",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/mastercard.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "56x56",
+              "natural": "150x150",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Mastercard",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/deposito-6iGnCbWY.jpg",
+              "host": "www.hergo.com.ar",
+              "displayed": "1425x438",
+              "natural": "6000x4000",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Depósito Hergo",
+              "objectFit": "cover",
+              "radius": "0px"
+            },
+            {
+              "src": "78.8%2017.3%2078.8%2024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+              "host": "",
+              "displayed": "15x20",
+              "natural": "113x150",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "(falta)",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "78.8%2017.3%2078.8%2024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+              "host": "",
+              "displayed": "15x20",
+              "natural": "113x150",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "(falta)",
+              "objectFit": "fill",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/company-img-1-DvhAdTat.jpg",
+              "host": "www.hergo.com.ar",
+              "displayed": "1140x661",
+              "natural": "1600x1066",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "(falta)",
+              "objectFit": "cover",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/company-img-2-BT8vnYMB.jpg",
+              "host": "www.hergo.com.ar",
+              "displayed": "285x661",
+              "natural": "1600x1066",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Operarios en almacén",
+              "objectFit": "cover",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/company-img-3-DurHHsed.jpg",
+              "host": "www.hergo.com.ar",
+              "displayed": "285x672",
+              "natural": "1600x1066",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Almacén logístico",
+              "objectFit": "cover",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/assets/company-img-4-Cvsq3290.jpg",
+              "host": "www.hergo.com.ar",
+              "displayed": "1140x672",
+              "natural": "1600x1066",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "(falta)",
+              "objectFit": "cover",
+              "radius": "0px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/tarjeta-mayorista.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "320x194",
+              "natural": "248x150",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Tarjeta Mayorista",
+              "objectFit": "fill",
+              "radius": "24px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/tarjeta-minorista.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "320x205",
+              "natural": "234x150",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Tarjeta Mayorista",
+              "objectFit": "fill",
+              "radius": "24px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/tarjeta-virtual.svg",
+              "host": "www.hergo.com.ar",
+              "displayed": "320x199",
+              "natural": "242x150",
+              "oversized": false,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Tarjeta Mayorista",
+              "objectFit": "fill",
+              "radius": "24px"
+            },
+            {
+              "src": "https://www.hergo.com.ar/logos/hergo-logo.png",
+              "host": "www.hergo.com.ar",
+              "displayed": "177x56",
+              "natural": "619x196",
+              "oversized": true,
+              "loading": "(default)",
+              "srcset": false,
+              "alt": "Hergo",
+              "objectFit": "fill",
+              "radius": "0px"
+            }
+          ]
+        },
+        "carousels": [],
+        "tables": [],
+        "navigation": {
+          "element": "nav.fixed.top-0.left-0",
+          "totalLinks": 5,
+          "topLevelItems": 0,
+          "items": [],
+          "sticky": "fixed",
+          "hasBurger": true,
+          "hasSearch": false
+        },
+        "footer": {
+          "columns": 1,
+          "links": 0,
+          "headings": 2,
+          "socialLinks": 0,
+          "height": 447,
+          "background": "#0045e5",
+          "hasNewsletter": false,
+          "paymentIcons": 0
+        },
+        "embeds": [
+          {
+            "tag": "iframe",
+            "host": "www.google.com",
+            "size": "1425x400",
+            "title": "Ubicación de Alta Distribuidora",
+            "lazy": true,
+            "autoplay": false,
+            "muted": false,
+            "controls": false
+          }
+        ]
+      },
+      "a11y": {
+        "imagesTotal": 19,
+        "imagesWithoutAlt": 4,
+        "imagesEmptyAlt": 0,
+        "imagesWithoutAltSamples": [
+          "024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+          "024.5%2078.8%2035.6%2078.8%2059.8%2043.3%2035.6%207.7%27/%3e%3c/svg%3e",
+          "https://www.hergo.com.ar/assets/company-img-1-DvhAdTat.jpg",
+          "https://www.hergo.com.ar/assets/company-img-4-Cvsq3290.jpg"
+        ],
+        "h1Count": 2,
+        "headings": {
+          "h1": 2,
+          "h2": 5,
+          "h3": 8,
+          "h4": 0,
+          "h5": 0,
+          "h6": 0
+        },
+        "headingOutline": [
+          {
+            "level": 1,
+            "text": "Primeras marcas.",
+            "visible": true,
+            "fontSize": "59.2px"
+          },
+          {
+            "level": 2,
+            "text": "El mejor precio.",
+            "visible": true,
+            "fontSize": "59.2px"
+          },
+          {
+            "level": 2,
+            "text": "Revista Ofertas #3226",
+            "visible": true,
+            "fontSize": "48px"
+          },
+          {
+            "level": 2,
+            "text": "Salón de ventas:",
+            "visible": true,
+            "fontSize": "59.2px"
+          },
+          {
+            "level": 3,
+            "text": "Días y Horarios de atención:",
+            "visible": true,
+            "fontSize": "59.2px"
+          },
+          {
+            "level": 1,
+            "text": "¿Quiénes somos?",
+            "visible": true,
+            "fontSize": "28.8px"
+          },
+          {
+            "level": 2,
+            "text": "Nuestra distribución y logística",
+            "visible": true,
+            "fontSize": "28.8px"
+          },
+          {
+            "level": 3,
+            "text": "› Si querés que visitemos tu comercio.",
+            "visible": true,
+            "fontSize": "48px"
+          },
+          {
+            "level": 2,
+            "text": "Trabajar en Hergo",
+            "visible": true,
+            "fontSize": "48px"
+          },
+          {
+            "level": 3,
+            "text": "MEDIOS DE PAGO:",
+            "visible": true,
+            "fontSize": "27.2px"
+          },
+          {
+            "level": 3,
+            "text": "› Tarjeta Azul",
+            "visible": true,
+            "fontSize": "40px"
+          },
+          {
+            "level": 3,
+            "text": "› Tarjeta Roja",
+            "visible": true,
+            "fontSize": "40px"
+          },
+          {
+            "level": 3,
+            "text": "› Tarjeta Digital",
+            "visible": true,
+            "fontSize": "40px"
+          },
+          {
+            "level": 3,
+            "text": "INSTITUCIONAL",
+            "visible": true,
+            "fontSize": "48px"
+          },
+          {
+            "level": 3,
+            "text": "OFERTAS",
+            "visible": true,
+            "fontSize": "48px"
+          }
+        ],
+        "headingOrderIssues": [],
+        "ariaLabelElements": 1,
+        "ariaAttributes": [
+          {
+            "value": "aria-label",
+            "count": 1
+          }
+        ],
+        "roles": [],
+        "inputsTotal": 18,
+        "inputsWithoutLabel": 6,
+        "inputsWithoutLabelSamples": [
+          "input[text] name=nameLastName ph=—",
+          "input[date] name=birthDate ph=—",
+          "input[text] name=address ph=—",
+          "input[tel] name=phone ph=—",
+          "input[email] name=email ph=—",
+          "textarea[text] name=comments ph=—"
+        ],
+        "buttonsWithoutAccessibleName": 0,
+        "buttonsWithoutAccessibleNameSamples": [],
+        "linksWithoutAccessibleName": 3,
+        "focusOutlineRemoved": 44,
+        "positiveTabindex": 0,
+        "skipLink": false,
+        "landmarksPresent": {
+          "banner": false,
+          "navigation": true,
+          "main": false,
+          "contentinfo": true,
+          "search": false
+        },
+        "iframesWithoutTitle": 0,
+        "tablesWithoutHeaders": 0,
+        "autoplayMedia": 0,
+        "langIssues": []
+      },
+      "animations": {
+        "elementsWithTransition": 21,
+        "elementsWithAnimation": 0,
+        "elementsWithTransform": 0,
+        "elementsWithWillChange": 0,
+        "elementsWithFilter": 4,
+        "elementsWithBackdropFilter": 0,
+        "transitionProperties": [
+          {
+            "value": "--tw-gradient-from",
+            "count": 21
+          },
+          {
+            "value": "--tw-gradient-to",
+            "count": 21
+          },
+          {
+            "value": "--tw-gradient-via",
+            "count": 21
+          },
+          {
+            "value": "background-color",
+            "count": 21
+          },
+          {
+            "value": "border-color",
+            "count": 21
+          },
+          {
+            "value": "color",
+            "count": 21
+          },
+          {
+            "value": "fill",
+            "count": 21
+          },
+          {
+            "value": "outline-color",
+            "count": 21
+          }
+        ],
+        "transitionDurations": [
+          {
+            "value": "0.15s",
+            "count": 18
+          },
+          {
+            "value": "0.2s",
+            "count": 3
+          }
+        ],
+        "transitionEasings": [
+          {
+            "value": "cubic-bezier(0.4",
+            "count": 21
+          }
+        ],
+        "transitionDelays": [],
+        "transitionSamples": [
+          {
+            "element": "button.bg-hergo-red.text-lg.font-bold",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.bg-hergo-red.text-lg.font-bold",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.bg-hergo-red.text-base.font-bold",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.bg-hergo-red.text-base.font-bold",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.px-6.py-2.rounded-full",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.px-6.py-2.rounded-full",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.px-6.py-2.rounded-full",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "button.px-6.py-2.rounded-full",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "a.text-white.hover:text-hergo-red.transition-colors",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "a.text-white.hover:text-hergo-red.transition-colors",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "a.text-white.hover:text-hergo-red.transition-colors",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.15s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          },
+          {
+            "element": "a.bg-white.text-hergo-red.px-8",
+            "property": "color, background-color, border-color, outline-color, text-d",
+            "duration": "0.2s",
+            "easing": "cubic-bezier(0.4",
+            "delay": "0s"
+          }
+        ],
+        "animationNames": [],
+        "animationDurations": [],
+        "animationIterations": [],
+        "animationSamples": [],
+        "keyframesDefined": [
+          "spin"
+        ],
+        "transforms": [],
+        "willChange": [],
+        "filters": [
+          {
+            "value": "brightness(0) invert(1)",
+            "count": 4
+          }
+        ],
+        "hoverProperties": [],
+        "scrollRevealHints": [],
+        "prefersReducedMotionSupport": false
+      },
+      "cssom": {
+        "stats": {
+          "stylesheets": 1,
+          "accessible": 1,
+          "crossOrigin": 0,
+          "totalRules": 90,
+          "styleRules": 2,
+          "mediaRules": 0,
+          "keyframeRules": 1,
+          "fontFaceRules": 18,
+          "supportsRules": 0,
+          "importRules": 0,
+          "importantCount": 0,
+          "customPropertyDeclarations": 0,
+          "inlineStyleAttributes": 2,
+          "approxCssBytes": 80
+        },
+        "sheets": [
+          {
+            "href": "https://www.hergo.com.ar/assets/index-B-oToTjL.css",
+            "host": "www.hergo.com.ar",
+            "rules": 2,
+            "media": ""
+          }
+        ],
+        "mediaQueries": [],
+        "mediaQueryCount": 0,
+        "widthBreakpoints": [],
+        "inferredBreakpoints": [],
+        "fontFaces": [
+          {
+            "family": "PlusJakartaSans-ExtraLight",
+            "weight": "200",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-ExtraLightItalic",
+            "weight": "200",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-Light",
+            "weight": "300",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-LightItalic",
+            "weight": "300",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-Regular",
+            "weight": "400",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-Italic",
+            "weight": "400",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-Medium",
+            "weight": "500",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-MediumItalic",
+            "weight": "500",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-SemiBold",
+            "weight": "600",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-SemiBoldItalic",
+            "weight": "600",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-Bold",
+            "weight": "700",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-BoldItalic",
+            "weight": "700",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-ExtraBold",
+            "weight": "800",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-ExtraBoldItalic",
+            "weight": "800",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-Variable",
+            "weight": "200 800",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "PlusJakartaSans-VariableItalic",
+            "weight": "200 800",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "Plus Jakarta Sans",
+            "weight": "200 800",
+            "style": "normal",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "family": "Plus Jakarta Sans",
+            "weight": "200 800",
+            "style": "italic",
+            "display": "swap",
+            "format": "woff2, woff, truetype",
+            "host": "www.hergo.com.ar"
+          }
+        ],
+        "supportsQueries": [],
+        "selectorDepthDistribution": [
+          {
+            "value": "1",
+            "count": 2
+          }
+        ],
+        "longestSelector": "#root",
+        "hasDarkModeQuery": false,
+        "hasPrintStyles": false,
+        "hasHoverQuery": false
+      },
+      "perf": {
+        "navigation": {
+          "type": "navigate",
+          "redirects": 0,
+          "ttfbMs": 180,
+          "dnsMs": 183,
+          "tcpMs": 361,
+          "tlsMs": 186,
+          "responseMs": 1,
+          "domInteractiveMs": 778,
+          "domContentLoadedMs": 1658,
+          "loadEventMs": 1659,
+          "transferSize": 777,
+          "encodedBodySize": 477,
+          "decodedBodySize": 811,
+          "protocol": "h2"
+        },
+        "paint": {
+          "first-paint": 2144,
+          "first-contentful-paint": 2144
+        },
+        "lcp": null,
+        "cls": 0.1274,
+        "resources": {
+          "script": {
+            "count": 2,
+            "bytes": 124501,
+            "durationMs": 1005
+          },
+          "link": {
+            "count": 1,
+            "bytes": 8534,
+            "durationMs": 363
+          },
+          "fetch": {
+            "count": 5,
+            "bytes": 0,
+            "durationMs": 3659
+          },
+          "iframe": {
+            "count": 1,
+            "bytes": 0,
+            "durationMs": 1930
+          },
+          "img": {
+            "count": 15,
+            "bytes": 5401038,
+            "durationMs": 12765
+          },
+          "css": {
+            "count": 1,
+            "bytes": 60624,
+            "durationMs": 756
+          },
+          "other": {
+            "count": 1,
+            "bytes": 635,
+            "durationMs": 538
+          }
+        },
+        "slowest": [
+          {
+            "url": "x5b51b7b3f8b75bf9!2sMayorista%20Hergo!5e0!3m2!1ses!2sar!4v1764162250010!5m2!1ses!2sar",
+            "type": "iframe",
+            "ms": 1930,
+            "kb": 0,
+            "host": "www.google.com"
+          },
+          {
+            "url": "https://www.hergo.com.ar/assets/deposito-6iGnCbWY.jpg",
+            "type": "img",
+            "ms": 1912,
+            "kb": 2944,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/assets/company-img-1-DvhAdTat.jpg",
+            "type": "img",
+            "ms": 1134,
+            "kb": 728,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/assets/company-img-3-DurHHsed.jpg",
+            "type": "img",
+            "ms": 1131,
+            "kb": 637,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/assets/company-img-2-BT8vnYMB.jpg",
+            "type": "img",
+            "ms": 1121,
+            "kb": 410,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/assets/company-img-4-Cvsq3290.jpg",
+            "type": "img",
+            "ms": 1119,
+            "kb": 262,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://portal.hergo.com.ar:8099/Imagenes/www/popup/",
+            "type": "fetch",
+            "ms": 1060,
+            "kb": 0,
+            "host": "portal.hergo.com.ar"
+          },
+          {
+            "url": "https://portal.hergo.com.ar:8099/Imagenes/www/banners/pc/",
+            "type": "fetch",
+            "ms": 1059,
+            "kb": 0,
+            "host": "portal.hergo.com.ar"
+          },
+          {
+            "url": "https://portal.hergo.com.ar:8099/Imagenes/www/banners/mobile/",
+            "type": "fetch",
+            "ms": 1048,
+            "kb": 0,
+            "host": "portal.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/logos/tarjeta-virtual.svg",
+            "type": "img",
+            "ms": 889,
+            "kb": 2,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/logos/tarjeta-minorista.svg",
+            "type": "img",
+            "ms": 889,
+            "kb": 2,
+            "host": "www.hergo.com.ar"
+          },
+          {
+            "url": "https://www.hergo.com.ar/logos/tarjeta-mayorista.svg",
+            "type": "img",
+            "ms": 889,
+            "kb": 2,
+            "host": "www.hergo.com.ar"
+          }
+        ],
+        "byHost": [
+          {
+            "host": "www.hergo.com.ar",
+            "count": 19,
+            "kb": 5464
+          },
+          {
+            "host": "portal.hergo.com.ar",
+            "count": 3,
+            "kb": 0
+          },
+          {
+            "host": "www.google-analytics.com",
+            "count": 2,
+            "kb": 0
+          },
+          {
+            "host": "www.googletagmanager.com",
+            "count": 1,
+            "kb": 0
+          },
+          {
+            "host": "www.google.com",
+            "count": 1,
+            "kb": 0
+          }
+        ],
+        "totals": {
+          "requests": 26,
+          "transferKb": 5464,
+          "thirdPartyRequests": 7,
+          "thirdPartyHosts": 4
+        }
+      },
+      "network": {
+        "totalRequests": 81,
+        "totalResponses": 81,
+        "totalKb": 6251,
+        "byType": {
+          "document": {
+            "count": 2,
+            "kb": 2
+          },
+          "stylesheet": {
+            "count": 4,
+            "kb": 0
+          },
+          "script": {
+            "count": 16,
+            "kb": 601
+          },
+          "image": {
+            "count": 38,
+            "kb": 5444
+          },
+          "font": {
+            "count": 5,
+            "kb": 188
+          },
+          "fetch": {
+            "count": 5,
+            "kb": 1
+          },
+          "xhr": {
+            "count": 10,
+            "kb": 16
+          },
+          "media": {
+            "count": 0,
+            "kb": 0
+          },
+          "other": {
+            "count": 1,
+            "kb": 0
+          }
+        },
+        "byStatus": {
+          "2xx": 81
+        },
+        "redirects": 0,
+        "notModified": 0,
+        "hosts": [
+          {
+            "host": "www.google.com",
+            "count": 25,
+            "kb": 191,
+            "thirdParty": true
+          },
+          {
+            "host": "www.hergo.com.ar",
+            "count": 20,
+            "kb": 5319,
+            "thirdParty": false
+          },
+          {
+            "host": "maps.googleapis.com",
+            "count": 19,
+            "kb": 372,
+            "thirdParty": true
+          },
+          {
+            "host": "fonts.gstatic.com",
+            "count": 4,
+            "kb": 129,
+            "thirdParty": true
+          },
+          {
+            "host": "fonts.googleapis.com",
+            "count": 3,
+            "kb": 0,
+            "thirdParty": true
+          },
+          {
+            "host": "portal.hergo.com.ar",
+            "count": 3,
+            "kb": 1,
+            "thirdParty": true
+          },
+          {
+            "host": "www.google-analytics.com",
+            "count": 2,
+            "kb": 0,
+            "thirdParty": true
+          },
+          {
+            "host": "maps.gstatic.com",
+            "count": 2,
+            "kb": 74,
+            "thirdParty": true
+          },
+          {
+            "host": "places.googleapis.com",
+            "count": 2,
+            "kb": 1,
+            "thirdParty": true
+          },
+          {
+            "host": "www.googletagmanager.com",
+            "count": 1,
+            "kb": 165,
+            "thirdParty": true
+          }
+        ],
+        "thirdPartyHosts": 9,
+        "failed": [
+          {
+            "url": "=https%3A%2F%2Fwww.hergo.com.ar%2F&dt=Hergo&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1152",
+            "type": "fetch",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "ttps%3A%2F%2Fwww.hergo.com.ar%2F&dt=Hergo&en=scroll&epn.percent_scrolled=90&_et=8&tfd=6248",
+            "type": "fetch",
+            "error": "net::ERR_ABORTED"
+          }
+        ]
+      },
+      "responsive": [
+        {
+          "width": 360,
+          "height": 844,
+          "dpr": 1,
+          "scrollHeight": 8505,
+          "viewportsTall": 10.1,
+          "horizontalOverflow": false,
+          "overflowWidth": 345,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": true,
+          "burgerVisibleIncludingHeuristic": true,
+          "burgerSource": "selector conocido",
+          "burgerElement": "button.md:hidden.text-white.text-lg",
+          "navVisible": true,
+          "navLinksVisible": 0,
+          "headerHeight": 59,
+          "headerPosition": "fixed",
+          "bodyFontSize": "16px",
+          "h1FontSize": "32px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 345,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "24px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 1,
+              "gap": "32px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 7,
+          "tapTargetsTotal": 12,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 90
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "dpr": 1,
+          "scrollHeight": 8148,
+          "viewportsTall": 9.7,
+          "horizontalOverflow": false,
+          "overflowWidth": 375,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": true,
+          "burgerVisibleIncludingHeuristic": true,
+          "burgerSource": "selector conocido",
+          "burgerElement": "button.md:hidden.text-white.text-lg",
+          "navVisible": true,
+          "navLinksVisible": 0,
+          "headerHeight": 59,
+          "headerPosition": "fixed",
+          "bodyFontSize": "16px",
+          "h1FontSize": "32px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 375,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "24px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 1,
+              "gap": "32px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 7,
+          "tapTargetsTotal": 12,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 90
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "dpr": 1,
+          "scrollHeight": 8997,
+          "viewportsTall": 8.8,
+          "horizontalOverflow": false,
+          "overflowWidth": 819,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": false,
+          "burgerVisibleIncludingHeuristic": false,
+          "burgerSource": null,
+          "burgerElement": null,
+          "navVisible": true,
+          "navLinksVisible": 4,
+          "headerHeight": null,
+          "headerPosition": null,
+          "bodyFontSize": "16px",
+          "h1FontSize": "59.2px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 753,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 8,
+          "tapTargetsTotal": 21,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 91
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 1024,
+          "height": 900,
+          "dpr": 1,
+          "scrollHeight": 7655,
+          "viewportsTall": 8.5,
+          "horizontalOverflow": false,
+          "overflowWidth": 1040,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": false,
+          "burgerVisibleIncludingHeuristic": false,
+          "burgerSource": null,
+          "burgerElement": null,
+          "navVisible": true,
+          "navLinksVisible": 4,
+          "headerHeight": 177,
+          "headerPosition": "fixed",
+          "bodyFontSize": "16px",
+          "h1FontSize": "59.2px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 1009,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 2,
+              "gap": "320px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 8,
+          "tapTargetsTotal": 21,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 91
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 1280,
+          "height": 900,
+          "dpr": 1,
+          "scrollHeight": 7214,
+          "viewportsTall": 8,
+          "horizontalOverflow": false,
+          "overflowWidth": 1265,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": false,
+          "burgerVisibleIncludingHeuristic": false,
+          "burgerSource": null,
+          "burgerElement": null,
+          "navVisible": true,
+          "navLinksVisible": 4,
+          "headerHeight": 177,
+          "headerPosition": "fixed",
+          "bodyFontSize": "16px",
+          "h1FontSize": "59.2px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 1265,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 2,
+              "gap": "320px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 9,
+          "tapTargetsTotal": 21,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 91
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1,
+          "scrollHeight": 7098,
+          "viewportsTall": 7.9,
+          "horizontalOverflow": false,
+          "overflowWidth": 1425,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": false,
+          "burgerVisibleIncludingHeuristic": false,
+          "burgerSource": null,
+          "burgerElement": null,
+          "navVisible": true,
+          "navLinksVisible": 4,
+          "headerHeight": 177,
+          "headerPosition": "fixed",
+          "bodyFontSize": "16px",
+          "h1FontSize": "59.2px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 1280,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 2,
+              "gap": "320px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 10,
+          "tapTargetsTotal": 21,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 91
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 1920,
+          "height": 900,
+          "dpr": 1,
+          "scrollHeight": 7042,
+          "viewportsTall": 7.8,
+          "horizontalOverflow": false,
+          "overflowWidth": 1905,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": false,
+          "burgerVisibleIncludingHeuristic": false,
+          "burgerSource": null,
+          "burgerElement": null,
+          "navVisible": true,
+          "navLinksVisible": 4,
+          "headerHeight": 177,
+          "headerPosition": "fixed",
+          "bodyFontSize": "16px",
+          "h1FontSize": "59.2px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 1536,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 2,
+              "gap": "320px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 3,
+              "gap": "48px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 10,
+          "tapTargetsTotal": 21,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 91
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "dpr": 2,
+          "scrollHeight": 7991,
+          "viewportsTall": 9.5,
+          "horizontalOverflow": false,
+          "overflowWidth": 390,
+          "overflowingElements": [],
+          "visibleElements": 280,
+          "hiddenElements": 3,
+          "burgerVisible": false,
+          "burgerVisibleIncludingHeuristic": false,
+          "burgerSource": null,
+          "burgerElement": null,
+          "navVisible": true,
+          "navLinksVisible": 0,
+          "headerHeight": null,
+          "headerPosition": null,
+          "bodyFontSize": "16px",
+          "h1FontSize": "32px",
+          "h1Text": "Primeras marcas.",
+          "containerWidth": 390,
+          "mainGrids": [
+            {
+              "element": "div.grid.grid-rows-2.h-full",
+              "columns": 1,
+              "gap": "24px"
+            },
+            {
+              "element": "div.grid.lg:grid-cols-2.gap-8",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.gap-2",
+              "columns": 1,
+              "gap": "8px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 1,
+              "gap": "32px"
+            },
+            {
+              "element": "div.grid.grid-cols-1.md:grid-cols-3",
+              "columns": 1,
+              "gap": "32px"
+            }
+          ],
+          "cardsPerRow": null,
+          "imagesVisible": 19,
+          "smallTapTargets": 7,
+          "tapTargetsTotal": 12,
+          "fixedElements": 1,
+          "topTags": [
+            {
+              "value": "div",
+              "count": 90
+            },
+            {
+              "value": "p",
+              "count": 47
+            },
+            {
+              "value": "img",
+              "count": 19
+            },
+            {
+              "value": "label",
+              "count": 18
+            },
+            {
+              "value": "span",
+              "count": 17
+            },
+            {
+              "value": "input",
+              "count": 16
+            }
+          ],
+          "emulatedTouch": true
+        }
+      ],
+      "responsiveSummary": {
+        "breakpointsProbed": [
+          360,
+          390,
+          768,
+          1024,
+          1280,
+          1440,
+          1920
+        ],
+        "declaredBreakpoints": [],
+        "transitions": [
+          {
+            "from": 390,
+            "to": 768,
+            "changes": [
+              "desaparece hamburguesa (menú completo)",
+              "links de nav visibles 0 → 4",
+              "h1 32px → 59.2px",
+              "header 59px → nullpx",
+              "columnas de grid [1,1,1,1,1] → [1,1,1,3,3]"
+            ]
+          },
+          {
+            "from": 768,
+            "to": 1024,
+            "changes": [
+              "header nullpx → 177px",
+              "columnas de grid [1,1,1,3,3] → [1,2,1,3,3]"
+            ]
+          }
+        ],
+        "horizontalOverflowAt": [],
+        "burgerVisibleAt": [
+          360,
+          390
+        ],
+        "burgerHeuristicAt": [],
+        "burgerElement": "button.md:hidden.text-white.text-lg",
+        "burgerThreshold": 390,
+        "smallTapTargetsMobile": [
+          {
+            "width": 360,
+            "small": 7,
+            "total": 12
+          },
+          {
+            "width": 390,
+            "small": 7,
+            "total": 12
+          }
+        ],
+        "isResponsive": true,
+        "verdict": "responsive: 2 transición(es) de layout detectadas, sin overflow horizontal"
+      },
+      "popups": {
+        "detected": [],
+        "dismissed": [],
+        "remaining": [],
+        "stillVisible": 0
+      },
+      "consoleErrors": [],
+      "steps": [
+        "   384ms  navegando (networkidle, 60s)",
+        "  9703ms  cargado HTTP 200 → https://www.hergo.com.ar/",
+        "  9703ms  scroll completo (lazy-load + animaciones de scroll)",
+        " 11989ms  extrayendo: meta y SEO",
+        " 11995ms  extrayendo: stack tecnológico",
+        " 12016ms  extrayendo: tipografía, paleta y espaciado",
+        " 12105ms  extrayendo: estructura y layout",
+        " 12120ms  extrayendo: inventario de componentes",
+        " 12145ms  extrayendo: accesibilidad",
+        " 12155ms  extrayendo: animaciones",
+        " 12165ms  extrayendo: CSSOM y media queries",
+        " 12174ms  extrayendo: performance timing",
+        " 12186ms  recortando 13 componentes y zonas",
+        " 14698ms  recortes guardados: 12/13",
+        " 15895ms  screenshot desktop 1440 fullPage",
+        " 17050ms  probando breakpoint 360x844",
+        " 18168ms  probando breakpoint 390x844",
+        " 18957ms  probando breakpoint 768x1024",
+        " 19846ms  probando breakpoint 1024x900",
+        " 20720ms  probando breakpoint 1280x900",
+        " 21651ms  probando breakpoint 1440x900",
+        " 23436ms  probando breakpoint 1920x900",
+        " 24555ms  contexto mobile 390x844 (touch) + screenshot fullPage"
+      ],
+      "screenshots": {
+        "desktop": "shots/hergo.com.ar/00-home/01-desktop/desktop-1440-fullpage.png",
+        "mobile": "shots/hergo.com.ar/00-home/02-mobile/mobile-390x844-fullpage.png",
+        "popup": null,
+        "popupMobile": null,
+        "breakpoints": {
+          "360": "shots/hergo.com.ar/00-home/03-breakpoints/bp-0360x844.png",
+          "390": "shots/hergo.com.ar/00-home/03-breakpoints/bp-0390x844.png",
+          "768": "shots/hergo.com.ar/00-home/03-breakpoints/bp-0768x1024.png",
+          "1024": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1024x900.png",
+          "1280": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1280x900.png",
+          "1440": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1440x900.png",
+          "1920": "shots/hergo.com.ar/00-home/03-breakpoints/bp-1920x900.png"
+        },
+        "components": {
+          "btn-1": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/boton-01.png",
+            "label": "Botón variante 1"
+          },
+          "btn-2": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/boton-02.png",
+            "label": "Botón variante 2"
+          },
+          "btn-3": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/boton-03.png",
+            "label": "Botón variante 3"
+          },
+          "btn-4": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/boton-04.png",
+            "label": "Botón variante 4"
+          },
+          "btn-5": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/boton-05.png",
+            "label": "Botón variante 5"
+          },
+          "input-1": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/input-01.png",
+            "label": "Input variante 1"
+          },
+          "input-2": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/input-02.png",
+            "label": "Input variante 2"
+          },
+          "input-3": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/input-03.png",
+            "label": "Input variante 3"
+          },
+          "zone-nav": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/zone-nav.png",
+            "label": "Navegación"
+          },
+          "zone-hero": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/zone-hero.png",
+            "label": "Primera sección / hero"
+          },
+          "zone-footer": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/zone-footer.png",
+            "label": "Footer"
+          },
+          "zone-form": {
+            "path": "shots/hergo.com.ar/00-home/05-componentes/zone-form.png",
+            "label": "Primer formulario"
+          }
+        }
+      }
+    }
+  ],
+  "siteSteps": [
+    "descubriendo páginas (sitemap + navegación)",
+    "páginas a analizar (1): Home /",
+    "— página 1/1: Home https://www.hergo.com.ar/",
+    "corriendo Lighthouse (desktop, con throttling)",
+    "Lighthouse: perf 62 · a11y 73 · bp 100 · seo 67"
+  ],
+  "role": "cliente",
+  "label": "Hergo"
+}

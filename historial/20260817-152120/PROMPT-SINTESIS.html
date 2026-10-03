@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompt de síntesis</title>
+<style>
+:root{--bg:#ffffff;--fg:#1c1f24;--muted:#5b6572;--line:#e3e7ec;--accent:#0b62d6;--code:#f4f6f8;--head:#f8fafc}
+@media (prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e6e9ee;--muted:#9aa4b2;--line:#2a2f37;--accent:#6aa9ff;--code:#1b1f26;--head:#1a1e25}}
+*{box-sizing:border-box}
+body{margin:0;padding:2rem 1.25rem 6rem;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1200px;margin-inline:auto}
+h1{font-size:1.9rem;margin:0 0 .3em;letter-spacing:-.02em}
+h2{font-size:1.45rem;margin:2.4em 0 .6em;padding-bottom:.3em;border-bottom:2px solid var(--line)}
+h3{font-size:1.15rem;margin:1.9em 0 .5em;color:var(--accent)}
+h4{font-size:1rem;margin:1.4em 0 .4em}
+p{margin:.55em 0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.88em;font-family:ui-monospace,Consolas,monospace}
+pre{background:var(--code);padding:.9rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82rem;line-height:1.45}
+pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.7em 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.85rem}
+th,td{padding:.42rem .6rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+td:last-child,th:last-child{white-space:normal}
+thead th{background:var(--head);position:sticky;top:0;font-weight:600}
+tbody tr:hover{background:var(--head)}
+details{margin:.6em 0;border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;background:var(--head)}
+summary{cursor:pointer;font-weight:600;font-size:.92rem}
+details[open] summary{margin-bottom:.6em}
+hr{border:0;border-top:1px solid var(--line);margin:2.5em 0}
+ul,ol{margin:.5em 0;padding-left:1.4rem}
+li{margin:.2em 0}
+.swatch{display:inline-block;width:.8em;height:.8em;border-radius:3px;border:1px solid var(--line);margin-right:.4em;vertical-align:-1px}
+.shots{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0}
+.shots figure{margin:0;flex:1 1 260px;max-width:340px}
+.shots img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.shots figcaption{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+.meta{color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<h1 id="prompt-de-síntesis-estética-de-referencias-estructura-del-cl">Prompt de síntesis — estética de referencias + estructura del cliente</h1>
+<p><em>Generado el 2026-08-17T18:21:20.265Z a partir de 3 sitio(s) analizado(s).</em></p>
+<p>&gt; Copiá todo lo que sigue y pasáselo a la IA que va a construir la aplicación.</p>
+<h2 id="0-punto-de-partida">0. Punto de partida</h2>
+<div class="tw"><table><thead><tr><th>Rol</th><th>Sitio</th><th>Qué aporta al proyecto</th></tr></thead><tbody><tr><td>Cliente</td><td>authogar.com</td><td>Estructura, contenido, funcionalidad y línea base a superar</td></tr><tr><td>Referencia</td><td>macowens.com.ar</td><td>Estética: color, tipografía, espaciado, componentes y movimiento</td></tr><tr><td>Referencia</td><td>devre.la</td><td>Estética: color, tipografía, espaciado, componentes y movimiento</td></tr></tbody></table></div>
+<p><strong>Regla de oro:</strong> replicar el *lenguaje visual* de las referencias, no su contenido. Nada de logos, marcas, fotos, textos ni nombres de producto de los sitios analizados. Cualquier coincidencia literal con una referencia es un error.</p>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Construir una aplicación web con una estética coherente con las 2 referencia(s) analizada(s), replicando la arquitectura de información y las funcionalidades de <strong>authogar.com</strong>, con mejor rendimiento y accesibilidad que todos los sitios analizados.</p>
+<h2 id="2-estética-en-común-entre-las-referencias">2. Estética en común entre las referencias</h2>
+<p>Cada valor indica en cuántas referencias aparece. Lo que está en la mayoría define el estilo; lo que aparece en una sola es una opción, no una regla.</p>
+<h3 id="21-color">2.1 Color</h3>
+<p><strong>Neutros compartidos</strong> (base de superficies y texto):</p>
+<div class="tw"><table><thead><tr><th>Color</th><th>Referencias</th><th>Usos totales</th><th>Dónde</th></tr></thead><tbody><tr><td><code>#f0f0f0</code></td><td>2/2</td><td>5348</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#ffffff</code></td><td>2/2</td><td>1187</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#000000</code></td><td>2/2</td><td>930</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#c2c2c2</code></td><td>2/2</td><td>174</td><td>macowens.com.ar, devre.la</td></tr></tbody></table></div>
+<p><strong>Acentos de cada referencia</strong> (elegir uno como color de marca, o el que indique el cliente):</p>
+<div class="tw"><table><thead><tr><th>Color</th><th>Referencias</th><th>Usos</th><th>Dónde</th></tr></thead><tbody><tr><td><code>#000080</code></td><td>2/2</td><td>521</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#e42621</code></td><td>2/2</td><td>281</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#f5f5dc</code></td><td>2/2</td><td>180</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#160083</code></td><td>2/2</td><td>105</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#b2cbea</code></td><td>2/2</td><td>96</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#e6bc99</code></td><td>1/2</td><td>24</td><td>macowens.com.ar</td></tr></tbody></table></div>
+<p><strong>Colores de texto más usados:</strong></p>
+<div class="tw"><table><thead><tr><th>Color</th><th>Referencias</th><th>Usos</th><th>Dónde</th></tr></thead><tbody><tr><td><code>#000000</code></td><td>2/2</td><td>20466</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#686868</code></td><td>2/2</td><td>8659</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#ffffff</code></td><td>2/2</td><td>1113</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#999999</code></td><td>2/2</td><td>249</td><td>macowens.com.ar, devre.la</td></tr><tr><td><code>#707070</code></td><td>1/2</td><td>20</td><td>macowens.com.ar</td></tr><tr><td><code>#ff5700</code></td><td>1/2</td><td>2</td><td>macowens.com.ar</td></tr></tbody></table></div>
+<p>Definir la paleta como variables CSS con roles (<code>--surface</code>, <code>--surface-alt</code>, <code>--text</code>, <code>--text-muted</code>, <code>--accent</code>, <code>--border</code>), no como colores sueltos. Todo par texto/fondo debe cumplir WCAG AA (4.5:1 en texto normal, 3:1 en texto grande) — ver sección 6.</p>
+<h3 id="22-tipografía">2.2 Tipografía</h3>
+<div class="tw"><table><thead><tr><th>Familia</th><th>Referencias</th><th>Usos</th><th>Dónde</th></tr></thead><tbody><tr><td>&quot;Nunito Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</td><td>1/2</td><td>20539</td><td>devre.la</td></tr><tr><td>&quot;Hind Siliguri&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</td><td>1/2</td><td>9900</td><td>macowens.com.ar</td></tr><tr><td>Roboto, sans-serif</td><td>1/2</td><td>88</td><td>macowens.com.ar</td></tr><tr><td>Helvetica</td><td>1/2</td><td>1</td><td>macowens.com.ar</td></tr></tbody></table></div>
+<p><strong>Escala de tamaños presente en la mayoría:</strong> 10px · 12px · 14px · 16px · 18px · 22px · 26px</p>
+<p><strong>Escala completa observada:</strong> 10px · 12px · 13px · 14px · 16px · 18px · 22px · 26px · 30px · 35px</p>
+<p><strong>Pesos:</strong> 400 (2/2) · 700 (2/2) · 500 (1/2) · 600 (1/2) · 200 (1/2)</p>
+<p><strong>Line-heights:</strong> 19.6px · 20px · 16.8px · 14px</p>
+<p>Escala tipográfica de cada referencia, para elegir el carácter (más contraste = más editorial, menos contraste = más utilitario):</p>
+<div class="tw"><table><thead><tr><th>Referencia</th><th>body</th><th>h1</th><th>h2</th><th>h3</th><th>Familia principal</th></tr></thead><tbody><tr><td>macowens.com.ar</td><td>14px</td><td>—</td><td>—</td><td>22px/400</td><td>&quot;Hind Siliguri&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</td></tr><tr><td>devre.la</td><td>14px</td><td>—</td><td>—</td><td>22px/400</td><td>&quot;Nunito Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif</td></tr></tbody></table></div>
+<h3 id="23-forma-espaciado-y-elevación">2.3 Forma, espaciado y elevación</h3>
+<p><strong>Radios:</strong> 3px (2/2) · 10px (2/2) · 50px (1/2)</p>
+<p>Usar una escala de 3 radios como máximo. Los que se repiten entre referencias son: 3px · 10px.</p>
+<p><strong>Gaps de grilla:</strong> 3px · 5px · 10px · 20px</p>
+<p><strong>Ancho de contenedor:</strong> 1430px (2/2)</p>
+<p><strong>Sombras más usadas:</strong></p>
+<div class="tw"><table><thead><tr><th>box-shadow</th><th>Referencias</th><th>Usos</th></tr></thead><tbody><tr><td><code>rgba(51, 51, 51, 0.2) 0px 0px 10px 0px</code></td><td>2/2</td><td>2</td></tr></tbody></table></div>
+<p>Normalizar en 3 niveles de elevación: sutil para cards, media para menús y popovers, fuerte para modales.</p>
+<h3 id="24-componentes-qué-usan-las-referencias">2.4 Componentes: qué usan las referencias</h3>
+<div class="tw"><table><thead><tr><th>Componente</th><th>Referencias que lo usan</th><th>Promedio por sitio</th><th>Conclusión</th></tr></thead><tbody><tr><td>prices</td><td>2/2</td><td>2337</td><td>obligatorio: lo usan todas</td></tr><tr><td>badges</td><td>2/2</td><td>1999</td><td>obligatorio: lo usan todas</td></tr><tr><td>search</td><td>2/2</td><td>1164</td><td>obligatorio: lo usan todas</td></tr><tr><td>buttons</td><td>2/2</td><td>441</td><td>obligatorio: lo usan todas</td></tr><tr><td>addToCart</td><td>2/2</td><td>441</td><td>obligatorio: lo usan todas</td></tr><tr><td>carousels</td><td>2/2</td><td>288</td><td>obligatorio: lo usan todas</td></tr><tr><td>banners</td><td>2/2</td><td>266</td><td>obligatorio: lo usan todas</td></tr><tr><td>modals</td><td>2/2</td><td>6</td><td>obligatorio: lo usan todas</td></tr><tr><td>social</td><td>2/2</td><td>2</td><td>obligatorio: lo usan todas</td></tr></tbody></table></div>
+<p><strong>Estilo de botón de cada referencia</strong> (para definir el <code>Button</code> primario):</p>
+<div class="tw"><table><thead><tr><th>Referencia</th><th>Fondo</th><th>Texto</th><th>Radio</th><th>Padding</th><th>Tamaño</th><th>Peso</th><th>Sombra</th></tr></thead><tbody><tr><td>macowens.com.ar</td><td><code>rgb(221, 221, 221)</code></td><td><code>rgb(255, 255, 255)</code></td><td>10px</td><td>0px</td><td>14px</td><td>400</td><td>sin sombra</td></tr><tr><td>devre.la</td><td><code>rgb(221, 221, 221)</code></td><td><code>rgb(255, 255, 255)</code></td><td>10px</td><td>0px</td><td>14px</td><td>400</td><td>sin sombra</td></tr></tbody></table></div>
+<p><strong>Estilo de card de cada referencia:</strong></p>
+<div class="tw"><table><thead><tr><th>Referencia</th><th>Fondo</th><th>Radio</th><th>Sombra</th><th>Padding</th><th>Tamaño típico</th></tr></thead><tbody></tbody></table></div>
+<h3 id="25-layout-y-densidad">2.5 Layout y densidad</h3>
+<div class="tw"><table><thead><tr><th>Referencia</th><th>Secciones</th><th>Alto del home</th><th>Header</th><th>Hamburguesa desde</th><th>Cards/fila @1440</th><th>grid vs flex</th><th>Nodos DOM</th></tr></thead><tbody><tr><td>macowens.com.ar</td><td>12</td><td>7.3 viewports</td><td>static</td><td>390px</td><td>1</td><td>0 / 3854</td><td>12331</td></tr><tr><td>devre.la</td><td>11</td><td>8.2 viewports</td><td>static</td><td>1920px</td><td>1</td><td>0 / 8128</td><td>34779</td></tr></tbody></table></div>
+<p><strong>Breakpoints que comparten las referencias:</strong> 360px (2/2) · 390px (2/2) · 400px (2/2) · 472px (2/2) · 479px (2/2) · 500px (2/2) · 576px (2/2) · 600px (2/2) · 639px (2/2) · 640px (2/2) · 700px (2/2) · 767px (2/2)</p>
+<p>Implementar con 640 / 768 / 1024 / 1280 / 1536 y verificar además 360px. Sin scroll horizontal en ningún ancho entre 320 y 1920.</p>
+<h3 id="26-movimiento">2.6 Movimiento</h3>
+<p><strong>Duraciones:</strong> 0.3s (2/2) · 0.5s (1/2)</p>
+<p><strong>Easings:</strong> ease · linear</p>
+<p><strong>Qué cambia en hover:</strong> color · background-color · background-position-x · background-position-y · background-attachment · background-clip</p>
+<p>Referencias con animación al scroll: macowens.com.ar, devre.la. Respetar siempre <code>prefers-reduced-motion</code> (0/2 referencias lo hacen).</p>
+<h2 id="3-estructura-y-funcionalidad">3. Estructura y funcionalidad</h2>
+<p>La arquitectura de información sale del sitio del cliente (<strong>authogar.com</strong>). Las referencias definen cómo se ve, no qué secciones hay.</p>
+<p><strong>Secciones del home, en orden de scroll:</strong></p>
+<div class="tw"><table><thead><tr><th>#</th><th>Sección</th><th>Encabezado</th><th>Alto</th><th>Layout</th><th>Contenido</th></tr></thead><tbody><tr><td>1</td><td>div.vtex-sticky-layout-0-x-container.vtex-sticky-layout-0-x-container--sticky-header.z-999</td><td>—</td><td>137px</td><td>block</td><td>3 img, 12 links, 4 items</td></tr><tr><td>2</td><td>img.vtex-store-components-3-x-imageElement.vtex-store-components-3-x-imageElement--wssp-fi</td><td>—</td><td>57px</td><td>inline</td><td>—</td></tr><tr><td>3</td><td>div.vtex-slider-layout-0-x-sliderTrack.vtex-slider-layout-0-x-sliderTrack--hero.flex</td><td>—</td><td>280px</td><td>flex, 9 col</td><td>2 img, 2 links</td></tr><tr><td>4</td><td>div.authogar-components-0-x-wrapperCategorySliderDesktop</td><td>Hogar y Tecnología:</td><td>235px</td><td>flex, 2 col</td><td>18 img, 18 links</td></tr><tr><td>5</td><td>div.vtex-slider-layout-0-x-sliderTrack.vtex-slider-layout-0-x-sliderTrack--home-brands.fle</td><td>—</td><td>67px</td><td>flex, 29 col</td><td>11 img, 11 links</td></tr><tr><td>6</td><td>div.authogar-components-0-x-wrapperCategorySliderDesktop</td><td>Deporte y Moda:</td><td>235px</td><td>flex, 2 col</td><td>18 img, 18 links</td></tr><tr><td>7</td><td>div.vtex-slider-layout-0-x-sliderTrack.vtex-slider-layout-0-x-sliderTrack--home-brands.fle</td><td>—</td><td>67px</td><td>flex, 27 col</td><td>11 img, 11 links</td></tr><tr><td>8</td><td>div.flex.mt0.mb0</td><td>PS5 PlayStation 5 Slim + Astro Bot y Gran Turismo 7 Digital</td><td>640px</td><td>flex, 2 col</td><td>25 img, 5 links, 65 items</td></tr><tr><td>9</td><td>div.flex.mt0.mb0</td><td>—</td><td>160px</td><td>flex, 3 col</td><td>3 img, 3 links</td></tr><tr><td>10</td><td>div.flex.mt0.mb0</td><td>Tablet TCL TAB A1 Plus 12.2&quot; 128GB 6GB Space Blue + Teclado</td><td>639px</td><td>flex, 2 col</td><td>28 img, 5 links, 80 items</td></tr><tr><td>11</td><td>div.flex.mt0.mb0</td><td>—</td><td>365px</td><td>flex, 2 col</td><td>3 img, 6 links</td></tr><tr><td>12</td><td>div.flex.mt0.mb0</td><td>Zapatillas Nike Vomero 18 Ver. Hombre</td><td>612px</td><td>flex, 2 col</td><td>24 img, 5 links, 80 items</td></tr><tr><td>13</td><td>div.flex.mt0.mb0</td><td>—</td><td>365px</td><td>flex, 2 col</td><td>3 img, 8 links</td></tr><tr><td>14</td><td>div.flex.mt0.mb0</td><td>Zapatillas Vans U Knu Skool Cel. Hombre</td><td>612px</td><td>flex, 2 col</td><td>24 img, 5 links, 80 items</td></tr><tr><td>15</td><td>section#slider-items-4pudh1k.w-100.flex.items-center</td><td>—</td><td>120px</td><td>flex, 3 col</td><td>2 img, 2 links</td></tr><tr><td>16</td><td>div.flex.mt0.mb0</td><td>Rack Para Colgar Tables 1,80M Tono Olmo Finlandes/Everest 1407-Coe</td><td>641px</td><td>flex, 2 col</td><td>26 img, 5 links, 80 items</td></tr><tr><td>17</td><td>div.flex.mt0.mb0</td><td>Termotanque Coppens 120L Multigas De Pie</td><td>639px</td><td>flex, 2 col</td><td>24 img, 5 links, 62 items</td></tr><tr><td>18</td><td>div.flex.mt0.mb0</td><td>—</td><td>223px</td><td>flex, 1 col</td><td>2 img, 2 links</td></tr><tr><td>19</td><td>div</td><td>—</td><td>267px</td><td>block</td><td>10 img, 21 links</td></tr><tr><td>20</td><td>div.authogar-minicart-0-x-drawer.authogar-minicart-0-x-closed.right-0</td><td>—</td><td>900px</td><td>flex, 1 col</td><td>—</td></tr></tbody></table></div>
+<p><strong>Navegación:</strong> 4 ítems de primer nivel: Revista Authogar · Deporte y Moda · Zapatillas · Promo 12 Sin Interés</p>
+<p><strong>Integraciones que el cliente ya tiene y hay que prever:</strong> VTEX, Google Tag Manager, Google Analytics, Meta Pixel, reCAPTCHA.</p>
+<h2 id="4-stack">4. Stack</h2>
+<div class="tw"><table><thead><tr><th>Sitio</th><th>Rol</th><th>Stack detectado</th></tr></thead><tbody><tr><td>authogar.com</td><td>Cliente</td><td>react, tailwind</td></tr><tr><td>macowens.com.ar</td><td>Referencia</td><td>jquery, bootstrap</td></tr><tr><td>devre.la</td><td>Referencia</td><td>jquery, bootstrap</td></tr></tbody></table></div>
+<p>Usar <strong>Next.js (App Router) + TypeScript strict + Tailwind CSS</strong>, con los tokens de la sección 2 en <code>tailwind.config</code> y variables CSS. Contenido desde datos (JSON/CMS/API), nunca hardcodeado en el markup.</p>
+<h2 id="5-referencias-visuales">5. Referencias visuales</h2>
+<p>Recortes reales de cada sitio. Sirven para calibrar el estilo, no para copiarlos.</p>
+<p><strong>authogar.com</strong> (cliente)</p>
+<p><a href="../shots/authogar.com/00-home/05-componentes/zone-header.png">authogar.com — Header</a> <a href="../shots/authogar.com/00-home/05-componentes/zone-nav.png">authogar.com — Navegación</a> <a href="../shots/authogar.com/00-home/05-componentes/zone-hero.png">authogar.com — Primera sección / hero</a></p>
+<div class="shots"><figure><a href="../shots/authogar.com/00-home/05-componentes/zone-header.png"><img loading="lazy" src="../shots/authogar.com/00-home/05-componentes/zone-header.png" alt="authogar.com — Header"></a><figcaption>authogar.com — Header</figcaption></figure><figure><a href="../shots/authogar.com/00-home/05-componentes/zone-nav.png"><img loading="lazy" src="../shots/authogar.com/00-home/05-componentes/zone-nav.png" alt="authogar.com — Navegación"></a><figcaption>authogar.com — Navegación</figcaption></figure><figure><a href="../shots/authogar.com/00-home/05-componentes/zone-hero.png"><img loading="lazy" src="../shots/authogar.com/00-home/05-componentes/zone-hero.png" alt="authogar.com — Primera sección / hero"></a><figcaption>authogar.com — Primera sección / hero</figcaption></figure></div>
+<p><strong>macowens.com.ar</strong> (referencia)</p>
+<p><a href="../shots/macowens.com.ar/00-home/05-componentes/zone-header.png">macowens.com.ar — Header</a> <a href="../shots/macowens.com.ar/00-home/05-componentes/zone-nav.png">macowens.com.ar — Navegación</a> <a href="../shots/macowens.com.ar/00-home/05-componentes/zone-hero.png">macowens.com.ar — Primera sección / hero</a></p>
+<div class="shots"><figure><a href="../shots/macowens.com.ar/00-home/05-componentes/zone-header.png"><img loading="lazy" src="../shots/macowens.com.ar/00-home/05-componentes/zone-header.png" alt="macowens.com.ar — Header"></a><figcaption>macowens.com.ar — Header</figcaption></figure><figure><a href="../shots/macowens.com.ar/00-home/05-componentes/zone-nav.png"><img loading="lazy" src="../shots/macowens.com.ar/00-home/05-componentes/zone-nav.png" alt="macowens.com.ar — Navegación"></a><figcaption>macowens.com.ar — Navegación</figcaption></figure><figure><a href="../shots/macowens.com.ar/00-home/05-componentes/zone-hero.png"><img loading="lazy" src="../shots/macowens.com.ar/00-home/05-componentes/zone-hero.png" alt="macowens.com.ar — Primera sección / hero"></a><figcaption>macowens.com.ar — Primera sección / hero</figcaption></figure></div>
+<p><strong>devre.la</strong> (referencia)</p>
+<p><a href="../shots/devre.la/00-home/05-componentes/zone-header.png">devre.la — Header</a> <a href="../shots/devre.la/00-home/05-componentes/zone-hero.png">devre.la — Primera sección / hero</a></p>
+<div class="shots"><figure><a href="../shots/devre.la/00-home/05-componentes/zone-header.png"><img loading="lazy" src="../shots/devre.la/00-home/05-componentes/zone-header.png" alt="devre.la — Header"></a><figcaption>devre.la — Header</figcaption></figure><figure><a href="../shots/devre.la/00-home/05-componentes/zone-hero.png"><img loading="lazy" src="../shots/devre.la/00-home/05-componentes/zone-hero.png" alt="devre.la — Primera sección / hero"></a><figcaption>devre.la — Primera sección / hero</figcaption></figure></div>
+<h2 id="6-calidad-exigida-mejor-que-todos-los-sitios-analizados">6. Calidad exigida (mejor que todos los sitios analizados)</h2>
+<div class="tw"><table><thead><tr><th>Métrica</th><th>Mejor de los sitios analizados</th><th>Objetivo de la app nueva</th></tr></thead><tbody><tr><td>LCP</td><td>sin dato</td><td>&lt; 2500 ms</td></tr><tr><td>Requests</td><td>673 (authogar.com)</td><td>&lt; 538</td></tr><tr><td>Peso transferido</td><td>7863 KB (authogar.com)</td><td>&lt; 6290 KB</td></tr><tr><td>Nodos DOM</td><td>3080 (authogar.com)</td><td>&lt; 2464</td></tr><tr><td>Lighthouse Performance</td><td>no medido</td><td>≥ 90</td></tr><tr><td>Contraste WCAG AA</td><td>el mejor tiene 0 fallos</td><td>0 fallos</td></tr><tr><td>Imágenes sin alt</td><td>el mejor tiene 5</td><td>0</td></tr><tr><td>Overflow horizontal</td><td>algunos no tienen</td><td>ninguno entre 320 y 1920px</td></tr></tbody></table></div>
+<p><strong>Errores que cometen los sitios analizados y que esta app no debe repetir:</strong></p>
+<ol><li>Imágenes sin <code>alt</code> (authogar.com, macowens.com.ar, devre.la)</li><li>Inputs sin label asociado (authogar.com, macowens.com.ar, devre.la)</li><li>Cantidad de <code>h1</code> distinta de uno (authogar.com, macowens.com.ar, devre.la)</li><li>Saltos en la jerarquía de encabezados (authogar.com, macowens.com.ar, devre.la)</li><li>Foco visible removido (authogar.com, macowens.com.ar, devre.la)</li><li>Sin skip link (authogar.com, macowens.com.ar, devre.la)</li><li>Contraste por debajo de AA (authogar.com, macowens.com.ar)</li><li>Imágenes sin <code>width</code>/<code>height</code> (causan CLS) (authogar.com, macowens.com.ar, devre.la)</li><li>Imágenes servidas mucho más grandes de lo que se muestran (authogar.com, macowens.com.ar, devre.la)</li><li>Sin formatos de imagen modernos (WebP/AVIF) (authogar.com, macowens.com.ar, devre.la)</li><li>Áreas clicables menores a 36px en mobile (authogar.com, macowens.com.ar, devre.la)</li><li>Animaciones que ignoran <code>prefers-reduced-motion</code> (devre.la)</li><li>Errores de consola en el home (authogar.com, macowens.com.ar, devre.la)</li><li>Demasiados dominios de terceros (authogar.com, macowens.com.ar, devre.la)</li></ol>
+<ul><li>Navegación completa por teclado con foco visible.</li><li>Lighthouse ≥ 90 en Performance, Accessibility, Best Practices y SEO (mobile con throttling).</li></ul>
+<h2 id="7-entregables">7. Entregables</h2>
+<ol><li>Proyecto que compila y corre con <code>npm install &amp;&amp; npm run dev</code>.</li><li>Tokens de diseño centralizados (variables CSS + config de Tailwind) con los valores de la sección 2.</li><li>Componentes tipados y reutilizables, con las variantes de la sección 2.4.</li><li>Las páginas y secciones de la sección 3, con datos de ejemplo propios.</li><li>README con estructura de carpetas, decisiones tomadas y cómo reemplazar el contenido de ejemplo.</li></ol>
+<p><strong>No incluir:</strong> logos, marcas, fotos, textos ni nombres de producto de ninguno de los sitios analizados.</p>
+<hr>
+<p><em>Detalle completo de cada sitio en su reporte individual: `reportes/authogar.com/`, `reportes/macowens.com.ar/`, `reportes/devre.la/`.</em></p>
+</body>
+</html>

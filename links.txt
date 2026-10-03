@@ -1,0 +1,8 @@
+# Sitios a analizar. Una URL por línea.
+# Después de la URL, detrás de un #, van el nombre y el rol:
+#   @cliente     → sitio actual del cliente: aporta estructura, contenido y funcionalidad
+#   @referencia  → sitio de la competencia que le gustó: aporta la estética a replicar
+# Sin rol explícito se asume @referencia.
+# Este archivo lo administra la interfaz (node ui.js), pero se puede editar a mano.
+
+https://tnmsport-web.vercel.app/  # Cliente @cliente

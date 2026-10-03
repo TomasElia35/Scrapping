@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>analizador · consola</title>
+<style>
+/* ============================================================
+   Tokens. Un solo acento (verde terminal) para todo lo interactivo;
+   ámbar y rojo solo para estados. Nada más, para que la interfaz
+   tenga un foco visual único.
+   ============================================================ */
+:root {
+  --bg: #0a0d13;
+  --surface: #10141c;
+  --surface-2: #151a24;
+  --surface-3: #1b212d;
+  --border: #232b39;
+  --border-strong: #313b4d;
+  --text: #d7dde8;
+  --text-dim: #96a0b3;
+  --text-faint: #636f85;
+  --accent: #3ddc97;
+  --accent-dim: #1f8f63;
+  --accent-glow: rgba(61, 220, 151, .12);
+  --warn: #e3b341;
+  --err: #f85149;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --mono: ui-monospace, "JetBrains Mono", "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --tap: 32px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --surface-2: #f7f9fb;
+    --surface-3: #eef2f7;
+    --border: #dde3ec;
+    --border-strong: #c3cdda;
+    --text: #101620;
+    --text-dim: #4a556a;
+    --text-faint: #6f7c93;
+    --accent: #0f8f5f;
+    --accent-dim: #0b6d48;
+    --accent-glow: rgba(15, 143, 95, .1);
+    --warn: #9a6700;
+    --err: #c0242c;
+  }
+}
+
+* { box-sizing: border-box; min-width: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.55 var(--sans);
+  /* retícula sutil, guiño a un editor de código */
+  background-image: linear-gradient(transparent 96%, color-mix(in srgb, var(--border) 45%, transparent) 96%);
+  background-size: 100% 28px;
+  background-attachment: fixed;
+}
+:focus-visible {
+  /* WCAG 2.2 · 2.4.11 Focus Appearance */
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+::selection { background: var(--accent-glow); }
+
+/* ---------- barra superior ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+  padding: .6rem 1rem;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: .5rem; font-family: var(--mono); font-weight: 600; letter-spacing: -.02em; }
+.brand-mark { color: var(--accent); font-size: 1.05rem; line-height: 1; }
+.brand small { color: var(--text-faint); font-weight: 400; }
+.path {
+  font-family: var(--mono); font-size: .76rem; color: var(--text-dim);
+  background: var(--surface-3); border: 1px solid var(--border);
+  padding: .15rem .45rem; border-radius: var(--radius);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw;
+}
+.spacer { flex: 1 1 auto; }
+
+/* ---------- pastillas de estado ---------- */
+.pill {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .02em;
+  padding: .22rem .5rem; border-radius: 99px;
+  border: 1px solid var(--border-strong); color: var(--text-dim);
+  background: var(--surface-2); white-space: nowrap;
+}
+.pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .8; }
+.pill.on { color: var(--accent); border-color: var(--accent-dim); background: var(--accent-glow); }
+.pill.warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, transparent); }
+.pill.bad { color: var(--err); border-color: color-mix(in srgb, var(--err) 45%, transparent); }
+.pill.run::before { animation: blink 1.1s steps(2, start) infinite; }
+@keyframes blink { 50% { opacity: .15; } }
+@media (prefers-reduced-motion: reduce) { .pill.run::before { animation: none; } }
+
+/* ---------- pestañas ---------- */
+.tabs {
+  display: flex; gap: .15rem; padding: 0 1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  overflow-x: auto; scrollbar-width: none;
+  position: sticky; top: 49px; z-index: 30;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  flex: 0 0 auto;
+  appearance: none; background: none; border: 0; border-bottom: 2px solid transparent;
+  color: var(--text-dim); font: 600 .82rem/1 var(--mono); letter-spacing: .01em;
+  padding: .7rem .8rem; min-height: var(--tap); cursor: pointer; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+.tab:hover { color: var(--text); }
+.tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.tab .count {
+  font-size: .68rem; padding: .05rem .3rem; border-radius: 99px;
+  background: var(--surface-3); color: var(--text-faint); border: 1px solid var(--border);
+}
+.tab[aria-selected="true"] .count { color: var(--accent); border-color: var(--accent-dim); }
+
+/* ---------- layout ---------- */
+main { max-width: 1400px; margin: 0 auto; padding: 1rem 1rem 7rem; }
+[role="tabpanel"][hidden] { display: none; }
+.grid { display: grid; gap: 1rem; }
+@media (min-width: 1080px) { .grid.two { grid-template-columns: 1.35fr 1fr; align-items: start; } }
+
+.panel {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.panel > header {
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  padding: .7rem .9rem; border-bottom: 1px solid var(--border); background: var(--surface-2);
+}
+.panel > header h2 { margin: 0; font: 600 .78rem/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--text-dim); }
+.panel > header h2::before { content: "// "; color: var(--accent); }
+.panel .body { padding: .9rem; }
+.panel .body.flush { padding: 0; }
+.hint { color: var(--text-faint); font-size: .78rem; margin: .6rem 0 0; }
+.hint code { font-family: var(--mono); background: var(--surface-3); padding: .05rem .3rem; border-radius: 4px; }
+
+/* ---------- controles ---------- */
+button, input, select { font: inherit; color: inherit; }
+.btn {
+  appearance: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+  min-height: var(--tap); padding: .35rem .8rem;
+  background: var(--surface-3); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: var(--radius);
+  font: 500 .82rem/1 var(--sans);
+  transition: border-color .12s, background .12s, color .12s;
+}
+.btn:hover:not(:disabled) { border-color: var(--accent-dim); color: var(--accent); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.primary { background: var(--accent); color: #04150d; border-color: var(--accent); font-weight: 700; }
+.btn.primary:hover:not(:disabled) { background: color-mix(in srgb, var(--accent) 85%, #fff); color: #04150d; }
+.btn.danger:hover:not(:disabled) { border-color: var(--err); color: var(--err); }
+.btn.ghost { background: none; }
+.btn.icon { min-width: var(--tap); padding: .3rem; font-family: var(--mono); }
+.btn-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+
+.field { display: grid; gap: .25rem; }
+.field > label { font: 600 .7rem/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); }
+input[type="text"], input[type="url"], select {
+  width: 100%; min-height: var(--tap);
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .35rem .5rem;
+  font-family: var(--mono); font-size: .82rem;
+}
+input::placeholder { color: var(--text-faint); }
+input:hover, select:hover { border-color: var(--border-strong); }
+.fields { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+/* interruptores como chips */
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+.chip {
+  appearance: none; cursor: pointer;
+  min-height: var(--tap); padding: .3rem .65rem;
+  background: var(--surface-2); border: 1px dashed var(--border-strong); border-radius: 99px;
+  color: var(--text-dim); font: 500 .78rem/1 var(--sans);
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+.chip::before { content: "○"; font-family: var(--mono); color: var(--text-faint); }
+.chip[aria-pressed="true"] { border-style: solid; border-color: var(--accent-dim); color: var(--accent); background: var(--accent-glow); }
+.chip[aria-pressed="true"]::before { content: "●"; color: var(--accent); }
+
+/* segmentado para el rol */
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--surface-2); }
+.seg button {
+  appearance: none; background: none; border: 0; cursor: pointer;
+  min-height: 30px; padding: .25rem .55rem;
+  font: 600 .7rem/1 var(--mono); color: var(--text-faint); letter-spacing: .03em;
+}
+.seg button[aria-pressed="true"] { background: var(--accent-glow); color: var(--accent); }
+.seg button + button { border-left: 1px solid var(--border); }
+
+/* ---------- sitios ---------- */
+.sites { display: grid; gap: .5rem; }
+.site {
+  display: grid; gap: .5rem; align-items: center;
+  grid-template-columns: auto 1fr auto;
+  padding: .55rem .6rem;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius);
+}
+@media (min-width: 860px) {
+  .site { grid-template-columns: auto minmax(120px, .8fr) minmax(200px, 1.6fr) auto auto; }
+}
+.site.dragging { opacity: .35; }
+.site .drag { cursor: grab; color: var(--text-faint); font-family: var(--mono); user-select: none; padding: 0 .2rem; min-height: var(--tap); display: flex; align-items: center; }
+.site .inputs { display: grid; gap: .4rem; grid-column: 1 / -1; grid-row: 2; }
+.site > .btn.icon { grid-column: 3; grid-row: 1; justify-self: end; }
+.site > .drag { grid-row: 1; }
+@media (min-width: 860px) {
+  .site .inputs { display: contents; }
+  .site > .btn.icon, .site > .drag { grid-row: 1; }
+  .site > .btn.icon { grid-column: auto; }
+}
+.site[data-role="cliente"] { border-left: 2px solid var(--accent); }
+.empty { color: var(--text-faint); font-size: .84rem; padding: 1.2rem; text-align: center; border: 1px dashed var(--border); border-radius: var(--radius); font-family: var(--mono); }
+
+/* ---------- barra de acción fija ---------- */
+.actionbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+  padding: .6rem 1rem;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+}
+.actionbar .now {
+  flex: 1 1 240px; min-width: 0;
+  font-family: var(--mono); font-size: .74rem; color: var(--text-dim);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.actionbar .now b { color: var(--accent); font-weight: 600; }
+
+/* ---------- log ---------- */
+.logbar { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; padding: .5rem .6rem; border-bottom: 1px solid var(--border); background: var(--surface-2); }
+.logbar input[type="text"] { max-width: 220px; }
+#log {
+  margin: 0; padding: .8rem .9rem;
+  height: clamp(280px, 46vh, 620px); overflow: auto;
+  background: var(--bg); color: var(--text-dim);
+  font: 12px/1.6 var(--mono); white-space: pre-wrap; word-break: break-word;
+}
+#log .l-ok { color: var(--accent); }
+#log .l-err { color: var(--err); }
+#log .l-warn { color: var(--warn); }
+#log .l-dim { color: var(--text-faint); }
+#log .l-site { color: var(--text); font-weight: 600; }
+
+/* ---------- tablas ---------- */
+.tw { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+th, td { padding: .45rem .6rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: middle; white-space: nowrap; }
+th { font: 600 .68rem/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); background: var(--surface-2); position: sticky; top: 0; }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: var(--surface-2); }
+td .name { font-weight: 600; }
+
+/* ---------- reportes ---------- */
+.cards { display: grid; gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.card { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); padding: .7rem .8rem; }
+.card h3 { margin: 0 0 .1rem; font: 600 .9rem/1.3 var(--mono); word-break: break-all; }
+.card .when { color: var(--text-faint); font-size: .72rem; font-family: var(--mono); }
+.card .group { margin-top: .55rem; }
+.card .group span { display: block; font: 600 .64rem/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin-bottom: .25rem; }
+.filelinks { display: flex; flex-wrap: wrap; gap: .3rem; }
+a.file {
+  font: 600 .7rem/1 var(--mono); text-decoration: none;
+  color: var(--text-dim); background: var(--surface-3);
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: .28rem .45rem; min-height: 26px; display: inline-flex; align-items: center;
+}
+a.file:hover { color: var(--accent); border-color: var(--accent-dim); }
+.feature {
+  border: 1px solid var(--accent-dim); background: var(--accent-glow);
+  border-radius: var(--radius); padding: .7rem .8rem; margin-bottom: .8rem;
+}
+.feature h3 { color: var(--accent); }
+
+/* ---------- historial ---------- */
+details.run { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-2); margin-bottom: .5rem; }
+details.run > summary { cursor: pointer; padding: .6rem .8rem; font-family: var(--mono); font-size: .8rem; display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; min-height: var(--tap); }
+details.run > summary::-webkit-details-marker { display: none; }
+details.run > summary::before { content: "▸"; color: var(--accent); }
+details.run[open] > summary::before { content: "▾"; }
+details.run > summary .meta { color: var(--text-faint); font-size: .74rem; }
+.delta-up { color: var(--accent); }
+.delta-down { color: var(--err); }
+.delta-eq { color: var(--text-faint); }
+.mono { font-family: var(--mono); }
+.sr {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.msg { font-size: .78rem; margin-top: .6rem; min-height: 1.1em; font-family: var(--mono); }
+.msg.ok { color: var(--accent); }
+.msg.bad { color: var(--err); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="brand"><span class="brand-mark">▚</span> analizador <small>· consola local</small></span>
+  <span class="path" id="fileName" title="Archivo de sitios">links.txt</span>
+  <span class="spacer"></span>
+  <span class="pill" id="conn" title="Conexión con el servidor local">conectando</span>
+  <span class="pill" id="status" role="status" aria-live="polite">inactivo</span>
+</div>
+
+<div class="tabs" role="tablist" aria-label="Secciones">
+  <button class="tab" role="tab" id="tab-sitios" aria-controls="p-sitios" aria-selected="true">sitios <span class="count" id="cSites">0</span></button>
+  <button class="tab" role="tab" id="tab-config" aria-controls="p-config" aria-selected="false" tabindex="-1">configuración</button>
+  <button class="tab" role="tab" id="tab-progreso" aria-controls="p-progreso" aria-selected="false" tabindex="-1">progreso <span class="count" id="cLines">0</span></button>
+  <button class="tab" role="tab" id="tab-reportes" aria-controls="p-reportes" aria-selected="false" tabindex="-1">reportes <span class="count" id="cReports">0</span></button>
+  <button class="tab" role="tab" id="tab-historial" aria-controls="p-historial" aria-selected="false" tabindex="-1">historial <span class="count" id="cRuns">0</span></button>
+</div>
+
+<main>
+  <!-- ================= SITIOS ================= -->
+  <div role="tabpanel" id="p-sitios" aria-labelledby="tab-sitios" class="grid two">
+    <section class="panel">
+      <header>
+        <h2>sitios a analizar</h2>
+        <span class="spacer"></span>
+        <span class="pill" id="roleCount">0 ref · 0 cliente</span>
+      </header>
+      <div class="body">
+        <div class="sites" id="sites"></div>
+        <div class="empty" id="sitesEmpty" hidden>sin sitios · agregá el primero</div>
+        <div class="btn-row" style="margin-top:.8rem">
+          <button class="btn" id="addRef">+ referencia</button>
+          <button class="btn" id="addClient">+ sitio del cliente</button>
+          <span class="spacer"></span>
+          <button class="btn ghost" id="reload">recargar</button>
+          <button class="btn primary" id="save">guardar</button>
+        </div>
+        <div class="msg" id="linksMsg" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header><h2>cómo se usan los roles</h2></header>
+      <div class="body">
+        <p class="hint" style="margin-top:0">
+          <strong style="color:var(--text)">referencia</strong> — sitio de la competencia que le gustó al cliente.
+          Aporta la <strong style="color:var(--accent)">estructura y la estética</strong>: secciones, componentes, grilla, tipografía y color.
+        </p>
+        <p class="hint">
+          <strong style="color:var(--text)">sitio del cliente</strong> — su sitio actual.
+          Aporta <strong style="color:var(--accent)">contenido, identidad e integraciones</strong>, y es la línea base a superar.
+        </p>
+        <p class="hint">
+          Se guarda como <code>URL # Nombre @rol</code>. El <code>https://</code> se agrega solo,
+          las repetidas se descartan y las filas se reordenan arrastrando.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= CONFIGURACIÓN ================= -->
+  <div role="tabpanel" id="p-config" aria-labelledby="tab-config" class="grid two" hidden>
+    <section class="panel">
+      <header><h2>parámetros</h2></header>
+      <div class="body">
+        <div class="fields">
+          <div class="field"><label for="pages">páginas por sitio</label><input type="text" id="pages" value="4" inputmode="numeric"></div>
+          <div class="field"><label for="concurrency">sitios en paralelo</label><input type="text" id="concurrency" value="1" inputmode="numeric"></div>
+          <div class="field"><label for="retries">reintentos</label><input type="text" id="retries" value="1" inputmode="numeric"></div>
+          <div class="field"><label for="limit">límite de sitios</label><input type="text" id="limit" placeholder="todos" inputmode="numeric"></div>
+          <div class="field">
+            <label for="lighthouse">lighthouse</label>
+            <select id="lighthouse">
+              <option value="">no correr</option>
+              <option value="mobile">mobile (throttling)</option>
+              <option value="desktop">desktop</option>
+            </select>
+          </div>
+          <div class="field"><label for="brief">briefing</label><select id="brief"><option value="">ninguno</option></select></div>
+          <div class="field" style="grid-column:1/-1"><label for="breakpoints">breakpoints</label><input type="text" id="breakpoints" placeholder="360,390,768,1024,1280,1440,1920"></div>
+        </div>
+        <div class="chips" role="group" aria-label="Opciones">
+          <button class="chip" id="cache" aria-pressed="false">usar caché</button>
+          <button class="chip" id="fullPages" aria-pressed="false">breakpoints en todas las páginas</button>
+          <button class="chip" id="headed" aria-pressed="false">ver el navegador</button>
+          <button class="chip" id="keepPopups" aria-pressed="false">no cerrar popups</button>
+          <button class="chip" id="noCrops" aria-pressed="false">sin recortes</button>
+          <button class="chip" id="noInteractions" aria-pressed="false">sin estados interactivos</button>
+          <button class="chip" id="noBpShots" aria-pressed="false">sin capturas por breakpoint</button>
+        </div>
+        <div class="msg" id="runMsg" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <header><h2>estimación</h2></header>
+      <div class="body">
+        <p class="hint" style="margin-top:0" id="estimate">—</p>
+        <p class="hint">El análisis corre en un proceso aparte: si cerrás esta pestaña, sigue. Al volver, la consola recupera el estado y el log.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= PROGRESO ================= -->
+  <div role="tabpanel" id="p-progreso" aria-labelledby="tab-progreso" hidden>
+    <section class="panel">
+      <header>
+        <h2>progreso</h2>
+        <span class="spacer"></span>
+        <span class="pill" id="logCount">0 líneas</span>
+      </header>
+      <div class="logbar">
+        <input type="text" id="logFilter" placeholder="filtrar…" aria-label="Filtrar el log">
+        <button class="chip" id="autoscroll" aria-pressed="true">autoscroll</button>
+        <span class="spacer"></span>
+        <button class="btn ghost" id="copyLog">copiar</button>
+        <button class="btn ghost" id="clearLog">limpiar vista</button>
+      </div>
+      <pre id="log" tabindex="0" aria-label="Salida del análisis">esperando…</pre>
+    </section>
+  </div>
+
+  <!-- ================= REPORTES ================= -->
+  <div role="tabpanel" id="p-reportes" aria-labelledby="tab-reportes" hidden>
+    <section class="panel">
+      <header>
+        <h2>última corrida</h2>
+        <span class="spacer"></span>
+        <button class="btn ghost" id="refreshReports">actualizar</button>
+      </header>
+      <div class="body" id="reports"><div class="empty">todavía no hay reportes</div></div>
+    </section>
+  </div>
+
+  <!-- ================= HISTORIAL ================= -->
+  <div role="tabpanel" id="p-historial" aria-labelledby="tab-historial" hidden>
+    <section class="panel">
+      <header>
+        <h2>corridas anteriores</h2>
+        <span class="spacer"></span>
+        <span id="historyLinks" class="filelinks"></span>
+      </header>
+      <div class="body" id="history"><div class="empty">todavía no hay corridas registradas</div></div>
+    </section>
+  </div>
+</main>
+
+<div class="actionbar">
+  <button class="btn primary" id="run">▶ analizar</button>
+  <button class="btn danger" id="stop" disabled>■ detener</button>
+  <span class="now" id="now">listo</span>
+</div>
+
+<script>
+'use strict';
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
+const esc = (s) => String(s === null || s === undefined ? '' : s);
+
+/* ================= pestañas ================= */
+const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+function selectTab(id, focus) {
+  tabs.forEach((t) => {
+    const on = t.id === id;
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+    t.tabIndex = on ? 0 : -1;
+    $(t.getAttribute('aria-controls')).hidden = !on;
+    if (on && focus) t.focus();
+  });
+  try { localStorage.setItem('tab', id); } catch (e) {}
+}
+tabs.forEach((t) => {
+  t.addEventListener('click', () => selectTab(t.id));
+  t.addEventListener('keydown', (e) => {
+    const i = tabs.indexOf(t);
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      selectTab(tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length].id, true);
+    } else if (e.key === 'Home') { e.preventDefault(); selectTab(tabs[0].id, true); }
+    else if (e.key === 'End') { e.preventDefault(); selectTab(tabs[tabs.length - 1].id, true); }
+  });
+});
+
+/* ================= sitios ================= */
+let items = [];
+
+function counters() {
+  const refs = items.filter((i) => i.role !== 'cliente').length;
+  const cli = items.length - refs;
+  $('cSites').textContent = items.length;
+  $('roleCount').textContent = `${refs} ref · ${cli} cliente`;
+  const pages = parseInt($('pages').value, 10) || 4;
+  const conc = parseInt($('concurrency').value, 10) || 1;
+  const lh = $('lighthouse').value ? 1 : 0;
+  const perSite = 25 + pages * 22 + lh * 45;
+  const mins = Math.max(1, Math.round((items.length * perSite) / Math.max(1, conc) / 60));
+  $('estimate').innerHTML = `<strong style="color:var(--text)">${items.length}</strong> sitio(s) × <strong style="color:var(--text)">${pages}</strong> página(s)` +
+    `${lh ? ' + Lighthouse' : ''}, ${conc} en paralelo → aproximadamente <strong style="color:var(--accent)">${mins} min</strong>.`;
+}
+
+function renderSites() {
+  const box = $('sites');
+  box.textContent = '';
+  items.forEach((it, i) => {
+    const row = el('div', 'site');
+    row.draggable = true;
+    row.dataset.role = it.role === 'cliente' ? 'cliente' : 'referencia';
+
+    const drag = el('span', 'drag', '⣿');
+    drag.title = 'Arrastrar para reordenar';
+    row.appendChild(drag);
+
+    const wrap = el('div', 'inputs');
+    const nameF = el('div', 'field');
+    const nameL = el('label', null, 'nombre');
+    nameL.htmlFor = `n${i}`;
+    const nameI = el('input');
+    nameI.type = 'text'; nameI.id = `n${i}`; nameI.value = it.label || ''; nameI.placeholder = 'Cliente';
+    nameI.addEventListener('input', () => { items[i].label = nameI.value; });
+    nameF.append(nameL, nameI);
+
+    const urlF = el('div', 'field');
+    const urlL = el('label', null, 'url');
+    urlL.htmlFor = `u${i}`;
+    const urlI = el('input');
+    urlI.type = 'url'; urlI.id = `u${i}`; urlI.value = it.url || ''; urlI.placeholder = 'https://sitio.com';
+    urlI.addEventListener('input', () => { items[i].url = urlI.value; });
+    urlF.append(urlL, urlI);
+
+    const roleF = el('div', 'field');
+    const roleL = el('label', null, 'rol');
+    const seg = el('div', 'seg');
+    seg.setAttribute('role', 'group');
+    seg.setAttribute('aria-label', 'Rol del sitio');
+    [['referencia', 'REF'], ['cliente', 'CLIENTE']].forEach(([value, txt]) => {
+      const b = el('button', null, txt);
+      b.type = 'button';
+      b.setAttribute('aria-pressed', (it.role === 'cliente' ? 'cliente' : 'referencia') === value ? 'true' : 'false');
+      b.addEventListener('click', () => { items[i].role = value; renderSites(); counters(); });
+      seg.appendChild(b);
+    });
+    roleF.append(roleL, seg);
+
+    const del = el('button', 'btn icon danger', '✕');
+    del.type = 'button';
+    del.title = 'Quitar';
+    del.setAttribute('aria-label', `Quitar ${it.url || 'sitio'}`);
+    del.addEventListener('click', () => { items.splice(i, 1); renderSites(); counters(); });
+
+    wrap.append(nameF, urlF, roleF);
+    row.append(wrap, del);
+
+    row.addEventListener('dragstart', (e) => { row.classList.add('dragging'); e.dataTransfer.setData('text/plain', String(i)); });
+    row.addEventListener('dragend', () => row.classList.remove('dragging'));
+    row.addEventListener('dragover', (e) => e.preventDefault());
+    row.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const from = parseInt(e.dataTransfer.getData('text/plain'), 10);
+      if (isNaN(from) || from === i) return;
+      const [m] = items.splice(from, 1);
+      items.splice(i, 0, m);
+      renderSites(); counters();
+    });
+
+    box.appendChild(row);
+  });
+  $('sitesEmpty').hidden = items.length > 0;
+}
+
+async function loadLinks() {
+  const d = await (await fetch('/api/links')).json();
+  items = d.items;
+  $('fileName').textContent = d.file;
+  renderSites(); counters();
+}
+
+async function saveLinks() {
+  const msg = $('linksMsg');
+  msg.className = 'msg'; msg.textContent = 'guardando…';
+  const d = await (await fetch('/api/links', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items }) })).json();
+  items = d.items;
+  renderSites(); counters();
+  if (d.rejected && d.rejected.length) {
+    msg.className = 'msg bad';
+    msg.textContent = `guardados ${d.items.length} · descartados por URL inválida: ${d.rejected.join(', ')}`;
+  } else {
+    msg.className = 'msg ok';
+    msg.textContent = `guardados ${d.items.length} sitio(s) en ${d.file}`;
+  }
+}
+
+function addRow(role) {
+  items.push({ url: '', label: '', role });
+  renderSites(); counters();
+  const inputs = $('sites').querySelectorAll('input[type="text"]');
+  if (inputs.length) inputs[inputs.length - 1].focus();
+}
+$('addRef').addEventListener('click', () => addRow('referencia'));
+$('addClient').addEventListener('click', () => addRow('cliente'));
+$('save').addEventListener('click', saveLinks);
+$('reload').addEventListener('click', loadLinks);
+['pages', 'concurrency', 'lighthouse'].forEach((id) => $(id).addEventListener('input', counters));
+
+/* ================= chips ================= */
+const CHIPS = ['cache', 'fullPages', 'headed', 'keepPopups', 'noCrops', 'noInteractions', 'noBpShots'];
+CHIPS.forEach((id) => {
+  $(id).addEventListener('click', () => {
+    const on = $(id).getAttribute('aria-pressed') === 'true';
+    $(id).setAttribute('aria-pressed', on ? 'false' : 'true');
+  });
+});
+const chipOn = (id) => $(id).getAttribute('aria-pressed') === 'true';
+
+/* ================= corrida ================= */
+function options() {
+  return {
+    pages: $('pages').value, concurrency: $('concurrency').value, retries: $('retries').value, limit: $('limit').value,
+    lighthouse: $('lighthouse').value, brief: $('brief').value, breakpoints: $('breakpoints').value,
+    cache: chipOn('cache'), fullPages: chipOn('fullPages'), headed: chipOn('headed'),
+    keepPopups: chipOn('keepPopups'), noCrops: chipOn('noCrops'), noInteractions: chipOn('noInteractions'), noBpShots: chipOn('noBpShots'),
+  };
+}
+
+$('run').addEventListener('click', async () => {
+  const msg = $('runMsg');
+  msg.className = 'msg'; msg.textContent = 'guardando sitios y arrancando…';
+  await saveLinks();
+  const d = await (await fetch('/api/run', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ options: options() }) })).json();
+  if (!d.ok) { msg.className = 'msg bad'; msg.textContent = d.error; return; }
+  msg.className = 'msg ok'; msg.textContent = 'análisis en marcha';
+  logLines = [];
+  renderLog();
+  selectTab('tab-progreso');
+});
+
+$('stop').addEventListener('click', async () => {
+  const d = await (await fetch('/api/stop', { method: 'POST' })).json();
+  if (!d.ok) { $('runMsg').className = 'msg bad'; $('runMsg').textContent = d.error; }
+});
+
+/* ================= log ================= */
+let logLines = [];
+let autoscroll = true;
+$('autoscroll').addEventListener('click', () => {
+  autoscroll = $('autoscroll').getAttribute('aria-pressed') !== 'true';
+  $('autoscroll').setAttribute('aria-pressed', autoscroll ? 'true' : 'false');
+});
+$('logFilter').addEventListener('input', renderLog);
+$('clearLog').addEventListener('click', () => { logLines = []; renderLog(); });
+$('copyLog').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(logLines.join('\n')); $('copyLog').textContent = 'copiado'; setTimeout(() => ($('copyLog').textContent = 'copiar'), 1200); } catch (e) {}
+});
+
+function lineClass(l) {
+  if (/✗|error|falló|fatal/i.test(l)) return 'l-err';
+  if (/✓|Listo|terminado/i.test(l)) return 'l-ok';
+  if (/⚠|no llegó|tope alcanzado|SIN indicación/i.test(l)) return 'l-warn';
+  if (/^\s*·|^\s+·/.test(l)) return 'l-dim';
+  if (/^\[\d+\/\d+\]/.test(l)) return 'l-site';
+  return '';
+}
+
+function renderLog() {
+  const q = $('logFilter').value.trim().toLowerCase();
+  const box = $('log');
+  const shown = q ? logLines.filter((l) => l.toLowerCase().includes(q)) : logLines;
+  box.textContent = '';
+  if (!shown.length) { box.textContent = q ? 'sin coincidencias' : 'esperando…'; }
+  else {
+    const frag = document.createDocumentFragment();
+    shown.slice(-2000).forEach((l) => {
+      const s = el('span', lineClass(l), l + '\n');
+      frag.appendChild(s);
+    });
+    box.appendChild(frag);
+  }
+  $('logCount').textContent = `${logLines.length} líneas`;
+  $('cLines').textContent = logLines.length;
+  if (autoscroll) box.scrollTop = box.scrollHeight;
+}
+
+function pushLog(line) {
+  logLines.push(line);
+  if (logLines.length > 4000) logLines.splice(0, logLines.length - 4000);
+  const clean = line.replace(/\s+/g, ' ').trim();
+  if (clean) $('now').innerHTML = `<b>›</b> ${esc(clean).slice(0, 160)}`;
+  renderLog();
+}
+
+function setStatus(s) {
+  const b = $('status');
+  if (s.running) { b.className = 'pill on run'; b.textContent = 'analizando'; }
+  else if (s.code === 0) { b.className = 'pill on'; b.textContent = 'terminado'; }
+  else if (s.code !== null && s.code !== undefined) { b.className = 'pill bad'; b.textContent = `error ${s.code}`; }
+  else { b.className = 'pill'; b.textContent = 'inactivo'; }
+  $('run').disabled = !!s.running;
+  $('stop').disabled = !s.running;
+  if (!s.running && s.code === 0) $('now').textContent = 'listo';
+}
+
+/* ================= reportes ================= */
+async function loadReports() {
+  const d = await (await fetch('/api/reports')).json();
+  const box = $('reports');
+  box.textContent = '';
+  $('cReports').textContent = (d.sites || []).length;
+  if (!d.sites || !d.sites.length) { box.appendChild(el('div', 'empty', 'todavía no hay reportes')); return; }
+
+  const link = (f, label) => {
+    if (!f) return null;
+    const a = el('a', 'file', label);
+    a.href = f.url; a.target = '_blank'; a.rel = 'noopener';
+    if (f.kb) a.title = `${f.kb} KB`;
+    return a;
+  };
+
+  if (d.synthesis && d.synthesis.length) {
+    const f = el('div', 'feature');
+    f.appendChild(el('h3', null, '★ prompt de síntesis'));
+    f.appendChild(el('div', 'when', 'estructura y estética de las referencias cruzadas con el sitio del cliente'));
+    const links = el('div', 'filelinks');
+    links.style.marginTop = '.5rem';
+    d.synthesis.forEach((s) => { const a = el('a', 'file', s.name); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; links.appendChild(a); });
+    f.appendChild(links);
+    box.appendChild(f);
+  }
+  if (d.summary && d.summary.length) {
+    const p = el('div', 'filelinks');
+    p.style.marginBottom = '.8rem';
+    p.appendChild(el('span', 'when', 'resumen general:'));
+    d.summary.forEach((s) => { const a = el('a', 'file', s.name.replace('resumen.', '').toUpperCase()); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; p.appendChild(a); });
+    box.appendChild(p);
+  }
+
+  const grid = el('div', 'cards');
+  d.sites.forEach((s) => {
+    const c = el('div', 'card');
+    c.appendChild(el('h3', null, s.name));
+    c.appendChild(el('div', 'when', new Date(s.updated).toLocaleString('es-AR')));
+    [['análisis', s.report], ['prompt', s.prompt]].forEach(([title, group]) => {
+      const g = el('div', 'group');
+      g.appendChild(el('span', null, title));
+      const links = el('div', 'filelinks');
+      ['html', 'docx', 'md', 'json'].forEach((k) => { const a = link(group[k], k.toUpperCase()); if (a) links.appendChild(a); });
+      if (links.children.length) { g.appendChild(links); c.appendChild(g); }
+    });
+    grid.appendChild(c);
+  });
+  box.appendChild(grid);
+}
+$('refreshReports').addEventListener('click', loadReports);
+
+/* ================= historial ================= */
+const METRICS = [
+  ['lhPerformance', 'LH', 'up'], ['lcpMs', 'LCP', 'down'], ['cls', 'CLS', 'down'],
+  ['requests', 'REQ', 'down'], ['kb', 'KB', 'down'], ['domNodes', 'DOM', 'down'],
+  ['sections', 'SEC', 'flat'], ['contrastIssues', 'CONTR', 'down'],
+  ['imagesWithoutAlt', 'ALT', 'down'], ['overflowBreakpoints', 'OVF', 'down'],
+];
+
+function deltaNode(prev, curr, dir) {
+  if (prev === null || prev === undefined || curr === null || curr === undefined) return null;
+  const d = curr - prev;
+  if (!d) return el('span', 'delta-eq', ' =');
+  const v = Math.abs(d) < 1 ? d.toFixed(3).replace(/0+$/, '') : Math.round(d);
+  const better = dir === 'up' ? d > 0 : dir === 'down' ? d < 0 : null;
+  const cls = better === null ? 'delta-eq' : better ? 'delta-up' : 'delta-down';
+  const s = el('span', cls, ` ${d > 0 ? '+' : ''}${v}`);
+  s.style.fontSize = '.72rem';
+  return s;
+}
+
+async function loadHistory() {
+  const d = await (await fetch('/api/history')).json();
+  const box = $('history');
+  box.textContent = '';
+  $('cRuns').textContent = d.total || 0;
+  const hl = $('historyLinks');
+  hl.textContent = '';
+  (d.view || []).forEach((v) => { const a = el('a', 'file', v.name); a.href = v.url; a.target = '_blank'; a.rel = 'noopener'; hl.appendChild(a); });
+
+  if (!d.runs || !d.runs.length) { box.appendChild(el('div', 'empty', 'todavía no hay corridas registradas')); return; }
+
+  d.runs.forEach((run, i) => {
+    const prev = d.runs[i + 1] || null;
+    const det = el('details', 'run');
+    if (i === 0) det.open = true;
+    const o = run.opciones || {};
+    const sum = el('summary');
+    const okCount = run.sitios.filter((s) => s.ok).length;
+    sum.appendChild(el('span', null, new Date(run.fecha).toLocaleString('es-AR')));
+    sum.appendChild(el('span', 'pill' + (okCount === run.sitios.length ? ' on' : ' warn'), `${okCount}/${run.sitios.length} sitios`));
+    const meta = [o.pages ? `${o.pages} pág/sitio` : null, o.lighthouse ? `LH ${o.lighthouse}` : null, o.concurrency > 1 ? `${o.concurrency} paralelo` : null, o.cache ? 'caché' : null, run.durationMs ? `${Math.round(run.durationMs / 1000)}s` : null].filter(Boolean).join(' · ');
+    sum.appendChild(el('span', 'meta', meta));
+    det.appendChild(sum);
+
+    const body = el('div');
+    body.style.padding = '0 .8rem .8rem';
+    if (run.synthesis) {
+      const p = el('div', 'filelinks');
+      p.style.margin = '.2rem 0 .6rem';
+      const a = el('a', 'file', '★ síntesis de esta corrida');
+      a.href = run.synthesis; a.target = '_blank'; a.rel = 'noopener';
+      p.appendChild(a);
+      body.appendChild(p);
+    }
+
+    const tw = el('div', 'tw');
+    const table = el('table');
+    const thead = el('thead');
+    const hr = el('tr');
+    hr.appendChild(el('th', null, 'sitio'));
+    hr.appendChild(el('th', null, 'rol'));
+    METRICS.forEach(([, label]) => { const th = el('th', 'num', label); hr.appendChild(th); });
+    hr.appendChild(el('th', null, 'archivos'));
+    thead.appendChild(hr);
+    table.appendChild(thead);
+
+    const tb = el('tbody');
+    run.sitios.forEach((s) => {
+      const tr = el('tr');
+      const td1 = el('td');
+      td1.appendChild(el('span', 'name', s.name));
+      tr.appendChild(td1);
+      tr.appendChild(el('td', 'mono', s.role === 'cliente' ? 'cliente' : 'ref'));
+      const p = prev ? (prev.sitios || []).find((x) => x.name === s.name && x.ok) : null;
+      if (!s.ok || !s.metrics) {
+        const td = el('td', null, s.error || 'error');
+        td.colSpan = METRICS.length;
+        td.style.color = 'var(--err)';
+        tr.appendChild(td);
+      } else {
+        METRICS.forEach(([k, , dir]) => {
+          const td = el('td', 'num');
+          const v = s.metrics[k];
+          td.appendChild(document.createTextNode(v === null || v === undefined ? '—' : String(v)));
+          if (p && p.metrics) { const dn = deltaNode(p.metrics[k], v, dir); if (dn) td.appendChild(dn); }
+          tr.appendChild(td);
+        });
+      }
+      const tdf = el('td');
+      const links = el('div', 'filelinks');
+      [['análisis', s.report], ['prompt', s.prompt], ['docx', s.docx]].forEach(([label, url]) => {
+        if (!url) return;
+        const a = el('a', 'file', label);
+        a.href = url; a.target = '_blank'; a.rel = 'noopener';
+        links.appendChild(a);
+      });
+      tdf.appendChild(links);
+      tr.appendChild(tdf);
+      tb.appendChild(tr);
+    });
+    table.appendChild(tb);
+    tw.appendChild(table);
+    body.appendChild(tw);
+    det.appendChild(body);
+    box.appendChild(det);
+  });
+}
+
+async function loadBriefs() {
+  const d = await (await fetch('/api/briefs')).json();
+  (d.files || []).forEach((f) => {
+    const o = el('option', null, f);
+    o.value = f;
+    $('brief').appendChild(o);
+  });
+}
+
+/* ================= conexión ================= */
+let es = null, lastEvent = Date.now(), lastRunning = false, connOk = false;
+
+function setConn(ok, text) {
+  connOk = ok;
+  const c = $('conn');
+  c.className = 'pill ' + (ok ? 'on' : 'bad');
+  c.textContent = text || (ok ? 'conectado' : 'sin conexión');
+}
+
+function openStream() {
+  if (es) { try { es.close(); } catch (e) {} }
+  es = new EventSource('/api/stream');
+  es.onopen = () => { lastEvent = Date.now(); setConn(true); };
+  es.onerror = () => setConn(false, 'reconectando');
+  es.addEventListener('ping', () => { lastEvent = Date.now(); setConn(true); });
+  es.addEventListener('log', (e) => { lastEvent = Date.now(); setConn(true); pushLog(JSON.parse(e.data).line); });
+  es.addEventListener('status', (e) => { lastEvent = Date.now(); setConn(true); setStatus(JSON.parse(e.data)); });
+  es.addEventListener('done', () => { loadReports(); loadHistory(); });
+}
+
+async function poll() {
+  try {
+    const st = await (await fetch('/api/status', { cache: 'no-store' })).json();
+    setConn(true);
+    setStatus(st);
+    if (Date.now() - lastEvent > 45000) { lastEvent = Date.now(); openStream(); }
+    if (st.log && st.log.length && st.lines > logLines.length) { logLines = st.log.slice(); renderLog(); }
+    if (lastRunning && !st.running) { loadReports(); loadHistory(); }
+    lastRunning = !!st.running;
+  } catch (e) {
+    setConn(false, 'servidor caído');
+    $('status').className = 'pill';
+    $('status').textContent = 'sin datos';
+  }
+}
+
+/* ================= arranque ================= */
+(async function init() {
+  await loadLinks();
+  await loadBriefs();
+  await loadReports();
+  await loadHistory();
+  try {
+    const st = await (await fetch('/api/status')).json();
+    setStatus(st);
+    lastRunning = !!st.running;
+    if (st.log && st.log.length) { logLines = st.log.slice(); renderLog(); }
+    setConn(true);
+  } catch (e) { setConn(false, 'servidor caído'); }
+
+  try {
+    const saved = localStorage.getItem('tab');
+    if (saved && document.getElementById(saved)) selectTab(saved);
+  } catch (e) {}
+
+  openStream();
+  setInterval(poll, 5000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) poll(); });
+  window.addEventListener('online', poll);
+})();
+</script>
+</body>
+</html>
